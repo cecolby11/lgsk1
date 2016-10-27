@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -20,15 +20,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GsZ-mO-Lco">
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="qYb-yD-NYP">
-                                    <frame key="frameInset"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                </view>
-                                <vibrancyEffect>
-                                    <blurEffect style="light"/>
-                                </vibrancyEffect>
-                            </visualEffectView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="buy-DK-O1C">
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="buy-DK-O1C" secondAttribute="height" multiplier="720:540" id="Nou-yO-E0A" userLabel="Dots - aspect ratio"/>
@@ -40,13 +31,6 @@
                                     <action selector="chooseCharacter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wfc-qv-4fS"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="🎁🎁🎁🎁🎁🎁🎁🎁" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gjl-O0-m1H">
-                                <frame key="frameInset" minX="491" minY="672" width="352" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPv-Py-ctc">
                                 <state key="normal" title="Character 2"/>
                                 <connections>
@@ -58,12 +42,8 @@
                         <constraints>
                             <constraint firstItem="buy-DK-O1C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="018-xn-5Nw" userLabel="Dots - centerX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xPv-Py-ctc" secondAttribute="trailing" constant="50" id="1Yy-AZ-eop" userLabel="Button2 - space to edge"/>
-                            <constraint firstItem="GsZ-mO-Lco" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="3YD-3h-Nvu" userLabel="Blur - space to edge"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xPv-Py-ctc" secondAttribute="bottom" constant="55" id="4CP-TT-uVv" userLabel="Button2 - space to bottom"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rif-br-TEm" secondAttribute="bottom" constant="55" id="Cw3-hB-vpT" userLabel="Button1 - space to bottom"/>
-                            <constraint firstItem="GsZ-mO-Lco" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VYE-hk-Wtk" userLabel="Blur - centerX"/>
-                            <constraint firstItem="buy-DK-O1C" firstAttribute="top" secondItem="GsZ-mO-Lco" secondAttribute="bottom" constant="5" id="eVD-zx-Y0F" userLabel="Blur - space to dots"/>
-                            <constraint firstItem="GsZ-mO-Lco" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="gFu-Xw-ic1" userLabel="Blur - space to top"/>
                             <constraint firstItem="rif-br-TEm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="l2t-fW-hvF" userLabel="Button1 - space to edge"/>
                             <constraint firstItem="buy-DK-O1C" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qXG-d9-gG2" userLabel="Dots - centerY"/>
                             <constraint firstItem="buy-DK-O1C" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="vwS-dN-Rtc" userLabel="Dots - extend to edge"/>

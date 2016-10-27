@@ -58,6 +58,15 @@ class DotViewController: UIViewController {
         } else {
             nextImage()
         }
+        
+        switch sender{
+            case character1:
+                print("left guy")
+            case character2:
+                print("right guy")
+            default:
+                print("nothing")
+        }
     }
     
     
