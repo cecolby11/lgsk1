@@ -10,13 +10,81 @@ import UIKit
 
 class IntroViewController: UIViewController {
     
+
+    @IBOutlet var tapRecognizer: UITapGestureRecognizer!
+    @IBOutlet weak var containedViewRed: UIView!
+    @IBOutlet weak var containedViewBlue: UIView!
+    var tapIndex = 0
+    @IBOutlet weak var instructionText: UILabel!
+    
+    @IBOutlet weak var redTestDot: UIImageView!
+    @IBOutlet weak var blueTestDot: UIImageView!
+    @IBOutlet weak var leftGreyReciever: UIImageView!
+    @IBOutlet weak var rightGreyReceiver: UIImageView!
+    
+   // var snap: UISnapBehavior!
+    //var animator: UIDynamicAnimator!
+
+    
+    @IBAction func tappedToContinue(_ sender: UITapGestureRecognizer) {
+        tapIndex+=1
+        
+        switch tapIndex {
+        case 1:
+            UIView.animate(withDuration: 0.9, animations: {
+            self.containedViewRed.alpha = 1})
+        case 2:
+            UIView.animate(withDuration: 0.9, animations: {
+                self.containedViewBlue.alpha = 1})
+        case 3:
+            UIView.animate(withDuration: 0.7, animations: {
+                self.containedViewBlue.alpha = 0
+                self.containedViewRed.alpha = 0
+                self.instructionText.isHidden = true
+            })
+            showTestDots()
+            
+        default:
+            self.containedViewRed.alpha = 0
+            self.containedViewBlue.alpha = 0
+            self.view.alpha = 1
+        }
+        
+    }
     
     
+    func showTestDots() {
+        redTestDot.isHidden = false
+        blueTestDot.isHidden = false
+        leftGreyReciever.isHidden = false
+        rightGreyReceiver.isHidden = false
+
+        
+    }
+
+   
+    @IBAction func handlePan(_ sender: UIPanGestureRecognizer) {
+        let translation = sender.translation(in: self.view)
+        sender.view?.center = CGPoint(x: sender.view!.center.x + translation.x, y: sender.view!.center.y + translation.y)
+        sender.setTranslation(CGPoint.zero, in: self.view)
+    }
     
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        containedViewRed.alpha = 0
+        containedViewBlue.alpha = 0
+        redTestDot.isHidden = true
+        blueTestDot.isHidden = true
+        leftGreyReciever.isHidden = true
+        rightGreyReceiver.isHidden = true
+        
+        tapRecognizer.isEnabled = true
+        tapRecognizer.numberOfTapsRequired = 2
+        tapRecognizer.numberOfTouchesRequired = 2
+        
+        //animator = UIDynamicAnimator(referenceView: view)
     }
     
 }

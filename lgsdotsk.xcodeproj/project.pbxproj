@@ -20,13 +20,13 @@
 		142EECB71DB90E3000E4AB0D /* Slide06.png in Resources */ = {isa = PBXBuildFile; fileRef = 142EECB01DB90E3000E4AB0D /* Slide06.png */; };
 		142EECB81DB90E3000E4AB0D /* Slide07.png in Resources */ = {isa = PBXBuildFile; fileRef = 142EECB11DB90E3000E4AB0D /* Slide07.png */; };
 		142EECB91DB90E3000E4AB0D /* Slide08.png in Resources */ = {isa = PBXBuildFile; fileRef = 142EECB21DB90E3000E4AB0D /* Slide08.png */; };
-		990D06331DC8F8890091B878 /* boy.png in Resources */ = {isa = PBXBuildFile; fileRef = 990D06311DC8F8890091B878 /* boy.png */; };
-		990D06341DC8F8890091B878 /* girl.png in Resources */ = {isa = PBXBuildFile; fileRef = 990D06321DC8F8890091B878 /* girl.png */; };
 		990D06371DC8FB840091B878 /* boyBig.png in Resources */ = {isa = PBXBuildFile; fileRef = 990D06351DC8FB840091B878 /* boyBig.png */; };
 		990D06381DC8FB840091B878 /* girlBig.png in Resources */ = {isa = PBXBuildFile; fileRef = 990D06361DC8FB840091B878 /* girlBig.png */; };
-		990D063B1DC8FD570091B878 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990D063A1DC8FD570091B878 /* Circle.swift */; };
 		990D063D1DC8FDD80091B878 /* IntroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990D063C1DC8FDD80091B878 /* IntroVC.swift */; };
 		990D063F1DC8FE280091B878 /* SetupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990D063E1DC8FE280091B878 /* SetupVC.swift */; };
+		9927B4751DC9161C00E8622B /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 9927B4741DC9161C00E8622B /* blue.png */; };
+		9927B4771DC9162100E8622B /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 9927B4761DC9162100E8622B /* red.png */; };
+		994856851DC941C10050B155 /* grey.png in Resources */ = {isa = PBXBuildFile; fileRef = 994856841DC941C10050B155 /* grey.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,13 +45,13 @@
 		142EECB01DB90E3000E4AB0D /* Slide06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Slide06.png; path = dots/Slide06.png; sourceTree = "<group>"; };
 		142EECB11DB90E3000E4AB0D /* Slide07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Slide07.png; path = dots/Slide07.png; sourceTree = "<group>"; };
 		142EECB21DB90E3000E4AB0D /* Slide08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Slide08.png; path = dots/Slide08.png; sourceTree = "<group>"; };
-		990D06311DC8F8890091B878 /* boy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boy.png; sourceTree = "<group>"; };
-		990D06321DC8F8890091B878 /* girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girl.png; sourceTree = "<group>"; };
 		990D06351DC8FB840091B878 /* boyBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boyBig.png; sourceTree = "<group>"; };
 		990D06361DC8FB840091B878 /* girlBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girlBig.png; sourceTree = "<group>"; };
-		990D063A1DC8FD570091B878 /* Circle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
 		990D063C1DC8FDD80091B878 /* IntroVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroVC.swift; sourceTree = "<group>"; };
 		990D063E1DC8FE280091B878 /* SetupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupVC.swift; sourceTree = "<group>"; };
+		9927B4741DC9161C00E8622B /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
+		9927B4761DC9162100E8622B /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
+		994856841DC941C10050B155 /* grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grey.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +110,6 @@
 		142EECBA1DB90E3700E4AB0D /* dots */ = {
 			isa = PBXGroup;
 			children = (
-				990D063A1DC8FD570091B878 /* Circle.swift */,
 				142EECAC1DB90E3000E4AB0D /* Slide02.png */,
 				142EECAD1DB90E3000E4AB0D /* Slide03.png */,
 				142EECAE1DB90E3000E4AB0D /* Slide04.png */,
@@ -127,8 +126,9 @@
 			children = (
 				990D06351DC8FB840091B878 /* boyBig.png */,
 				990D06361DC8FB840091B878 /* girlBig.png */,
-				990D06311DC8F8890091B878 /* boy.png */,
-				990D06321DC8F8890091B878 /* girl.png */,
+				9927B4741DC9161C00E8622B /* blue.png */,
+				9927B4761DC9162100E8622B /* red.png */,
+				994856841DC941C10050B155 /* grey.png */,
 			);
 			name = characters;
 			sourceTree = "<group>";
@@ -196,14 +196,15 @@
 				142EEC9E1DB9021700E4AB0D /* LaunchScreen.storyboard in Resources */,
 				142EECB31DB90E3000E4AB0D /* Slide02.png in Resources */,
 				142EECB41DB90E3000E4AB0D /* Slide03.png in Resources */,
-				990D06331DC8F8890091B878 /* boy.png in Resources */,
 				142EECB51DB90E3000E4AB0D /* Slide04.png in Resources */,
-				990D06341DC8F8890091B878 /* girl.png in Resources */,
+				9927B4771DC9162100E8622B /* red.png in Resources */,
 				990D06381DC8FB840091B878 /* girlBig.png in Resources */,
 				142EEC9B1DB9021700E4AB0D /* Assets.xcassets in Resources */,
 				142EECB71DB90E3000E4AB0D /* Slide06.png in Resources */,
 				142EECB81DB90E3000E4AB0D /* Slide07.png in Resources */,
 				142EECB91DB90E3000E4AB0D /* Slide08.png in Resources */,
+				9927B4751DC9161C00E8622B /* blue.png in Resources */,
+				994856851DC941C10050B155 /* grey.png in Resources */,
 				990D06371DC8FB840091B878 /* boyBig.png in Resources */,
 				142EECB61DB90E3000E4AB0D /* Slide05.png in Resources */,
 				142EEC991DB9021700E4AB0D /* Main.storyboard in Resources */,
@@ -219,7 +220,6 @@
 			files = (
 				990D063D1DC8FDD80091B878 /* IntroVC.swift in Sources */,
 				142EEC961DB9021700E4AB0D /* DotVC.swift in Sources */,
-				990D063B1DC8FD570091B878 /* Circle.swift in Sources */,
 				990D063F1DC8FE280091B878 /* SetupVC.swift in Sources */,
 				142EEC941DB9021700E4AB0D /* AppDelegate.swift in Sources */,
 				142EECAA1DB90BA600E4AB0D /* Stimuli.swift in Sources */,
