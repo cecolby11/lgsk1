@@ -26,6 +26,9 @@ class IntroViewController: UIViewController {
     @IBOutlet var bluePan: UIPanGestureRecognizer!
     var snap: UISnapBehavior!
     var animator: UIDynamicAnimator!
+    var collision: UICollisionBehavior!
+    
+    var correct: Int = 0
 
     
     @IBAction func tappedToContinue(_ sender: UITapGestureRecognizer) {
@@ -45,6 +48,8 @@ class IntroViewController: UIViewController {
                 self.instructionText.isHidden = true
             })
             showTestDots()
+        case _ where (tapIndex>=4 && rightGreyReceiver.center==blueTestDot.center && leftGreyReciever.center==redTestDot.center):
+            self.performSegue(withIdentifier: "beginExperiment", sender: self)
             
         default:
             self.containedViewRed.alpha = 0
@@ -70,7 +75,6 @@ class IntroViewController: UIViewController {
         sender.view?.center = CGPoint(x: sender.view!.center.x + translation.x, y: sender.view!.center.y + translation.y)
         sender.setTranslation(CGPoint.zero, in: self.view)
         
-        
         if (rightGreyReceiver.frame.intersects(blueTestDot.frame)) {
             rightGreyReceiver.isHidden = true
             
@@ -90,8 +94,15 @@ class IntroViewController: UIViewController {
             snap.damping = 0.1 //oscillation
             redPan.isEnabled = false
             animator.addBehavior(snap)
+            
+        } else {
+            leftGreyReciever.isHidden = false
         }
+
     }
+    
+
+    
     
 
     override func viewDidLoad() {
@@ -109,6 +120,7 @@ class IntroViewController: UIViewController {
         tapRecognizer.numberOfTouchesRequired = 2
         
         animator = UIDynamicAnimator(referenceView: view)
+
     }
     
 }
