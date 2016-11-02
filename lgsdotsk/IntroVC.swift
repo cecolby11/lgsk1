@@ -22,8 +22,10 @@ class IntroViewController: UIViewController {
     @IBOutlet weak var leftGreyReciever: UIImageView!
     @IBOutlet weak var rightGreyReceiver: UIImageView!
     
-   // var snap: UISnapBehavior!
-    //var animator: UIDynamicAnimator!
+    @IBOutlet var redPan: UIPanGestureRecognizer!
+    @IBOutlet var bluePan: UIPanGestureRecognizer!
+    var snap: UISnapBehavior!
+    var animator: UIDynamicAnimator!
 
     
     @IBAction func tappedToContinue(_ sender: UITapGestureRecognizer) {
@@ -67,6 +69,28 @@ class IntroViewController: UIViewController {
         let translation = sender.translation(in: self.view)
         sender.view?.center = CGPoint(x: sender.view!.center.x + translation.x, y: sender.view!.center.y + translation.y)
         sender.setTranslation(CGPoint.zero, in: self.view)
+        
+        
+        if (rightGreyReceiver.frame.intersects(blueTestDot.frame)) {
+            rightGreyReceiver.isHidden = true
+            
+            snap = UISnapBehavior(item: blueTestDot, snapTo: rightGreyReceiver.center)
+            snap.damping = 0.1
+            bluePan.isEnabled = false
+            animator.addBehavior(snap)
+            
+        } else {
+            rightGreyReceiver.isHidden = false
+        }
+        
+        if (leftGreyReciever.frame.intersects(redTestDot.frame)){
+            leftGreyReciever.isHidden = true
+            
+            snap = UISnapBehavior(item: redTestDot, snapTo: leftGreyReciever.center)
+            snap.damping = 0.1 //oscillation
+            redPan.isEnabled = false
+            animator.addBehavior(snap)
+        }
     }
     
 
@@ -84,7 +108,7 @@ class IntroViewController: UIViewController {
         tapRecognizer.numberOfTapsRequired = 2
         tapRecognizer.numberOfTouchesRequired = 2
         
-        //animator = UIDynamicAnimator(referenceView: view)
+        animator = UIDynamicAnimator(referenceView: view)
     }
     
 }

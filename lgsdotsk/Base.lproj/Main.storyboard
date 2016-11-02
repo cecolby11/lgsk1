@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iFR-2A-omJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iFR-2A-omJ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -263,11 +263,13 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="bluePan" destination="Fje-W4-tNd" id="P3X-e0-u8x"/>
                         <outlet property="blueTestDot" destination="vT1-GJ-DB0" id="Wn3-4r-Uxt"/>
                         <outlet property="containedViewBlue" destination="nF3-3X-hfH" id="Ndt-4q-qul"/>
                         <outlet property="containedViewRed" destination="JD7-8W-OHR" id="qUB-wq-oo0"/>
                         <outlet property="instructionText" destination="cFp-ZN-dnm" id="waT-0u-cO6"/>
                         <outlet property="leftGreyReciever" destination="Xgp-2l-wAa" id="qGK-Hz-fEw"/>
+                        <outlet property="redPan" destination="QzP-md-rpn" id="NFL-S0-BiA"/>
                         <outlet property="redTestDot" destination="qGJ-J3-KnB" id="y9P-Zk-erh"/>
                         <outlet property="rightGreyReceiver" destination="k0p-mI-Cle" id="wuE-jJ-ZI2"/>
                         <outlet property="tapRecognizer" destination="nal-VS-V5c" id="joR-9D-b5i"/>
