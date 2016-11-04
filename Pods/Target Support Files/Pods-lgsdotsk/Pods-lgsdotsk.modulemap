@@ -1,0 +1,6 @@
+framework module Pods_lgsdotsk {
+  umbrella header "Pods-lgsdotsk-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,534 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2D13957C195CAA330537AC5BD196F7C8 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38D269B98B57E56040F729F7EB45A57 /* UIImage+Gif.swift */; };
+		33EBE81DA931AE93B23A67FB327D19BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		3740A06B3A57B0DD5E5F60E23CA5FE38 /* SwiftGifOrigin-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4196D8AF155DA5471346375971BE66 /* SwiftGifOrigin-dummy.m */; };
+		62E957AC2C9AAC6A93ABB2BBCAC7BF08 /* SwiftGifOrigin-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A79597D7691CDD2E78B165697E47D33 /* SwiftGifOrigin-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9025AB4962C16DE49CB7FF7A5240C4CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		BDB84B5B446678EC2D41D0D059404C37 /* Pods-lgsdotsk-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 043D20F86E077BB86B7F4E23F96800DE /* Pods-lgsdotsk-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C1B737687791ECCC384D82FE74CC7BDA /* Pods-lgsdotsk-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5A0E726549B2D9527A1D1B6A7FFDB0 /* Pods-lgsdotsk-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4ABD54E0F297A257E6C5F4B37DCADEDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 30D2AD4492E7C96FC2E0B3BB255146A4;
+			remoteInfo = SwiftGifOrigin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		043D20F86E077BB86B7F4E23F96800DE /* Pods-lgsdotsk-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-lgsdotsk-umbrella.h"; sourceTree = "<group>"; };
+		0A79597D7691CDD2E78B165697E47D33 /* SwiftGifOrigin-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftGifOrigin-umbrella.h"; sourceTree = "<group>"; };
+		0C907120A7715AB90284F3F20C89C58C /* SwiftGifOrigin-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftGifOrigin-prefix.pch"; sourceTree = "<group>"; };
+		4408BA2F3659717E0C508742B14EDFBD /* Pods-lgsdotsk-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-lgsdotsk-acknowledgements.markdown"; sourceTree = "<group>"; };
+		44C0379DCDC9B6B74374D9CE296461AD /* Pods-lgsdotsk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-lgsdotsk.debug.xcconfig"; sourceTree = "<group>"; };
+		5F82892FA6028D0F84BB9EC798A2E7CE /* SwiftGifOrigin.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftGifOrigin.modulemap; sourceTree = "<group>"; };
+		63747A5BC8BB755006C3414F181E059F /* Pods-lgsdotsk.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-lgsdotsk.modulemap"; sourceTree = "<group>"; };
+		63E7343B4623BF9ACC81098BFF577B13 /* SwiftGifOrigin.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftGifOrigin.xcconfig; sourceTree = "<group>"; };
+		640D58086E66185275B520EADFB1E60A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EE87CE7D721CDE09FA3B198B3B9B4F3 /* Pods-lgsdotsk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-lgsdotsk.release.xcconfig"; sourceTree = "<group>"; };
+		772627B8C907F857E26398194979672E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A0EEC6E9A83861BB242D21D7DED8E2E8 /* Pods-lgsdotsk-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-lgsdotsk-resources.sh"; sourceTree = "<group>"; };
+		A38D269B98B57E56040F729F7EB45A57 /* UIImage+Gif.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Gif.swift"; path = "SwiftGifCommon/UIImage+Gif.swift"; sourceTree = "<group>"; };
+		A55AF5867DD10015C35726D69EDE1CDB /* Pods-lgsdotsk-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-lgsdotsk-frameworks.sh"; sourceTree = "<group>"; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		EA5A0E726549B2D9527A1D1B6A7FFDB0 /* Pods-lgsdotsk-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-lgsdotsk-dummy.m"; sourceTree = "<group>"; };
+		EB48691126D35010BB656B3729BD6240 /* Pods_lgsdotsk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_lgsdotsk.framework; path = "Pods-lgsdotsk.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED5F88787AEC80BBABE2F571C4B06651 /* Pods-lgsdotsk-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-lgsdotsk-acknowledgements.plist"; sourceTree = "<group>"; };
+		F6BB4E47AE1BF55CBDB123F69B203DBC /* SwiftGifOrigin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftGifOrigin.framework; path = SwiftGifOrigin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA4196D8AF155DA5471346375971BE66 /* SwiftGifOrigin-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftGifOrigin-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		342928B723890BF17A5AB852BF09A211 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33EBE81DA931AE93B23A67FB327D19BE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8FF622DAF003610AEAA71D2B0E48B60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9025AB4962C16DE49CB7FF7A5240C4CC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1FD8CE5DEB17C1C76F236ADF231BD040 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				772627B8C907F857E26398194979672E /* Info.plist */,
+				5F82892FA6028D0F84BB9EC798A2E7CE /* SwiftGifOrigin.modulemap */,
+				63E7343B4623BF9ACC81098BFF577B13 /* SwiftGifOrigin.xcconfig */,
+				FA4196D8AF155DA5471346375971BE66 /* SwiftGifOrigin-dummy.m */,
+				0C907120A7715AB90284F3F20C89C58C /* SwiftGifOrigin-prefix.pch */,
+				0A79597D7691CDD2E78B165697E47D33 /* SwiftGifOrigin-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftGifOrigin";
+			sourceTree = "<group>";
+		};
+		26699727C250983FF494AD0DE3CFBC88 /* SwiftGifOrigin */ = {
+			isa = PBXGroup;
+			children = (
+				A38D269B98B57E56040F729F7EB45A57 /* UIImage+Gif.swift */,
+				1FD8CE5DEB17C1C76F236ADF231BD040 /* Support Files */,
+			);
+			name = SwiftGifOrigin;
+			path = SwiftGifOrigin;
+			sourceTree = "<group>";
+		};
+		3424B5DFC5C9C7B2A9CA7319299AF9C9 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9EBE289474945E7A0871166240B072BB /* Pods-lgsdotsk */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		41C0EC5EEC431D8F6276C5B80E2803F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB48691126D35010BB656B3729BD6240 /* Pods_lgsdotsk.framework */,
+				F6BB4E47AE1BF55CBDB123F69B203DBC /* SwiftGifOrigin.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				CBDE1A1234E4B1D43F65A57BED38E87C /* Pods */,
+				41C0EC5EEC431D8F6276C5B80E2803F2 /* Products */,
+				3424B5DFC5C9C7B2A9CA7319299AF9C9 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9EBE289474945E7A0871166240B072BB /* Pods-lgsdotsk */ = {
+			isa = PBXGroup;
+			children = (
+				640D58086E66185275B520EADFB1E60A /* Info.plist */,
+				63747A5BC8BB755006C3414F181E059F /* Pods-lgsdotsk.modulemap */,
+				4408BA2F3659717E0C508742B14EDFBD /* Pods-lgsdotsk-acknowledgements.markdown */,
+				ED5F88787AEC80BBABE2F571C4B06651 /* Pods-lgsdotsk-acknowledgements.plist */,
+				EA5A0E726549B2D9527A1D1B6A7FFDB0 /* Pods-lgsdotsk-dummy.m */,
+				A55AF5867DD10015C35726D69EDE1CDB /* Pods-lgsdotsk-frameworks.sh */,
+				A0EEC6E9A83861BB242D21D7DED8E2E8 /* Pods-lgsdotsk-resources.sh */,
+				043D20F86E077BB86B7F4E23F96800DE /* Pods-lgsdotsk-umbrella.h */,
+				44C0379DCDC9B6B74374D9CE296461AD /* Pods-lgsdotsk.debug.xcconfig */,
+				6EE87CE7D721CDE09FA3B198B3B9B4F3 /* Pods-lgsdotsk.release.xcconfig */,
+			);
+			name = "Pods-lgsdotsk";
+			path = "Target Support Files/Pods-lgsdotsk";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CBDE1A1234E4B1D43F65A57BED38E87C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				26699727C250983FF494AD0DE3CFBC88 /* SwiftGifOrigin */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8F311D093B6A8CE666B5EE81A104C988 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDB84B5B446678EC2D41D0D059404C37 /* Pods-lgsdotsk-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C18C4CFA16F5DFD43DD8462140C47BD3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62E957AC2C9AAC6A93ABB2BBCAC7BF08 /* SwiftGifOrigin-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		30D2AD4492E7C96FC2E0B3BB255146A4 /* SwiftGifOrigin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C044F7C986257685040479C01B780D9D /* Build configuration list for PBXNativeTarget "SwiftGifOrigin" */;
+			buildPhases = (
+				D5C8B1AE6BEA212D0DE5797870DDC204 /* Sources */,
+				342928B723890BF17A5AB852BF09A211 /* Frameworks */,
+				C18C4CFA16F5DFD43DD8462140C47BD3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftGifOrigin;
+			productName = SwiftGifOrigin;
+			productReference = F6BB4E47AE1BF55CBDB123F69B203DBC /* SwiftGifOrigin.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6C3A960F31A139154D827EF938750421 /* Pods-lgsdotsk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A90E4E3A26DD5398F97F31454068FFF6 /* Build configuration list for PBXNativeTarget "Pods-lgsdotsk" */;
+			buildPhases = (
+				73D50ECCAD672001CB9314BD63BC5567 /* Sources */,
+				B8FF622DAF003610AEAA71D2B0E48B60 /* Frameworks */,
+				8F311D093B6A8CE666B5EE81A104C988 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0BAA465540F5B2FB7D38694AC1A2F708 /* PBXTargetDependency */,
+			);
+			name = "Pods-lgsdotsk";
+			productName = "Pods-lgsdotsk";
+			productReference = EB48691126D35010BB656B3729BD6240 /* Pods_lgsdotsk.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 41C0EC5EEC431D8F6276C5B80E2803F2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6C3A960F31A139154D827EF938750421 /* Pods-lgsdotsk */,
+				30D2AD4492E7C96FC2E0B3BB255146A4 /* SwiftGifOrigin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		73D50ECCAD672001CB9314BD63BC5567 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1B737687791ECCC384D82FE74CC7BDA /* Pods-lgsdotsk-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5C8B1AE6BEA212D0DE5797870DDC204 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3740A06B3A57B0DD5E5F60E23CA5FE38 /* SwiftGifOrigin-dummy.m in Sources */,
+				2D13957C195CAA330537AC5BD196F7C8 /* UIImage+Gif.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0BAA465540F5B2FB7D38694AC1A2F708 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftGifOrigin;
+			target = 30D2AD4492E7C96FC2E0B3BB255146A4 /* SwiftGifOrigin */;
+			targetProxy = 4ABD54E0F297A257E6C5F4B37DCADEDC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		13E96A645A77DAD1FD4F541F18F5DDBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		373A4877EC87BE3C34949BF4413FAD69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44C0379DCDC9B6B74374D9CE296461AD /* Pods-lgsdotsk.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-lgsdotsk/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-lgsdotsk/Pods-lgsdotsk.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_lgsdotsk;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3CEE6132403FD4C22C4326F5921067B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63E7343B4623BF9ACC81098BFF577B13 /* SwiftGifOrigin.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftGifOrigin/SwiftGifOrigin-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftGifOrigin/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftGifOrigin/SwiftGifOrigin.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftGifOrigin;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		862AF3139CD84E18D34FAF2F43CD0DA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C1D8BE2A8176585871D4BC9D4E1F16A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63E7343B4623BF9ACC81098BFF577B13 /* SwiftGifOrigin.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftGifOrigin/SwiftGifOrigin-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftGifOrigin/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftGifOrigin/SwiftGifOrigin.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftGifOrigin;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C9CA81FF8C24E309565FC60092AA3A22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EE87CE7D721CDE09FA3B198B3B9B4F3 /* Pods-lgsdotsk.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-lgsdotsk/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-lgsdotsk/Pods-lgsdotsk.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_lgsdotsk;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13E96A645A77DAD1FD4F541F18F5DDBF /* Debug */,
+				862AF3139CD84E18D34FAF2F43CD0DA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A90E4E3A26DD5398F97F31454068FFF6 /* Build configuration list for PBXNativeTarget "Pods-lgsdotsk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				373A4877EC87BE3C34949BF4413FAD69 /* Debug */,
+				C9CA81FF8C24E309565FC60092AA3A22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C044F7C986257685040479C01B780D9D /* Build configuration list for PBXNativeTarget "SwiftGifOrigin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1D8BE2A8176585871D4BC9D4E1F16A0 /* Debug */,
+				3CEE6132403FD4C22C4326F5921067B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
