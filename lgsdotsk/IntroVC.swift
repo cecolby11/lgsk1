@@ -27,8 +27,6 @@ class IntroViewController: UIViewController {
     var snap: UISnapBehavior!
     var animator: UIDynamicAnimator!
     var collision: UICollisionBehavior!
-    
-    var correct: Int = 0
 
     
     @IBAction func tappedToContinue(_ sender: UITapGestureRecognizer) {
@@ -65,7 +63,7 @@ class IntroViewController: UIViewController {
         blueTestDot.isHidden = false
         leftGreyReciever.isHidden = false
         rightGreyReceiver.isHidden = false
-
+        
         
     }
 
