@@ -23,6 +23,7 @@
 		142EECB71DB90E3000E4AB0D /* Slide06.png in Resources */ = {isa = PBXBuildFile; fileRef = 142EECB01DB90E3000E4AB0D /* Slide06.png */; };
 		142EECB81DB90E3000E4AB0D /* Slide07.png in Resources */ = {isa = PBXBuildFile; fileRef = 142EECB11DB90E3000E4AB0D /* Slide07.png */; };
 		142EECB91DB90E3000E4AB0D /* Slide08.png in Resources */ = {isa = PBXBuildFile; fileRef = 142EECB21DB90E3000E4AB0D /* Slide08.png */; };
+		149345C91DD504F60018A792 /* Trial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149345C81DD504F60018A792 /* Trial.swift */; };
 		1494EE6A1DCCF781005F3757 /* happypups.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1494EE691DCCF781005F3757 /* happypups.gif */; };
 		990D06371DC8FB840091B878 /* boyBig.png in Resources */ = {isa = PBXBuildFile; fileRef = 990D06351DC8FB840091B878 /* boyBig.png */; };
 		990D06381DC8FB840091B878 /* girlBig.png in Resources */ = {isa = PBXBuildFile; fileRef = 990D06361DC8FB840091B878 /* girlBig.png */; };
@@ -52,6 +53,7 @@
 		142EECB01DB90E3000E4AB0D /* Slide06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Slide06.png; path = dots/Slide06.png; sourceTree = "<group>"; };
 		142EECB11DB90E3000E4AB0D /* Slide07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Slide07.png; path = dots/Slide07.png; sourceTree = "<group>"; };
 		142EECB21DB90E3000E4AB0D /* Slide08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Slide08.png; path = dots/Slide08.png; sourceTree = "<group>"; };
+		149345C81DD504F60018A792 /* Trial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trial.swift; sourceTree = "<group>"; };
 		1494EE691DCCF781005F3757 /* happypups.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = happypups.gif; sourceTree = "<group>"; };
 		280EBD79E7BA996F1BBDB9AF /* Pods-lgsdotsk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lgsdotsk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-lgsdotsk/Pods-lgsdotsk.debug.xcconfig"; sourceTree = "<group>"; };
 		6863272CBFE8469ADC338AB0 /* Pods-lgsdotsk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lgsdotsk.release.xcconfig"; path = "Pods/Target Support Files/Pods-lgsdotsk/Pods-lgsdotsk.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		142EECAB1DB90BCA00E4AB0D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				149345C81DD504F60018A792 /* Trial.swift */,
 				142EECA91DB90BA600E4AB0D /* Stimuli.swift */,
 			);
 			name = Models;
@@ -308,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				149345C91DD504F60018A792 /* Trial.swift in Sources */,
 				990D063D1DC8FDD80091B878 /* IntroVC.swift in Sources */,
 				142EEC961DB9021700E4AB0D /* DotVC.swift in Sources */,
 				990D063F1DC8FE280091B878 /* SetupVC.swift in Sources */,
