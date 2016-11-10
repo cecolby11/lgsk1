@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0180485DB4FE83A4425DB43A /* Pods_lgsdotsk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C9F4C7C2360BB39C8CCF13C /* Pods_lgsdotsk.framework */; };
 		140AC5EE1DCD08BB000FD978 /* EndExperimentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140AC5ED1DCD08BB000FD978 /* EndExperimentVC.swift */; };
 		140AC5F01DCD1043000FD978 /* sadpup.gif in Resources */ = {isa = PBXBuildFile; fileRef = 140AC5EF1DCD1043000FD978 /* sadpup.gif */; };
 		142EEC941DB9021700E4AB0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142EEC931DB9021700E4AB0D /* AppDelegate.swift */; };
@@ -31,7 +32,6 @@
 		9927B4771DC9162100E8622B /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 9927B4761DC9162100E8622B /* red.png */; };
 		994856851DC941C10050B155 /* grey.png in Resources */ = {isa = PBXBuildFile; fileRef = 994856841DC941C10050B155 /* grey.png */; };
 		9998AB8A1DCBD2F5008BCD0D /* paw.png in Resources */ = {isa = PBXBuildFile; fileRef = 9998AB891DCBD2F5008BCD0D /* paw.png */; };
-		CE5F9585875CFF8C0A032A31 /* Pods_lgsdotsk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C9F4C7C2360BB39C8CCF13C /* Pods_lgsdotsk.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE5F9585875CFF8C0A032A31 /* Pods_lgsdotsk.framework in Frameworks */,
+				0180485DB4FE83A4425DB43A /* Pods_lgsdotsk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

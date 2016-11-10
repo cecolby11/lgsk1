@@ -1,12 +1,20 @@
 PODS:
+  - Realm (2.0.3):
+    - Realm/Headers (= 2.0.3)
+  - Realm/Headers (2.0.3)
+  - RealmSwift (2.0.3):
+    - Realm (= 2.0.3)
   - SwiftGifOrigin (1.6.1)
 
 DEPENDENCIES:
+  - RealmSwift
   - SwiftGifOrigin (~> 1.6.1)
 
 SPEC CHECKSUMS:
+  Realm: 5f008bfe3c8c47142eddfc30b8c1584cde22db24
+  RealmSwift: 5afb451f65b682242f272dbb52d5c6f6e343c980
   SwiftGifOrigin: d6679d3ebe9df2e049a84bc52582635107b581f6
 
-PODFILE CHECKSUM: 97fce81256d8e8d98781eb81593ad1e7f58ca6ac
+PODFILE CHECKSUM: 0609a3dd943bf431f043f20d2d71e48ed680a0ac
 
 COCOAPODS: 1.1.1
