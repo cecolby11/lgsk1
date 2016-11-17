@@ -18,7 +18,6 @@ class Trial: Object {
     dynamic var created = NSDate()
     dynamic var trialNumber = 1
     
-    dynamic var slide = ""
     dynamic var response = ""
     
     dynamic var strongWin = ""
