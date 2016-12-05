@@ -28,6 +28,10 @@ class IntroViewController: UIViewController {
     var animator: UIDynamicAnimator!
     var collision: UICollisionBehavior!
 
+    var trial = Trial()
+    
+    
+    //MARK: Actions 
     
     @IBAction func tappedToContinue(_ sender: UITapGestureRecognizer) {
         tapIndex+=1
@@ -63,8 +67,6 @@ class IntroViewController: UIViewController {
         blueTestDot.isHidden = false
         leftGreyReciever.isHidden = false
         rightGreyReceiver.isHidden = false
-        
-        
     }
 
    
@@ -100,9 +102,8 @@ class IntroViewController: UIViewController {
     }
     
 
+    //MARK: View Lifecycle
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -119,6 +120,17 @@ class IntroViewController: UIViewController {
         
         animator = UIDynamicAnimator(referenceView: view)
 
+    }
+    
+    
+    
+    //MARK: Navigation
+    
+    override func prepare(for segue:UIStoryboardSegue, sender:Any?) {
+        if let destination = segue.destination as? DotViewController {
+            destination.baseTrial = self.trial
+        }
+        
     }
     
 }

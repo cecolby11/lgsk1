@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import RealmSwift
 
 class DotViewController: UIViewController {
 
     @IBOutlet weak var dotDisplay: UIImageView!
     var i: Int = 0
     let stim = Stimuli()
+    var baseTrial = Trial()
+    var order = [UIImage]()
+    var response = ""
     
     @IBOutlet weak var character1: UIButton!
     @IBOutlet weak var character2: UIButton!
@@ -23,7 +27,31 @@ class DotViewController: UIViewController {
     @IBOutlet weak var leftPawButton: UIButton!
     @IBOutlet weak var rightPawButton: UIButton!
     
-    //MARK: Experiment Actions
+    //MARK: Experiment Setup
+    
+    func selectStimuli() {
+        //shortened test version
+        if baseTrial.subjectNumber == "s999" {
+            order = stim.testorder
+            baseTrial.order = 99
+        } else {
+        
+            let indexLast = baseTrial.subjectNumber.index(before:baseTrial.subjectNumber.endIndex)
+            let lastCh = baseTrial.subjectNumber[indexLast]//last character of subject number
+            let evens : [Character] = ["0", "2", "4", "6", "8"]
+        
+            //Order det. by ODD/EVEN subj#
+            if evens.contains(lastCh){
+                order = stim.order1
+                baseTrial.order = 1
+            } else { //odds and default
+                order = stim.order2
+                baseTrial.order = 2
+            }
+        }
+    }
+    
+    //Experiment Actions
     
     func wobbleButton(sender:UIButton) {
         //shrink
@@ -64,13 +92,14 @@ class DotViewController: UIViewController {
             //show button which calls progress view
             switch sender{
                 case character1:
-                    print("left guy")
+                    response="A"
                     revealPawButton(button: leftPawButton)
+                
                 case character2:
-                    print("right guy")
+                    response="B"
                     revealPawButton(button: rightPawButton)
                 default:
-                    print("nothing")
+                    response="NA"
             }
         }
     }
@@ -90,6 +119,7 @@ class DotViewController: UIViewController {
     }
     
     @IBAction func showProgress() {
+        writeTrialToRealm()
         view.viewWithTag(i+1)?.alpha = 1
         UIView.animate(withDuration: 0.5, animations: {self.progressView.alpha = 1})
     }
@@ -112,12 +142,38 @@ class DotViewController: UIViewController {
     }
 
     
+    //MARK: Realm
+    
+    func writeTrialToRealm() {
+        
+        let realm = try! Realm()
+        
+        try! realm.write {
+            let newTrial = Trial()
+            newTrial.subjectNumber = baseTrial.subjectNumber
+            newTrial.condition = baseTrial.condition
+            newTrial.order = baseTrial.order
+            
+            newTrial.trialNumber = i+1
+            newTrial.response = response
+
+            realm.add(newTrial)
+        }
+    }
+    
+    func preProcessData() {
+        //TODO
+    }
+    
+
+    
     //MARK: View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         redirectLogToDocuments() //NSlog in aux file from this point forward
         
+        selectStimuli()
         dotDisplay.image = stim.order1[i]
 
         progressView.alpha = 0
