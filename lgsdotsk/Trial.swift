@@ -17,6 +17,8 @@ class Trial: Object {
     dynamic var order = 1 //odd/default (1), even(2)
     dynamic var created = NSDate()
     dynamic var trialNumber = 1
+    dynamic var imageType = ""
+    dynamic var imageName = ""
     
     dynamic var response = ""
     

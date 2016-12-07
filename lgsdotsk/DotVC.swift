@@ -73,7 +73,7 @@ class DotViewController: UIViewController {
         i+=1
         print("i = \(i)") //to console
         NSLog("\n\n\ni=\(i), trial number:\(i+1)") //to aux file
-        dotDisplay.image=stim.order1[i]
+        dotDisplay.image=order[i]
         character1.isEnabled = true
         character2.isEnabled = true
     }
@@ -85,7 +85,7 @@ class DotViewController: UIViewController {
     
     @IBAction func chooseCharacter(_ sender:UIButton) {
         wobbleButton(sender: sender)
-        if i==stim.order1.count-1 {
+        if i==order.count-1 {
             endExperiment()
         } else {
             //next image called when progressView is dismissed
@@ -145,7 +145,7 @@ class DotViewController: UIViewController {
     //MARK: Realm
     
     func writeTrialToRealm() {
-        
+
         let realm = try! Realm()
         
         try! realm.write {
@@ -156,6 +156,7 @@ class DotViewController: UIViewController {
             
             newTrial.trialNumber = i+1
             newTrial.response = response
+            //newTrial.imageName = url.deletingPathExtension().lastPathComponent
 
             realm.add(newTrial)
         }
@@ -174,7 +175,7 @@ class DotViewController: UIViewController {
         redirectLogToDocuments() //NSlog in aux file from this point forward
         
         selectStimuli()
-        dotDisplay.image = stim.order1[i]
+        dotDisplay.image = order[i]
 
         progressView.alpha = 0
         leftPawButton.isHidden = true

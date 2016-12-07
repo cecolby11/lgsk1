@@ -42,9 +42,7 @@ class Stimuli {
         UIImage(named: "Slide07.png")!,
         UIImage(named: "Slide04.png")!
     ]
-  }
-
+}
 
 //need all conditions and orders!
-
 
