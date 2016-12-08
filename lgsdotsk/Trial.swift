@@ -22,15 +22,13 @@ class Trial: Object {
     
     dynamic var response = ""
     
-    dynamic var strongWin = ""
-    dynamic var weakWin = ""
-    dynamic var averageWin = ""
-    dynamic var X1biggestWin = ""
-    dynamic var X2biggestWin = ""
+    dynamic var strongpx = ""
+    dynamic var weakpx = ""
+    dynamic var averagepx = ""
+    dynamic var X1biggestpx = ""
     
     dynamic var strongResp = 0
     dynamic var weakResp = 0
     dynamic var averageResp = 0
     dynamic var X1biggestResp = 0
-    dynamic var X2biggestResp = 0
 }

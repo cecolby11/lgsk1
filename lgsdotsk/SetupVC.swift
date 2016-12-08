@@ -91,11 +91,14 @@ class SetupViewController: UIViewController, UIAlertViewDelegate{
         let filePath = url.appendingPathComponent("lgsk_\(trial.subjectNumber).realm")?.path
         let fileManager = FileManager.default
         if fileManager.fileExists(atPath: filePath!) {
+            NSLog("validation error: \(trial.subjectNumber) already exists")
             errController = UIAlertController(title: "Validation Error", message: "\(trial.subjectNumber) already exists", preferredStyle: .alert)
             let errAction = UIAlertAction(title: "Enter Unique Subject Number", style:UIAlertActionStyle.default) { alert in
+                NSLog("entering new subject number")
                 self.present(self.alertController, animated: true, completion: nil)
             }
             let overrideAction = UIAlertAction(title: "Use \(trial.subjectNumber)", style: UIAlertActionStyle.destructive) { alert in
+                NSLog("proceeding with \(self.trial.subjectNumber) anyways")
                 self.performSegue(withIdentifier: "toIntro", sender: self)
             }
             errController.addAction(errAction)

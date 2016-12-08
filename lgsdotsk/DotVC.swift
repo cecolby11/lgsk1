@@ -89,7 +89,7 @@ class DotViewController: UIViewController {
             //show button which calls progress view
             switch sender{
                 case character1:
-                    response="A"
+                    response="R"
                     revealPawButton(button: leftPawButton)
                 
                 case character2:
@@ -147,7 +147,8 @@ class DotViewController: UIViewController {
         let url = NSURL.fileURL(withPath: path as! String)
         let fileName = url.deletingPathExtension().lastPathComponent
         print(fileName)
-        NSLog("trial number:\(i+1), \(fileName)") //to aux file
+        NSLog("trial number \(i+1), \(fileName)") //to aux file
+        NSLog("subject response : \(response)")
 
         let realm = try! Realm()
         
@@ -161,18 +162,73 @@ class DotViewController: UIViewController {
             newTrial.trialNumber = i+1
             newTrial.response = response
             newTrial.imageName = fileName
-
+            
+            preprocessData(currentTrial: newTrial)
+            
             realm.add(newTrial)
         }
     }
     
-
-    
-    func preProcessData() {
-        //TODO
+    func preprocessData(currentTrial: Trial) {
+        //imageType
+        switch currentTrial.imageName {
+        case "Slide02", "Slide03", "Slide04","Slide05":
+            currentTrial.imageType = "AllT"
+        case "Slide22", "Slide23", "Slide24","Slide25":
+            currentTrial.imageType = "AllF"
+        case "Slide17", "Slide18", "Slide19","Slide20":
+            currentTrial.imageType = "ATWFlg"
+        case "Slide12", "Slide13", "Slide14","Slide15":
+            currentTrial.imageType = "ATWFsm"
+        case "Slide07", "Slide08", "Slide09","Slide10":
+            currentTrial.imageType = "ATWT"
+        default: break
+        }
+        //hypotheses px
+        switch currentTrial.imageType {
+            case "AllT":
+                currentTrial.strongpx = "R"
+                currentTrial.weakpx = "R"
+                currentTrial.averagepx = "R"
+                currentTrial.X1biggestpx = "R"
+            case "AllF":
+                currentTrial.strongpx = "B"
+                currentTrial.weakpx = "B"
+                currentTrial.averagepx = "B"
+                currentTrial.X1biggestpx = "B"
+            case "ATWFlg":
+                currentTrial.strongpx = "B"
+                currentTrial.weakpx = "B"
+                currentTrial.averagepx = "R"
+                currentTrial.X1biggestpx = "B"
+            case "ATWFsm":
+                currentTrial.strongpx = "B"
+                currentTrial.weakpx = "B"
+                currentTrial.averagepx = "R"
+                currentTrial.X1biggestpx = "R"
+            case "ATWT":
+                currentTrial.strongpx = "B"
+                currentTrial.weakpx = "R"
+                currentTrial.averagepx = "R"
+                currentTrial.X1biggestpx = "R"
+            default: break
+        }
+            //response consistent with hypotheses?
+        switch response {
+            case currentTrial.strongpx:
+                currentTrial.strongResp = 1
+            case currentTrial.weakpx:
+                currentTrial.weakResp = 1
+            case currentTrial.averagepx:
+                currentTrial.averageResp = 1
+            case currentTrial.X1biggestpx:
+                currentTrial.X1biggestResp = 1
+            default: break
+        }
+        
+        
     }
     
-
     
     //MARK: View Lifecycle
     
