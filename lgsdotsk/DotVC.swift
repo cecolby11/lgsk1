@@ -81,7 +81,7 @@ class DotViewController: UIViewController {
         
     
     func endExperiment() {
-        print("Experiment terminated successfully")
+        NSLog("Experiment terminated successfully")
         self.performSegue(withIdentifier: "endExperiment", sender: self)
     }
     
@@ -147,7 +147,7 @@ class DotViewController: UIViewController {
         let path = stim.order[i]
         let url = NSURL.fileURL(withPath: path as! String)
         let fileName = url.deletingPathExtension().lastPathComponent
-        print(fileName)
+
         NSLog("trial number \(i+1), \(fileName)") //to aux file
         NSLog("subject response : \(response)")
 

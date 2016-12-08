@@ -127,18 +127,27 @@
                                     <imageView userInteractionEnabled="NO" alpha="0.10000000000000001" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paw.png" translatesAutoresizingMaskIntoConstraints="NO" id="7n0-ls-6nH">
                                         <rect key="frame" x="480" y="745" width="64" height="64"/>
                                     </imageView>
+                                    <imageView userInteractionEnabled="NO" alpha="0.10000000149011612" tag="9" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paw.png" translatesAutoresizingMaskIntoConstraints="NO" id="B9Y-fG-OPg">
+                                        <rect key="frame" x="475" y="275" width="64" height="64"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" alpha="0.10000000149011612" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paw.png" translatesAutoresizingMaskIntoConstraints="NO" id="xj9-Ap-Qky">
+                                        <rect key="frame" x="485" y="181" width="64" height="64"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <constraints>
+                                    <constraint firstItem="Xkm-CN-FAW" firstAttribute="top" secondItem="B9Y-fG-OPg" secondAttribute="bottom" constant="30" id="3g8-2S-OVU" userLabel="paw9 - Y"/>
                                     <constraint firstItem="Xkm-CN-FAW" firstAttribute="centerX" secondItem="VwG-og-LeI" secondAttribute="centerX" constant="-15" id="43K-vU-32L" userLabel="paw8 - X"/>
                                     <constraint firstItem="1yt-Zx-dfU" firstAttribute="centerX" secondItem="VwG-og-LeI" secondAttribute="centerX" constant="15" id="5g7-SX-glB" userLabel="paw7 - X"/>
                                     <constraint firstItem="vzT-we-goK" firstAttribute="centerX" secondItem="VwG-og-LeI" secondAttribute="centerX" id="5iq-nX-HOX" userLabel="paw1 - X"/>
                                     <constraint firstItem="fPT-Kh-rT1" firstAttribute="centerX" secondItem="VwG-og-LeI" secondAttribute="centerX" constant="-15" id="Akb-a0-zVM" userLabel="paw6 - X"/>
                                     <constraint firstItem="fPT-Kh-rT1" firstAttribute="top" secondItem="1yt-Zx-dfU" secondAttribute="bottom" constant="30" id="CPb-YZ-gxB" userLabel="paw7 - Y"/>
+                                    <constraint firstItem="B9Y-fG-OPg" firstAttribute="top" secondItem="xj9-Ap-Qky" secondAttribute="bottom" constant="30" id="Lj9-7W-vAF" userLabel="paw10 - Y"/>
                                     <constraint firstItem="63J-06-P60" firstAttribute="centerY" secondItem="VwG-og-LeI" secondAttribute="centerY" id="Opo-Sy-sfS" userLabel="middlepaw - centerY"/>
                                     <constraint firstItem="7n0-ls-6nH" firstAttribute="top" secondItem="63J-06-P60" secondAttribute="bottom" constant="30" id="SJw-fj-abx" userLabel="paw4 - Y"/>
                                     <constraint firstItem="1yt-Zx-dfU" firstAttribute="top" secondItem="Xkm-CN-FAW" secondAttribute="bottom" constant="30" id="Vxr-68-0Vr" userLabel="paw8 - Y"/>
+                                    <constraint firstItem="xj9-Ap-Qky" firstAttribute="centerX" secondItem="VwG-og-LeI" secondAttribute="centerX" constant="5" id="WKU-b2-eV0" userLabel="paw10 - X"/>
                                     <constraint firstItem="7n0-ls-6nH" firstAttribute="centerX" secondItem="VwG-og-LeI" secondAttribute="centerX" id="YqL-tm-oqp" userLabel="paw4 - X"/>
                                     <constraint firstItem="pk4-wL-oFm" firstAttribute="centerX" secondItem="VwG-og-LeI" secondAttribute="centerX" constant="15" id="cp0-8h-oK4" userLabel="paw3 - X"/>
                                     <constraint firstItem="vzT-we-goK" firstAttribute="top" secondItem="kjG-hb-8Fs" secondAttribute="bottom" constant="30" id="hUr-25-r0U" userLabel="paw1 - Y"/>
@@ -147,6 +156,7 @@
                                     <constraint firstItem="kjG-hb-8Fs" firstAttribute="top" secondItem="pk4-wL-oFm" secondAttribute="bottom" constant="30" id="vnZ-vT-oSY" userLabel="paw2 - Y"/>
                                     <constraint firstItem="63J-06-P60" firstAttribute="top" secondItem="fPT-Kh-rT1" secondAttribute="bottom" constant="30" id="wIC-W6-exM" userLabel="paw6 - Y"/>
                                     <constraint firstItem="63J-06-P60" firstAttribute="centerX" secondItem="VwG-og-LeI" secondAttribute="centerX" constant="15" id="ynJ-qM-H6x" userLabel="middlepaw - X"/>
+                                    <constraint firstItem="B9Y-fG-OPg" firstAttribute="centerX" secondItem="VwG-og-LeI" secondAttribute="centerX" constant="-5" id="zlD-dv-Nlv" userLabel="paw9 - X"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="OWY-Hq-3Z6" appends="YES" id="bWb-Lw-IQg"/>
