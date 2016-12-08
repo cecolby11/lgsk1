@@ -57,7 +57,9 @@ class SetupViewController: UIViewController, UIAlertViewDelegate{
             self.trial.condition = "\((self.alertController.textFields![1] as UITextField).text!)"
             
             if self.validateFields() { //require that all fields are filled before segue is called
-                self.performSegue(withIdentifier: "toIntro", sender: self) //manually segue when save button pressed
+                if self.validateSubjectNumber() {
+                    self.performSegue(withIdentifier: "toIntro", sender: self) //when save button pressed
+                }
             }
         })
         
@@ -83,17 +85,25 @@ class SetupViewController: UIViewController, UIAlertViewDelegate{
         }
     }
     
-    func checkSubjectNumber() -> Bool {
+    func validateSubjectNumber() -> Bool {
         let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
         let url = NSURL(fileURLWithPath: path)
         let filePath = url.appendingPathComponent("lgsk_\(trial.subjectNumber).realm")?.path
         let fileManager = FileManager.default
         if fileManager.fileExists(atPath: filePath!) {
-            print("FILE AVAILABLE")
-            return true
-        } else {
-            print("FILE NOT AVAILABLE")
+            errController = UIAlertController(title: "Validation Error", message: "\(trial.subjectNumber) already exists", preferredStyle: .alert)
+            let errAction = UIAlertAction(title: "Enter Unique Subject Number", style:UIAlertActionStyle.default) { alert in
+                self.present(self.alertController, animated: true, completion: nil)
+            }
+            let overrideAction = UIAlertAction(title: "Use \(trial.subjectNumber)", style: UIAlertActionStyle.destructive) { alert in
+                self.performSegue(withIdentifier: "toIntro", sender: self)
+            }
+            errController.addAction(errAction)
+            errController.addAction(overrideAction)
+            present(errController, animated: true, completion: nil)
             return false
+        } else {
+        return true
         }
     }
     
