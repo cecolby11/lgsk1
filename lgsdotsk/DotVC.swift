@@ -69,11 +69,16 @@ class DotViewController: UIViewController {
     }
     
     func nextImage() {
-        i+=1
-        dotDisplay.image = UIImage(contentsOfFile: stim.order[i] as! String)
-        character1.isEnabled = true
-        character2.isEnabled = true
+        if i==stim.order.count-1 {
+            endExperiment()
+        } else {
+            i+=1
+            dotDisplay.image = UIImage(contentsOfFile: stim.order[i] as! String)
+            character1.isEnabled = true
+            character2.isEnabled = true
+        }
     }
+        
     
     func endExperiment() {
         print("Experiment terminated successfully")
@@ -82,9 +87,6 @@ class DotViewController: UIViewController {
     
     @IBAction func chooseCharacter(_ sender:UIButton) {
         wobbleButton(sender: sender)
-        if i==stim.order.count-1 {
-            endExperiment()
-        } else {
             //next image called when progressView is dismissed
             //show button which calls progress view
             switch sender{
@@ -98,11 +100,10 @@ class DotViewController: UIViewController {
                 default:
                     response="NA"
             }
-        }
     }
     
     
-    //MARK: Progress Actions
+    //MARK: Game Actions
     
     func revealPawButton(button: UIButton) {
         button.isEnabled = true
