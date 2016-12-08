@@ -15,7 +15,6 @@ class DotViewController: UIViewController {
     var i: Int = 0
     let stim = Stimuli()
     var baseTrial = Trial()
-    var order = [UIImage]()
     var response = ""
     
     @IBOutlet weak var character1: UIButton!
@@ -32,7 +31,7 @@ class DotViewController: UIViewController {
     func selectStimuli() {
         //shortened test version
         if baseTrial.subjectNumber == "s999" {
-            order = stim.testorder
+            stim.order = stim.orderT
             baseTrial.order = 99
         } else {
         
@@ -42,10 +41,10 @@ class DotViewController: UIViewController {
         
             //Order det. by ODD/EVEN subj#
             if evens.contains(lastCh){
-                order = stim.order1
+                stim.order = stim.order1
                 baseTrial.order = 1
             } else { //odds and default
-                order = stim.order2
+                stim.order = stim.order2
                 baseTrial.order = 2
             }
         }
@@ -71,9 +70,7 @@ class DotViewController: UIViewController {
     
     func nextImage() {
         i+=1
-        print("i = \(i)") //to console
-        NSLog("\n\n\ni=\(i), trial number:\(i+1)") //to aux file
-        dotDisplay.image=order[i]
+        dotDisplay.image = UIImage(contentsOfFile: stim.order[i] as! String)
         character1.isEnabled = true
         character2.isEnabled = true
     }
@@ -85,7 +82,7 @@ class DotViewController: UIViewController {
     
     @IBAction func chooseCharacter(_ sender:UIButton) {
         wobbleButton(sender: sender)
-        if i==order.count-1 {
+        if i==stim.order.count-1 {
             endExperiment()
         } else {
             //next image called when progressView is dismissed
@@ -145,22 +142,31 @@ class DotViewController: UIViewController {
     //MARK: Realm
     
     func writeTrialToRealm() {
+        
+        let path = stim.order[i]
+        let url = NSURL.fileURL(withPath: path as! String)
+        let fileName = url.deletingPathExtension().lastPathComponent
+        print(fileName)
+        NSLog("trial number:\(i+1), \(fileName)") //to aux file
 
         let realm = try! Realm()
         
         try! realm.write {
             let newTrial = Trial()
+            //common
             newTrial.subjectNumber = baseTrial.subjectNumber
             newTrial.condition = baseTrial.condition
             newTrial.order = baseTrial.order
-            
+            //trial-specific
             newTrial.trialNumber = i+1
             newTrial.response = response
-            //newTrial.imageName = url.deletingPathExtension().lastPathComponent
+            newTrial.imageName = fileName
 
             realm.add(newTrial)
         }
     }
+    
+
     
     func preProcessData() {
         //TODO
@@ -175,7 +181,7 @@ class DotViewController: UIViewController {
         redirectLogToDocuments() //NSlog in aux file from this point forward
         
         selectStimuli()
-        dotDisplay.image = order[i]
+        dotDisplay.image = UIImage(contentsOfFile: stim.order[i] as! String)
 
         progressView.alpha = 0
         leftPawButton.isHidden = true
@@ -186,7 +192,6 @@ class DotViewController: UIViewController {
     
     //MARK: Logging
     func redirectLogToDocuments() {
-        
         let allPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         let documentsDirectory = allPaths.first!
         let pathForLog = documentsDirectory.appending("/experimentLog.txt")

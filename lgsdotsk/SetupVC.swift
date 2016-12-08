@@ -83,6 +83,19 @@ class SetupViewController: UIViewController, UIAlertViewDelegate{
         }
     }
     
+    func checkSubjectNumber() -> Bool {
+        let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
+        let url = NSURL(fileURLWithPath: path)
+        let filePath = url.appendingPathComponent("lgsk_\(trial.subjectNumber).realm")?.path
+        let fileManager = FileManager.default
+        if fileManager.fileExists(atPath: filePath!) {
+            print("FILE AVAILABLE")
+            return true
+        } else {
+            print("FILE NOT AVAILABLE")
+            return false
+        }
+    }
     
     
     //MARK: Realm Configuration

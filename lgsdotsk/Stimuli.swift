@@ -11,38 +11,39 @@ import UIKit
 
 class Stimuli {
     
-    let order1 : [UIImage] = [
-        UIImage(named: "Slide02.png")!,
-        UIImage(named: "Slide03.png")!,
-        UIImage(named: "Slide04.png")!,
-        UIImage(named: "Slide05.png")!,
-        UIImage(named: "Slide08.png")!,
-        UIImage(named: "Slide07.png")!,
-        UIImage(named: "Slide02.png")!,
-        UIImage(named: "Slide03.png")!,
-        UIImage(named: "Slide04.png")!,
-        UIImage(named: "Slide08.png")!
+    //TODO: Get both conditions and orders
+    
+    var order : [NSObject] = []
+    
+    let order1 : [NSObject] = [
+        Bundle.main.path(forResource: "Slide02", ofType: "png")! as NSObject,
+        Bundle.main.path(forResource: "Slide03", ofType: "png")! as NSObject,
+        Bundle.main.path(forResource: "Slide04", ofType: "png")! as NSObject,
+        Bundle.main.path(forResource: "Slide05", ofType: "png")! as NSObject,
+        Bundle.main.path(forResource: "Slide07", ofType: "png")! as NSObject,
+        Bundle.main.path(forResource: "Slide08", ofType: "png")! as NSObject,
+        Bundle.main.path(forResource: "Slide02", ofType: "png")! as NSObject,
+        Bundle.main.path(forResource: "Slide03", ofType: "png")! as NSObject,
+        Bundle.main.path(forResource: "Slide04", ofType: "png")! as NSObject
     ]
     
-    let order2 : [UIImage] = [
-        UIImage(named: "Slide04.png")!,
-        UIImage(named: "Slide03.png")!,
-        UIImage(named: "Slide02.png")!,
-        UIImage(named: "Slide05.png")!,
-        UIImage(named: "Slide07.png")!,
-        UIImage(named: "Slide08.png")!,
-        UIImage(named: "Slide02.png")!,
-        UIImage(named: "Slide04.png")!,
-        UIImage(named: "Slide03.png")!,
-        UIImage(named: "Slide08.png")!
+    let order2 : [NSObject] = [
+        Bundle.main.path(forResource: "Slide08", ofType: "png")! as NSObject,
+        Bundle.main.path(forResource: "Slide07", ofType: "png")! as NSObject,
+        Bundle.main.path(forResource: "Slide05", ofType: "png")! as NSObject,
+        Bundle.main.path(forResource: "Slide04", ofType: "png")! as NSObject,
+        Bundle.main.path(forResource: "Slide03", ofType: "png")! as NSObject,
+        Bundle.main.path(forResource: "Slide02", ofType: "png")! as NSObject,
+        Bundle.main.path(forResource: "Slide08", ofType: "png")! as NSObject,
+        Bundle.main.path(forResource: "Slide07", ofType: "png")! as NSObject,
+        Bundle.main.path(forResource: "Slide06", ofType: "png")! as NSObject
+    
     ]
 
-    let testorder : [UIImage] = [
-        UIImage(named: "Slide03.png")!,
-        UIImage(named: "Slide07.png")!,
-        UIImage(named: "Slide04.png")!
+    let orderT : [NSObject] = [
+        Bundle.main.path(forResource: "Slide02", ofType: "png")! as NSObject,
+        Bundle.main.path(forResource: "Slide03", ofType: "png")! as NSObject,
+        Bundle.main.path(forResource: "Slide04", ofType: "png")! as NSObject
     ]
 }
-
-//need all conditions and orders!
 
