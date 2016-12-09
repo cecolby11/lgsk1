@@ -26,6 +26,8 @@ class DotViewController: UIViewController {
     @IBOutlet weak var leftPawButton: UIButton!
     @IBOutlet weak var rightPawButton: UIButton!
     
+    @IBOutlet var panEdgeRec: UIScreenEdgePanGestureRecognizer!
+    
     //MARK: Experiment Setup
     
     func selectStimuli() {
@@ -244,6 +246,7 @@ class DotViewController: UIViewController {
         leftPawButton.isHidden = true
         rightPawButton.isHidden = true
         
+        panEdgeRec.edges = .left
     }
 
     
@@ -255,6 +258,18 @@ class DotViewController: UIViewController {
         
     }
 
+    
+    
+    //MARK: Navigation
+    
+    @IBAction func edgePanReceived(_ sender: Any) {
+        self.performSegue(withIdentifier: "jumpToTrial", sender: self)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as! JumpTrialViewController {
+            destination.i = self.i
+    }
 
     
     

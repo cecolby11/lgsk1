@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boyBig.png" translatesAutoresizingMaskIntoConstraints="NO" id="dWI-wZ-b3M">
-                                <rect key="frame" x="312.5" y="516.5" width="209" height="333"/>
+                                <rect key="frame" x="409" y="675" width="16" height="16"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="girlBig.png" translatesAutoresizingMaskIntoConstraints="NO" id="bQU-La-Bxs">
                                 <rect key="frame" x="501.5" y="517" width="211" height="332"/>
@@ -160,6 +160,7 @@
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="OWY-Hq-3Z6" appends="YES" id="bWb-Lw-IQg"/>
+                                    <outletCollection property="gestureRecognizers" destination="kcs-52-V6D" appends="YES" id="9eU-IL-ors"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -187,10 +188,17 @@
                         <outlet property="character2" destination="xPv-Py-ctc" id="NTd-Jm-r6Q"/>
                         <outlet property="dotDisplay" destination="buy-DK-O1C" id="H7b-Wd-q4d"/>
                         <outlet property="leftPawButton" destination="2ou-ax-U5F" id="J9V-3Y-BzR"/>
+                        <outlet property="panEdgeRec" destination="kcs-52-V6D" id="1ah-Ar-z17"/>
                         <outlet property="progressView" destination="VwG-og-LeI" id="fdB-U4-Iss"/>
                         <outlet property="rightPawButton" destination="KT0-4D-OUt" id="wgd-vb-K66"/>
                         <outlet property="tapRec" destination="OWY-Hq-3Z6" id="Zan-8Q-a6W"/>
                         <segue destination="UPV-IL-r08" kind="show" identifier="endExperiment" id="N5v-Hn-qwg"/>
+                        <segue destination="jJe-X3-qIU" kind="popoverPresentation" identifier="jumpToTrial" popoverAnchorView="VwG-og-LeI" id="JLb-Q0-nSK">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                            <popoverPassthroughViews>
+                                <view reference="VwG-og-LeI"/>
+                            </popoverPassthroughViews>
+                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -199,6 +207,11 @@
                         <action selector="tapToHideProgress:" destination="BYZ-38-t0r" id="6FN-9G-XAm"/>
                     </connections>
                 </tapGestureRecognizer>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="kcs-52-V6D">
+                    <connections>
+                        <action selector="edgePanReceived:" destination="BYZ-38-t0r" id="oUP-bM-9gw"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="561.9140625" y="138.79941434846265"/>
         </scene>
@@ -215,7 +228,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boyBig.png" translatesAutoresizingMaskIntoConstraints="NO" id="0Ao-1i-JuG">
-                                <rect key="frame" x="289" y="569" width="209" height="333"/>
+                                <rect key="frame" x="482" y="886" width="16" height="16"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="girlBig.png" translatesAutoresizingMaskIntoConstraints="NO" id="dbi-5z-pJe">
                                 <rect key="frame" x="567" y="570" width="211" height="332"/>
@@ -263,6 +276,57 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1341.796875" y="138.79941434846265"/>
+        </scene>
+        <!--Jump Trial View Controller-->
+        <scene sceneID="4nt-E4-aNl">
+            <objects>
+                <viewController id="jJe-X3-qIU" customClass="JumpTrialViewController" customModule="lgsdotsk" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qma-cS-RX1"/>
+                        <viewControllerLayoutGuide type="bottom" id="XGf-nL-UOT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DEM-Hd-LPz">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jump to Trial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U4v-Sj-8uG">
+                                <rect key="frame" x="322.5" y="659" width="219" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gL3-AE-3St">
+                                <rect key="frame" x="572" y="661.5" width="22" height="43"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ndR-6q-Bhp">
+                                <rect key="frame" x="465" y="728.5" width="94" height="29"/>
+                                <connections>
+                                    <action selector="stepperAdjusted:" destination="jJe-X3-qIU" eventType="valueChanged" id="YCR-rE-qpj"/>
+                                </connections>
+                            </stepper>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="U4v-Sj-8uG" firstAttribute="centerX" secondItem="DEM-Hd-LPz" secondAttribute="centerX" constant="-80" id="Ica-rV-Hba"/>
+                            <constraint firstItem="gL3-AE-3St" firstAttribute="leading" secondItem="U4v-Sj-8uG" secondAttribute="trailing" constant="30.5" id="YC8-rK-7Zl"/>
+                            <constraint firstItem="U4v-Sj-8uG" firstAttribute="centerY" secondItem="DEM-Hd-LPz" secondAttribute="centerY" id="ZKb-t8-3ts"/>
+                            <constraint firstItem="ndR-6q-Bhp" firstAttribute="centerY" secondItem="DEM-Hd-LPz" secondAttribute="centerY" constant="60" id="b0b-V8-rwC"/>
+                            <constraint firstItem="ndR-6q-Bhp" firstAttribute="centerX" secondItem="DEM-Hd-LPz" secondAttribute="centerX" id="flk-IH-mpV"/>
+                            <constraint firstItem="gL3-AE-3St" firstAttribute="centerY" secondItem="DEM-Hd-LPz" secondAttribute="centerY" id="ljH-hb-ppM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="stepper" destination="ndR-6q-Bhp" id="QO1-fd-fA8"/>
+                        <outlet property="trialLabel" destination="gL3-AE-3St" id="Mqf-fg-GRv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ajh-JY-grp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="562" y="-531"/>
         </scene>
         <!--Intro View Controller-->
         <scene sceneID="rcx-HL-b6U">
@@ -393,6 +457,7 @@
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="856-1k-zGt" firstAttribute="top" secondItem="4Jc-J2-YAy" secondAttribute="top" constant="-100" id="0Eh-aI-WvI" userLabel="2nd biggest - Y to smallest"/>
                                     <constraint firstItem="4Jc-J2-YAy" firstAttribute="centerX" secondItem="nF3-3X-hfH" secondAttribute="centerX" constant="220" id="20f-2z-L1m" userLabel="smallest - centerX + value"/>
@@ -480,4 +545,5 @@
         <image name="paw.png" width="64" height="64"/>
         <image name="red.png" width="163" height="163"/>
     </resources>
+    <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>
