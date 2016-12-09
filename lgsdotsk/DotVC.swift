@@ -267,8 +267,9 @@ class DotViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as! JumpTrialViewController {
+        if let destination = segue.destination as? JumpTrialViewController {
             destination.i = self.i
+        }
     }
 
     
