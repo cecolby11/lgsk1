@@ -124,9 +124,6 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
         for index in 1...i+1 {
             view.viewWithTag(index)?.alpha = 1
         }
-        for index in i+2...stim.order.count{
-            view.viewWithTag(index)?.alpha = 0.1
-        }
         UIView.animate(withDuration: 0.5, animations: {self.progressView.alpha = 1})
     }
     

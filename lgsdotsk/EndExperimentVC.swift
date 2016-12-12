@@ -13,7 +13,7 @@ class EndExperimentViewController: UIViewController {
     
     @IBOutlet weak var happyPupsView: UIImageView!
     @IBOutlet var tapRec: UITapGestureRecognizer!
-    var i = 0
+    var i = 4
     
     @IBAction func tapReceived(_ sender: UITapGestureRecognizer) {
         //get touch location
@@ -29,7 +29,7 @@ class EndExperimentViewController: UIViewController {
     }
 
     @IBAction func clearPawPrints(_ sender: UIButton) {
-        for x in 1...i{
+        for x in 4...i{
             let image = view.viewWithTag(x)
             image?.removeFromSuperview()
         }
