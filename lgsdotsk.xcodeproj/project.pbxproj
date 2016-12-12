@@ -29,7 +29,6 @@
 		990D06381DC8FB840091B878 /* girlBig.png in Resources */ = {isa = PBXBuildFile; fileRef = 990D06361DC8FB840091B878 /* girlBig.png */; };
 		990D063D1DC8FDD80091B878 /* IntroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990D063C1DC8FDD80091B878 /* IntroVC.swift */; };
 		990D063F1DC8FE280091B878 /* SetupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990D063E1DC8FE280091B878 /* SetupVC.swift */; };
-		991AEF041DFB316E00DE4298 /* JumpTrialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991AEF031DFB316E00DE4298 /* JumpTrialVC.swift */; };
 		9927B4751DC9161C00E8622B /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 9927B4741DC9161C00E8622B /* blue.png */; };
 		9927B4771DC9162100E8622B /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 9927B4761DC9162100E8622B /* red.png */; };
 		994856851DC941C10050B155 /* grey.png in Resources */ = {isa = PBXBuildFile; fileRef = 994856841DC941C10050B155 /* grey.png */; };
@@ -63,7 +62,6 @@
 		990D06361DC8FB840091B878 /* girlBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girlBig.png; sourceTree = "<group>"; };
 		990D063C1DC8FDD80091B878 /* IntroVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroVC.swift; sourceTree = "<group>"; };
 		990D063E1DC8FE280091B878 /* SetupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupVC.swift; sourceTree = "<group>"; };
-		991AEF031DFB316E00DE4298 /* JumpTrialVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JumpTrialVC.swift; sourceTree = "<group>"; };
 		9927B4741DC9161C00E8622B /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
 		9927B4761DC9162100E8622B /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
 		994856841DC941C10050B155 /* grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grey.png; sourceTree = "<group>"; };
@@ -111,7 +109,6 @@
 				142EEC951DB9021700E4AB0D /* DotVC.swift */,
 				140AC5ED1DCD08BB000FD978 /* EndExperimentVC.swift */,
 				142EEC971DB9021700E4AB0D /* Main.storyboard */,
-				991AEF031DFB316E00DE4298 /* JumpTrialVC.swift */,
 				142EEC9A1DB9021700E4AB0D /* Assets.xcassets */,
 				142EEC9C1DB9021700E4AB0D /* LaunchScreen.storyboard */,
 				142EEC9F1DB9021700E4AB0D /* Info.plist */,
@@ -319,7 +316,6 @@
 				142EEC961DB9021700E4AB0D /* DotVC.swift in Sources */,
 				990D063F1DC8FE280091B878 /* SetupVC.swift in Sources */,
 				142EEC941DB9021700E4AB0D /* AppDelegate.swift in Sources */,
-				991AEF041DFB316E00DE4298 /* JumpTrialVC.swift in Sources */,
 				142EECAA1DB90BA600E4AB0D /* Stimuli.swift in Sources */,
 				140AC5EE1DCD08BB000FD978 /* EndExperimentVC.swift in Sources */,
 			);

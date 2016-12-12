@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class DotViewController: UIViewController {
+class DotViewController: UIViewController, UIPopoverPresentationControllerDelegate {
 
     @IBOutlet weak var dotDisplay: UIImageView!
     var i: Int = 0
@@ -26,7 +26,7 @@ class DotViewController: UIViewController {
     @IBOutlet weak var leftPawButton: UIButton!
     @IBOutlet weak var rightPawButton: UIButton!
     
-    @IBOutlet var panEdgeRec: UIScreenEdgePanGestureRecognizer!
+
     
     //MARK: Experiment Setup
     
@@ -78,6 +78,7 @@ class DotViewController: UIViewController {
             dotDisplay.image = UIImage(contentsOfFile: stim.order[i] as! String)
             character1.isEnabled = true
             character2.isEnabled = true
+            print("i=\(i)")
         }
     }
         
@@ -120,7 +121,12 @@ class DotViewController: UIViewController {
     
     @IBAction func showProgress() {
         writeTrialToRealm()
-        view.viewWithTag(i+1)?.alpha = 1
+        for index in 1...i+1 {
+            view.viewWithTag(index)?.alpha = 1
+        }
+        for index in i+2...stim.order.count{
+            view.viewWithTag(index)?.alpha = 0.1
+        }
         UIView.animate(withDuration: 0.5, animations: {self.progressView.alpha = 1})
     }
     
@@ -246,7 +252,9 @@ class DotViewController: UIViewController {
         leftPawButton.isHidden = true
         rightPawButton.isHidden = true
         
-        panEdgeRec.edges = .left
+//        trialStepper.maximumValue = 10
+//        trialStepper.minimumValue = 1
+//        trialStepper.wraps = true
     }
 
     
@@ -259,19 +267,6 @@ class DotViewController: UIViewController {
     }
 
     
-    
-    //MARK: Navigation
-    
-    @IBAction func edgePanReceived(_ sender: Any) {
-        self.performSegue(withIdentifier: "jumpToTrial", sender: self)
-    }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? JumpTrialViewController {
-            destination.i = self.i
-        }
-    }
-
     
     
 
