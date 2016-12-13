@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftGifOrigin //then build
 
 class EndExperimentViewController: UIViewController {
     
@@ -37,8 +36,7 @@ class EndExperimentViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        happyPupsView.loadGif(name: "happypups")
+        happyPupsView.image = UIImage(named: "pupstogether.png")
     }
     
 }

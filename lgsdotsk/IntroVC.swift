@@ -17,6 +17,7 @@ class IntroViewController: UIViewController {
     var tapIndex = 0
     @IBOutlet weak var instructionText: UILabel!
     
+    @IBOutlet weak var pupAlone: UIView!
     @IBOutlet weak var redTestDot: UIImageView!
     @IBOutlet weak var blueTestDot: UIImageView!
     @IBOutlet weak var leftGreyReciever: UIImageView!
@@ -50,7 +51,7 @@ class IntroViewController: UIViewController {
                 self.instructionText.isHidden = true
             })
             showTestDots()
-        case _ where (tapIndex>=4 && rightGreyReceiver.center==blueTestDot.center && leftGreyReciever.center==redTestDot.center):
+        case _ where (tapIndex>=3 && rightGreyReceiver.center==blueTestDot.center && leftGreyReciever.center==redTestDot.center):
             self.performSegue(withIdentifier: "beginExperiment", sender: self)
             
         default:

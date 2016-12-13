@@ -215,13 +215,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boyBig.png" translatesAutoresizingMaskIntoConstraints="NO" id="0Ao-1i-JuG">
-                                <rect key="frame" x="289" y="569" width="209" height="333"/>
+                                <rect key="frame" x="277" y="559" width="209" height="333"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="girlBig.png" translatesAutoresizingMaskIntoConstraints="NO" id="dbi-5z-pJe">
-                                <rect key="frame" x="567" y="569" width="216" height="333"/>
+                                <rect key="frame" x="594" y="559" width="216" height="333"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="happypups.gif" translatesAutoresizingMaskIntoConstraints="NO" id="VcO-iS-UpK">
-                                <rect key="frame" x="352" y="673" width="320" height="320"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pupstogether.png" translatesAutoresizingMaskIntoConstraints="NO" id="VcO-iS-UpK">
+                                <rect key="frame" x="370" y="669" width="375" height="299"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBm-QF-IW3">
                                 <rect key="frame" x="939" y="1298" width="40" height="34"/>
@@ -233,38 +233,54 @@
                                     <action selector="clearPawPrints:" destination="UPV-IL-r08" eventType="touchUpInside" id="8Ib-fx-IAA"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paw.png" translatesAutoresizingMaskIntoConstraints="NO" id="zTd-nh-dhs">
-                                <rect key="frame" x="467" y="1268" width="64" height="64"/>
+                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paw.png" translatesAutoresizingMaskIntoConstraints="NO" id="EEn-9J-7Z9" userLabel="paw2">
+                                <rect key="frame" x="511" y="1094" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="ElR-32-Fuc"/>
+                                    <constraint firstAttribute="height" constant="35" id="hcP-pr-xSG"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paw.png" translatesAutoresizingMaskIntoConstraints="NO" id="EEn-9J-7Z9">
-                                <rect key="frame" x="453" y="1158" width="64" height="64"/>
+                            <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paw.png" translatesAutoresizingMaskIntoConstraints="NO" id="eWw-6r-iak" userLabel="paw4">
+                                <rect key="frame" x="505" y="993" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="N38-Eo-3wq"/>
+                                    <constraint firstAttribute="width" constant="35" id="TNt-lg-zcz"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paw.png" translatesAutoresizingMaskIntoConstraints="NO" id="eWw-6r-iak">
-                                <rect key="frame" x="480" y="1001" width="64" height="64"/>
+                            <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paw.png" translatesAutoresizingMaskIntoConstraints="NO" id="rgO-1s-ge6" userLabel="paw3">
+                                <rect key="frame" x="552" y="1032" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="ojn-q6-fq0"/>
+                                    <constraint firstAttribute="width" constant="35" id="qTr-dc-jFf"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paw.png" translatesAutoresizingMaskIntoConstraints="NO" id="rgO-1s-ge6">
-                                <rect key="frame" x="517" y="1073" width="64" height="64"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paw.png" translatesAutoresizingMaskIntoConstraints="NO" id="zTd-nh-dhs" userLabel="paw1">
+                                <rect key="frame" x="497" y="1151" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="IuN-7z-lYI"/>
+                                    <constraint firstAttribute="height" constant="35" id="Xnr-ch-zBg"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="rgO-1s-ge6" secondAttribute="trailing" constant="443" id="4PS-mM-Wgv"/>
-                            <constraint firstItem="eWw-6r-iak" firstAttribute="centerX" secondItem="VcO-iS-UpK" secondAttribute="centerX" id="56f-S8-ile"/>
-                            <constraint firstItem="rgO-1s-ge6" firstAttribute="top" secondItem="eWw-6r-iak" secondAttribute="bottom" constant="8" symbolic="YES" id="5zj-Zk-jfe"/>
-                            <constraint firstItem="zTd-nh-dhs" firstAttribute="leading" secondItem="AFu-Kg-gMD" secondAttribute="leading" constant="467" id="B8M-Cn-zKb"/>
-                            <constraint firstItem="eWw-6r-iak" firstAttribute="top" secondItem="VcO-iS-UpK" secondAttribute="bottom" constant="8" symbolic="YES" id="DNp-ge-Sgq"/>
-                            <constraint firstItem="VcO-iS-UpK" firstAttribute="centerX" secondItem="AFu-Kg-gMD" secondAttribute="centerX" id="GsD-8l-bHo" userLabel="happypups - X"/>
-                            <constraint firstItem="0Ao-1i-JuG" firstAttribute="bottom" secondItem="VcO-iS-UpK" secondAttribute="bottom" constant="-91" id="LfB-ek-MGv" userLabel="boy - Y"/>
-                            <constraint firstItem="EEn-9J-7Z9" firstAttribute="leading" secondItem="AFu-Kg-gMD" secondAttribute="leading" constant="453" id="MXB-BR-Sp2"/>
-                            <constraint firstItem="dbi-5z-pJe" firstAttribute="bottom" secondItem="VcO-iS-UpK" secondAttribute="bottom" constant="-91" id="Pa7-Wf-luM" userLabel="girl - Y"/>
-                            <constraint firstItem="VcO-iS-UpK" firstAttribute="leading" secondItem="0Ao-1i-JuG" secondAttribute="trailing" constant="-146" id="eGn-Z9-YCA" userLabel="boy - X"/>
-                            <constraint firstItem="zTd-nh-dhs" firstAttribute="bottom" secondItem="HBm-QF-IW3" secondAttribute="bottom" id="evI-FQ-APq"/>
+                            <constraint firstItem="eWw-6r-iak" firstAttribute="centerX" secondItem="VcO-iS-UpK" secondAttribute="centerX" constant="-35" id="56f-S8-ile"/>
+                            <constraint firstItem="rgO-1s-ge6" firstAttribute="top" secondItem="eWw-6r-iak" secondAttribute="bottom" constant="4" id="5zj-Zk-jfe"/>
+                            <constraint firstItem="eWw-6r-iak" firstAttribute="top" secondItem="VcO-iS-UpK" secondAttribute="bottom" constant="25" id="DNp-ge-Sgq"/>
+                            <constraint firstItem="VcO-iS-UpK" firstAttribute="centerX" secondItem="AFu-Kg-gMD" secondAttribute="centerX" constant="45.5" id="GsD-8l-bHo" userLabel="happypups - X"/>
+                            <constraint firstItem="0Ao-1i-JuG" firstAttribute="bottom" secondItem="VcO-iS-UpK" secondAttribute="bottom" constant="-76" id="LfB-ek-MGv" userLabel="boy - Y"/>
+                            <constraint firstItem="rgO-1s-ge6" firstAttribute="leading" secondItem="EEn-9J-7Z9" secondAttribute="trailing" constant="6" id="O2b-PQ-NF7"/>
+                            <constraint firstItem="dbi-5z-pJe" firstAttribute="bottom" secondItem="VcO-iS-UpK" secondAttribute="bottom" constant="-76" id="Pa7-Wf-luM" userLabel="girl - Y"/>
+                            <constraint firstItem="VcO-iS-UpK" firstAttribute="leading" secondItem="0Ao-1i-JuG" secondAttribute="trailing" constant="-116" id="eGn-Z9-YCA" userLabel="boy - X"/>
+                            <constraint firstItem="rgO-1s-ge6" firstAttribute="leading" secondItem="eWw-6r-iak" secondAttribute="trailing" constant="12" id="ejo-FN-ZqB"/>
                             <constraint firstItem="hio-XL-hkg" firstAttribute="top" secondItem="HBm-QF-IW3" secondAttribute="bottom" constant="34" id="fCC-7Z-BKW"/>
-                            <constraint firstItem="zTd-nh-dhs" firstAttribute="top" secondItem="EEn-9J-7Z9" secondAttribute="bottom" constant="46" id="faf-iI-b2i"/>
-                            <constraint firstItem="dbi-5z-pJe" firstAttribute="leading" secondItem="VcO-iS-UpK" secondAttribute="trailing" constant="-105" id="k1i-SZ-9R2" userLabel="girl - X"/>
-                            <constraint firstItem="VcO-iS-UpK" firstAttribute="centerY" secondItem="AFu-Kg-gMD" secondAttribute="centerY" constant="150" id="pNU-ia-8Oy" userLabel="happypups - Y"/>
+                            <constraint firstItem="zTd-nh-dhs" firstAttribute="top" secondItem="EEn-9J-7Z9" secondAttribute="bottom" constant="22" id="faf-iI-b2i"/>
+                            <constraint firstItem="dbi-5z-pJe" firstAttribute="leading" secondItem="VcO-iS-UpK" secondAttribute="trailing" constant="-151" id="k1i-SZ-9R2" userLabel="girl - X"/>
+                            <constraint firstItem="EEn-9J-7Z9" firstAttribute="top" secondItem="rgO-1s-ge6" secondAttribute="bottom" constant="27" id="kKh-ks-te1"/>
+                            <constraint firstItem="VcO-iS-UpK" firstAttribute="centerY" secondItem="AFu-Kg-gMD" secondAttribute="centerY" constant="135.5" id="pNU-ia-8Oy" userLabel="happypups - Y"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HBm-QF-IW3" secondAttribute="trailing" constant="25" id="uQY-5R-VSn"/>
+                            <constraint firstItem="zTd-nh-dhs" firstAttribute="leading" secondItem="EEn-9J-7Z9" secondAttribute="trailing" constant="-49" id="ube-KM-Kg7"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Csd-vg-OiN" appends="YES" id="mCD-bO-bRf"/>
@@ -321,6 +337,9 @@
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="Fje-W4-tNd" appends="YES" id="Ims-DH-U4Q"/>
                                 </connections>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pupalone.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vk7-oC-5uP">
+                                <rect key="frame" x="391" y="677" width="282" height="298"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Two-finger double-tap anywhere to continue!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFp-ZN-dnm">
                                 <rect key="frame" x="247" y="1253" width="530" height="33"/>
@@ -439,18 +458,20 @@
                             <constraint firstItem="JD7-8W-OHR" firstAttribute="bottom" secondItem="2a8-U3-GuY" secondAttribute="top" id="GnI-Sd-hXp"/>
                             <constraint firstItem="qGJ-J3-KnB" firstAttribute="centerX" secondItem="dL0-fb-33f" secondAttribute="centerX" id="H4W-Wt-kaq" userLabel="testRed - X"/>
                             <constraint firstItem="k0p-mI-Cle" firstAttribute="centerY" secondItem="dL0-fb-33f" secondAttribute="centerY" constant="-300" id="IEG-mp-Uhm" userLabel="rightGrey - centerY"/>
-                            <constraint firstItem="ysP-l4-YCT" firstAttribute="centerX" secondItem="dL0-fb-33f" secondAttribute="centerX" constant="200" id="LPl-7c-WEN" userLabel="girl - centerX+val"/>
+                            <constraint firstItem="ysP-l4-YCT" firstAttribute="centerX" secondItem="dL0-fb-33f" secondAttribute="centerX" constant="200" id="LPl-7c-WEN" userLabel="girl - X"/>
                             <constraint firstItem="nF3-3X-hfH" firstAttribute="leading" secondItem="JD7-8W-OHR" secondAttribute="leading" id="May-2W-8Aw"/>
                             <constraint firstItem="nF3-3X-hfH" firstAttribute="bottom" secondItem="2a8-U3-GuY" secondAttribute="top" id="RLD-im-xpV"/>
                             <constraint firstItem="qGJ-J3-KnB" firstAttribute="centerY" secondItem="dL0-fb-33f" secondAttribute="centerY" constant="300" id="SIw-Y5-RfA" userLabel="testRed - Y"/>
                             <constraint firstItem="Xgp-2l-wAa" firstAttribute="centerX" secondItem="dL0-fb-33f" secondAttribute="centerX" constant="-200" id="ScM-Ve-Lug" userLabel="leftGrey- centerX"/>
                             <constraint firstItem="JD7-8W-OHR" firstAttribute="top" secondItem="dL0-fb-33f" secondAttribute="top" id="TOY-ES-cch"/>
                             <constraint firstItem="nF3-3X-hfH" firstAttribute="trailing" secondItem="JD7-8W-OHR" secondAttribute="trailing" id="UMP-Yg-VHe"/>
-                            <constraint firstItem="ysP-l4-YCT" firstAttribute="centerY" secondItem="dL0-fb-33f" secondAttribute="centerY" constant="50" id="UrB-vr-FEE" userLabel="girl - centerY"/>
+                            <constraint firstItem="ysP-l4-YCT" firstAttribute="centerY" secondItem="dL0-fb-33f" secondAttribute="centerY" constant="50" id="UrB-vr-FEE" userLabel="girl - Y"/>
+                            <constraint firstItem="uaS-0X-Z0Y" firstAttribute="top" secondItem="Vk7-oC-5uP" secondAttribute="top" constant="-110" id="W8Z-12-Mvx" userLabel="pup - Y"/>
                             <constraint firstItem="uaS-0X-Z0Y" firstAttribute="centerX" secondItem="dL0-fb-33f" secondAttribute="centerX" constant="-200" id="X8V-zd-IpO" userLabel="boy - centerX-val"/>
                             <constraint firstItem="JD7-8W-OHR" firstAttribute="centerX" secondItem="cFp-ZN-dnm" secondAttribute="centerX" id="Z6B-iO-MK0"/>
                             <constraint firstItem="nF3-3X-hfH" firstAttribute="top" secondItem="JD7-8W-OHR" secondAttribute="top" id="gDp-on-nD3"/>
                             <constraint firstItem="vT1-GJ-DB0" firstAttribute="centerX" secondItem="dL0-fb-33f" secondAttribute="centerX" id="kLC-pH-Ncf" userLabel="testBlue - X"/>
+                            <constraint firstItem="Vk7-oC-5uP" firstAttribute="centerX" secondItem="nF3-3X-hfH" secondAttribute="centerX" constant="20" id="pOU-xK-oOf" userLabel="pup - X"/>
                             <constraint firstItem="JD7-8W-OHR" firstAttribute="leading" secondItem="dL0-fb-33f" secondAttribute="leading" id="tOj-bJ-S6i"/>
                             <constraint firstItem="k0p-mI-Cle" firstAttribute="centerX" secondItem="dL0-fb-33f" secondAttribute="centerX" constant="200" id="uat-kA-wS1" userLabel="rightGrey - centerX"/>
                         </constraints>
@@ -465,6 +486,7 @@
                         <outlet property="containedViewRed" destination="JD7-8W-OHR" id="qUB-wq-oo0"/>
                         <outlet property="instructionText" destination="cFp-ZN-dnm" id="waT-0u-cO6"/>
                         <outlet property="leftGreyReciever" destination="Xgp-2l-wAa" id="qGK-Hz-fEw"/>
+                        <outlet property="pupAlone" destination="nF3-3X-hfH" id="2hX-V1-fnd"/>
                         <outlet property="redPan" destination="QzP-md-rpn" id="NFL-S0-BiA"/>
                         <outlet property="redTestDot" destination="qGJ-J3-KnB" id="y9P-Zk-erh"/>
                         <outlet property="rightGreyReceiver" destination="k0p-mI-Cle" id="wuE-jJ-ZI2"/>
@@ -497,8 +519,9 @@
         <image name="boyBig.png" width="209" height="333"/>
         <image name="girlBig.png" width="216" height="333"/>
         <image name="grey.png" width="163" height="163"/>
-        <image name="happypups.gif" width="320" height="320"/>
         <image name="paw.png" width="64" height="64"/>
+        <image name="pupalone.png" width="282" height="298"/>
+        <image name="pupstogether.png" width="375" height="299"/>
         <image name="red.png" width="163" height="163"/>
     </resources>
     <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
