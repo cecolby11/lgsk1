@@ -14,6 +14,9 @@ class EndExperimentViewController: UIViewController {
     @IBOutlet var tapRec: UITapGestureRecognizer!
     var i = 4
     
+    
+    //MARK: Actions
+    
     @IBAction func tapReceived(_ sender: UITapGestureRecognizer) {
         //get touch location
            let position :CGPoint = sender.location(in: view)
@@ -33,6 +36,8 @@ class EndExperimentViewController: UIViewController {
             image?.removeFromSuperview()
         }
     }
+    
+    //MARK: View Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +45,13 @@ class EndExperimentViewController: UIViewController {
         UIView.animate(withDuration: 0.5, delay: 6.0, options: [], animations: {
             self.happyPupsView.loadGif(name: "pupstogether2")
         }, completion: nil)
+    }
+    
+    
+    //MARK: Navigation
+    
+    @IBAction func newSubjectTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: "unwindToSetupVC", sender: self)
     }
     
 }

@@ -161,5 +161,9 @@ class SetupViewController: UIViewController, UIAlertViewDelegate{
         showAlert()
     }
     
+    @IBAction func prepareForUnwind(segue: UIStoryboardSegue){
+        //for new subject from final view controller
+    }
+    
     
 }
