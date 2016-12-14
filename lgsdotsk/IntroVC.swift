@@ -7,9 +7,9 @@
 //
 
 import UIKit
+import SwiftGifOrigin
 
 class IntroViewController: UIViewController {
-    
 
     @IBOutlet var tapRecognizer: UITapGestureRecognizer!
     @IBOutlet weak var containedViewRed: UIView!
@@ -17,7 +17,7 @@ class IntroViewController: UIViewController {
     var tapIndex = 0
     @IBOutlet weak var instructionText: UILabel!
     
-    @IBOutlet weak var pupAlone: UIView!
+    @IBOutlet weak var pupAlone: UIImageView!
     @IBOutlet weak var redTestDot: UIImageView!
     @IBOutlet weak var blueTestDot: UIImageView!
     @IBOutlet weak var leftGreyReciever: UIImageView!
@@ -39,19 +39,23 @@ class IntroViewController: UIViewController {
         
         switch tapIndex {
         case 1:
-            UIView.animate(withDuration: 0.9, animations: {
-            self.containedViewRed.alpha = 1})
+            UIView.animate(withDuration: 0.6, animations: {
+                self.pupAlone.alpha = 1})
         case 2:
             UIView.animate(withDuration: 0.9, animations: {
-                self.containedViewBlue.alpha = 1})
+            self.containedViewRed.alpha = 1})
         case 3:
+            UIView.animate(withDuration: 0.9, animations: {
+                self.containedViewBlue.alpha = 1})
+        case 4:
             UIView.animate(withDuration: 0.7, animations: {
                 self.containedViewBlue.alpha = 0
                 self.containedViewRed.alpha = 0
                 self.instructionText.isHidden = true
+                self.pupAlone.isHidden = true
             })
             showTestDots()
-        case _ where (tapIndex>=3 && rightGreyReceiver.center==blueTestDot.center && leftGreyReciever.center==redTestDot.center):
+        case _ where (tapIndex>=4 && rightGreyReceiver.center==blueTestDot.center && leftGreyReciever.center==redTestDot.center):
             self.performSegue(withIdentifier: "beginExperiment", sender: self)
             
         default:
@@ -110,6 +114,7 @@ class IntroViewController: UIViewController {
         
         containedViewRed.alpha = 0
         containedViewBlue.alpha = 0
+        pupAlone.alpha = 0
         redTestDot.isHidden = true
         blueTestDot.isHidden = true
         leftGreyReciever.isHidden = true

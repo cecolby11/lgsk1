@@ -37,6 +37,9 @@ class EndExperimentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         happyPupsView.image = UIImage(named: "pupstogether.png")
+        UIView.animate(withDuration: 0.5, delay: 6.0, options: [], animations: {
+            self.happyPupsView.loadGif(name: "pupstogether2")
+        }, completion: nil)
     }
     
 }

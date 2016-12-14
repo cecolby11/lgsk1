@@ -120,19 +120,6 @@ class SetupViewController: UIViewController, UIAlertViewDelegate{
         }
     }
     
-    func wobbleImage(sender: UIImageView) {
-        sender.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-        UIView.animate(withDuration: 2.0,
-                       delay: 0,
-                       usingSpringWithDamping: 0.2,
-                       initialSpringVelocity: 4.0,
-                       options: UIViewAnimationOptions.allowUserInteraction,
-                       animations: {
-                        sender.transform =
-                            CGAffineTransform.identity}
-            , completion: nil)
-    }
-    
     
     //MARK: Realm Configuration
     func setDefaultRealmForUser() {
@@ -172,8 +159,6 @@ class SetupViewController: UIViewController, UIAlertViewDelegate{
     
     @IBAction func peopleTapped(_ sender: UITapGestureRecognizer) {
         showAlert()
-        wobbleImage(sender:boy)
-        wobbleImage(sender: girl)
     }
     
     

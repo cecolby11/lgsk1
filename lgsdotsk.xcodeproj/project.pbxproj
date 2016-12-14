@@ -33,6 +33,8 @@
 		9927B4771DC9162100E8622B /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 9927B4761DC9162100E8622B /* red.png */; };
 		994856851DC941C10050B155 /* grey.png in Resources */ = {isa = PBXBuildFile; fileRef = 994856841DC941C10050B155 /* grey.png */; };
 		9998AB8A1DCBD2F5008BCD0D /* paw.png in Resources */ = {isa = PBXBuildFile; fileRef = 9998AB891DCBD2F5008BCD0D /* paw.png */; };
+		99FFE7C11E01E4A8001375A7 /* pupstogether2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 99FFE7BF1E01E4A8001375A7 /* pupstogether2.gif */; };
+		99FFE7C31E01EC42001375A7 /* pup2alone.png in Resources */ = {isa = PBXBuildFile; fileRef = 99FFE7C21E01EC42001375A7 /* pup2alone.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,8 @@
 		9927B4761DC9162100E8622B /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
 		994856841DC941C10050B155 /* grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grey.png; sourceTree = "<group>"; };
 		9998AB891DCBD2F5008BCD0D /* paw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paw.png; sourceTree = "<group>"; };
+		99FFE7BF1E01E4A8001375A7 /* pupstogether2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = pupstogether2.gif; sourceTree = "<group>"; };
+		99FFE7C21E01EC42001375A7 /* pup2alone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pup2alone.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +162,8 @@
 				9927B4761DC9162100E8622B /* red.png */,
 				994856841DC941C10050B155 /* grey.png */,
 				14496B111E00931C0002A386 /* pupstogether.png */,
+				99FFE7BF1E01E4A8001375A7 /* pupstogether2.gif */,
+				99FFE7C21E01EC42001375A7 /* pup2alone.png */,
 				14496B131E009AF40002A386 /* pupalone.png */,
 				9998AB891DCBD2F5008BCD0D /* paw.png */,
 			);
@@ -242,6 +248,7 @@
 				142EECB41DB90E3000E4AB0D /* Slide03.png in Resources */,
 				142EECB51DB90E3000E4AB0D /* Slide04.png in Resources */,
 				9927B4771DC9162100E8622B /* red.png in Resources */,
+				99FFE7C11E01E4A8001375A7 /* pupstogether2.gif in Resources */,
 				990D06381DC8FB840091B878 /* girlBig.png in Resources */,
 				142EEC9B1DB9021700E4AB0D /* Assets.xcassets in Resources */,
 				142EECB71DB90E3000E4AB0D /* Slide06.png in Resources */,
@@ -249,6 +256,7 @@
 				142EECB91DB90E3000E4AB0D /* Slide08.png in Resources */,
 				9927B4751DC9161C00E8622B /* blue.png in Resources */,
 				994856851DC941C10050B155 /* grey.png in Resources */,
+				99FFE7C31E01EC42001375A7 /* pup2alone.png in Resources */,
 				990D06371DC8FB840091B878 /* boyBig.png in Resources */,
 				14496B141E009AF40002A386 /* pupalone.png in Resources */,
 				142EECB61DB90E3000E4AB0D /* Slide05.png in Resources */,
