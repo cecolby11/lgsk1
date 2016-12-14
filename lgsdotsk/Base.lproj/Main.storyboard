@@ -23,11 +23,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boyBig.png" translatesAutoresizingMaskIntoConstraints="NO" id="dWI-wZ-b3M">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boyBig.png" translatesAutoresizingMaskIntoConstraints="NO" id="dWI-wZ-b3M">
                                 <rect key="frame" x="313" y="517" width="209" height="333"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="65w-jp-TZG" appends="YES" id="fnk-y9-HZw"/>
+                                </connections>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="girlBig.png" translatesAutoresizingMaskIntoConstraints="NO" id="bQU-La-Bxs">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="girlBig.png" translatesAutoresizingMaskIntoConstraints="NO" id="bQU-La-Bxs">
                                 <rect key="frame" x="499" y="517" width="216" height="333"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="HJm-dA-ZHG" appends="YES" id="SdN-gW-mii"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -39,10 +47,22 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="boy" destination="dWI-wZ-b3M" id="HZs-NM-Jwc"/>
+                        <outlet property="girl" destination="bQU-La-Bxs" id="QSa-C5-5OP"/>
                         <segue destination="iFR-2A-omJ" kind="show" identifier="toIntro" id="FAS-Jx-i37"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sBG-Ql-fg4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="65w-jp-TZG">
+                    <connections>
+                        <action selector="peopleTapped:" destination="RKh-8n-xNc" id="aK3-6U-02q"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="HJm-dA-ZHG">
+                    <connections>
+                        <action selector="peopleTapped:" destination="RKh-8n-xNc" id="0OS-Ed-F4R"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1290" y="139"/>
         </scene>
