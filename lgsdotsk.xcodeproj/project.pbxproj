@@ -37,7 +37,7 @@
 
 /* Begin PBXFileReference section */
 		140AC5ED1DCD08BB000FD978 /* EndExperimentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndExperimentVC.swift; sourceTree = "<group>"; };
-		142EEC901DB9021700E4AB0D /* lgsdotsk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lgsdotsk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		142EEC901DB9021700E4AB0D /* lgsk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lgsk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		142EEC931DB9021700E4AB0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		142EEC951DB9021700E4AB0D /* DotVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotVC.swift; sourceTree = "<group>"; };
 		142EEC981DB9021700E4AB0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 		142EEC911DB9021700E4AB0D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				142EEC901DB9021700E4AB0D /* lgsdotsk.app */,
+				142EEC901DB9021700E4AB0D /* lgsk.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -192,7 +192,7 @@
 			);
 			name = lgsdotsk;
 			productName = lgsdotsk;
-			productReference = 142EEC901DB9021700E4AB0D /* lgsdotsk.app */;
+			productReference = 142EEC901DB9021700E4AB0D /* lgsk.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -444,8 +444,8 @@
 				DEVELOPMENT_TEAM = EBDDQEQXX7;
 				INFOPLIST_FILE = lgsdotsk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = c.colby.lgsdotsk;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = c.colby.lgsk;
+				PRODUCT_NAME = lgsk;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -458,8 +458,8 @@
 				DEVELOPMENT_TEAM = EBDDQEQXX7;
 				INFOPLIST_FILE = lgsdotsk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = c.colby.lgsdotsk;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = c.colby.lgsk;
+				PRODUCT_NAME = lgsk;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
