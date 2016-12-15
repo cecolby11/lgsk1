@@ -43,7 +43,7 @@ class SetupViewController: UIViewController, UIAlertViewDelegate{
         
         
         alertController.addTextField { (textField:UITextField!) in
-            textField.placeholder = "Condition"
+            textField.placeholder = "Condition (sg or pl)"
             textField.textColor = UIColor.orange //input text
             textField.font = UIFont.systemFont(ofSize: 22, weight: UIFontWeightLight)
         }
@@ -85,7 +85,21 @@ class SetupViewController: UIViewController, UIAlertViewDelegate{
             errController.addAction(errAction)
             present(errController, animated: true, completion: nil)
             return false
-        } else {
+        }
+        let conditions = ["sg", "pl"]
+        if !(conditions.contains(trial.condition.lowercased())) {
+            errController = UIAlertController(title: "Validation Error", message: "'sg' or 'pl' conditions only", preferredStyle: .alert)
+            errController.view.tintColor = UIColor.orange
+            
+            let errAction = UIAlertAction(title: "Update Fields", style: UIAlertActionStyle.destructive) { alert in
+                self.present(self.alertController, animated: true, completion: nil)
+            }
+            
+            errController.addAction(errAction)
+            present(errController, animated: true, completion: nil)
+            return false
+        }
+        else {
             return true
         }
     }
