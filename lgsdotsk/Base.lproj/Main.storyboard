@@ -407,7 +407,7 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pupalone.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vk7-oC-5uP">
-                                <rect key="frame" x="423" y="688" width="268" height="283"/>
+                                <rect key="frame" x="423" y="803" width="268" height="283"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="girlBig.png" translatesAutoresizingMaskIntoConstraints="NO" id="ysP-l4-YCT">
                                 <rect key="frame" x="575" y="521" width="275" height="424"/>
@@ -569,7 +569,7 @@
                             <constraint firstItem="JD7-8W-OHR" firstAttribute="top" secondItem="dL0-fb-33f" secondAttribute="top" id="TOY-ES-cch"/>
                             <constraint firstItem="nF3-3X-hfH" firstAttribute="trailing" secondItem="JD7-8W-OHR" secondAttribute="trailing" id="UMP-Yg-VHe"/>
                             <constraint firstItem="ysP-l4-YCT" firstAttribute="centerY" secondItem="dL0-fb-33f" secondAttribute="centerY" constant="50" id="UrB-vr-FEE" userLabel="girl - Y"/>
-                            <constraint firstItem="uaS-0X-Z0Y" firstAttribute="top" secondItem="Vk7-oC-5uP" secondAttribute="top" constant="-174" id="W8Z-12-Mvx" userLabel="pup - Y"/>
+                            <constraint firstItem="uaS-0X-Z0Y" firstAttribute="top" secondItem="Vk7-oC-5uP" secondAttribute="top" constant="-289" id="W8Z-12-Mvx" userLabel="pup - Y"/>
                             <constraint firstItem="uaS-0X-Z0Y" firstAttribute="centerX" secondItem="dL0-fb-33f" secondAttribute="centerX" constant="-200" id="X8V-zd-IpO" userLabel="boy - centerX-val"/>
                             <constraint firstItem="JD7-8W-OHR" firstAttribute="centerX" secondItem="cFp-ZN-dnm" secondAttribute="centerX" id="Z6B-iO-MK0"/>
                             <constraint firstItem="nF3-3X-hfH" firstAttribute="top" secondItem="JD7-8W-OHR" secondAttribute="top" id="gDp-on-nD3"/>

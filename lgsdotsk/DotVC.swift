@@ -259,7 +259,7 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
     func redirectLogToDocuments() {
         let allPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         let documentsDirectory = allPaths.first!
-        let pathForLog = documentsDirectory.appending("/experimentLog.txt")
+        _ = documentsDirectory.appending("/experimentLog.txt")
         
     }
 
