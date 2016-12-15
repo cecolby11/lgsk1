@@ -134,6 +134,9 @@ class SetupViewController: UIViewController, UIAlertViewDelegate{
         }
     }
     
+        @IBAction func newSubjectTapped(_ sender: Any) {
+        showAlert()
+    }
     
     //MARK: Realm Configuration
     func setDefaultRealmForUser() {
@@ -155,12 +158,6 @@ class SetupViewController: UIViewController, UIAlertViewDelegate{
         redirectLogToDocuments()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        showAlert()
-    }
-    
-    
     
     //MARK: Navigation
     
@@ -169,10 +166,6 @@ class SetupViewController: UIViewController, UIAlertViewDelegate{
             setDefaultRealmForUser()
             destination.trial = self.trial
         }
-    }
-    
-    @IBAction func peopleTapped(_ sender: UITapGestureRecognizer) {
-        showAlert()
     }
     
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue){

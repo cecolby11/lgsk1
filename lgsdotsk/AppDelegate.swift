@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         // Bugfix: Tint not fully Applied to Alert Controller without Reapplying (e.g. on device rotation)
         window?.tintColor = UIColor.orange
+        //UINavigationBar.appearance().barTintColor = UIColor.orange
         return true
     }
 

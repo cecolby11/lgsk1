@@ -29,13 +29,14 @@ class EndExperimentViewController: UIViewController {
             i+=1
             pawPrint.tag = i
     }
-
-    @IBAction func clearPawPrints(_ sender: UIButton) {
+    
+    @IBAction func clearPawPrintsTapped(_ sender: Any) {
         for x in 4...i{
             let image = view.viewWithTag(x)
             image?.removeFromSuperview()
         }
     }
+    
     
     //MARK: View Lifecycle
 
@@ -50,7 +51,7 @@ class EndExperimentViewController: UIViewController {
     
     //MARK: Navigation
     
-    @IBAction func newSubjectTapped(_ sender: Any) {
+    @IBAction func newSubjectTapped(_ sender: UIBarButtonItem) {
         self.performSegue(withIdentifier: "unwindToSetupVC", sender: self)
     }
     
