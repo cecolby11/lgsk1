@@ -33,7 +33,7 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
     func selectStimuli() {
         //shortened test version
         if baseTrial.subjectNumber == "s999" {
-            stim.order = stim.orderT
+            stim.order = stim.plT
             baseTrial.order = 99
         } else {
         
@@ -43,10 +43,10 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
         
             //Order det. by ODD/EVEN subj#
             if evens.contains(lastCh){
-                stim.order = stim.order1
+                stim.order = stim.pl1
                 baseTrial.order = 1
             } else { //odds and default
-                stim.order = stim.order2
+                stim.order = stim.pl2
                 baseTrial.order = 2
             }
         }
