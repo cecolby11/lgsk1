@@ -59,15 +59,15 @@
                                 <rect key="frame" x="0.0" y="1322" width="1024" height="44"/>
                                 <items>
                                     <barButtonItem systemItem="add" id="f77-mz-2Fb">
-                                        <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="newSubjectTapped:" destination="RKh-8n-xNc" id="bIX-uS-qAg"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
+                                <color key="barTintColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.87450980389999999" green="0.8862745098" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="dWI-wZ-b3M" firstAttribute="leading" secondItem="hWj-3F-8ce" secondAttribute="trailing" constant="-138" id="95W-Bj-gp8"/>
                             <constraint firstItem="3Zx-LC-MRf" firstAttribute="leading" secondItem="PaC-ki-PfG" secondAttribute="leading" id="AgU-Nt-hXG"/>
@@ -181,7 +181,7 @@
                                         <rect key="frame" x="485" y="196" width="64" height="64"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.87450980389999999" green="0.8862745098" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="Xkm-CN-FAW" firstAttribute="top" secondItem="B9Y-fG-OPg" secondAttribute="bottom" constant="30" id="3g8-2S-OVU" userLabel="paw9 - Y"/>
@@ -310,7 +310,6 @@
                                 <rect key="frame" x="0.0" y="1322" width="1024" height="44"/>
                                 <items>
                                     <barButtonItem title="New Subject" id="wqN-k6-JWa">
-                                        <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="newSubjectTapped:" destination="UPV-IL-r08" id="zxC-bP-IGt"/>
                                         </connections>
@@ -322,9 +321,10 @@
                                         </connections>
                                     </barButtonItem>
                                 </items>
+                                <color key="barTintColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.87450980389999999" green="0.8862745098" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="eb4-jR-Jy5" firstAttribute="leading" secondItem="AFu-Kg-gMD" secondAttribute="leading" id="348-2Z-iYp"/>
@@ -349,6 +349,7 @@
                             <outletCollection property="gestureRecognizers" destination="Csd-vg-OiN" appends="YES" id="mCD-bO-bRf"/>
                         </connections>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="haN-g9-E8X"/>
                     <connections>
                         <outlet property="happyPupsView" destination="VcO-iS-UpK" id="aa8-LS-Xtc"/>
@@ -418,7 +419,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Two-finger double-tap anywhere to continue!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFp-ZN-dnm">
                                 <rect key="frame" x="247" y="1253" width="530" height="33"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="27"/>
-                                <color key="textColor" red="1" green="0.53552669537800734" blue="0.23863425390417614" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JD7-8W-OHR">
@@ -460,7 +461,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.87450980389999999" green="0.8862745098" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="9ad-bM-j74" firstAttribute="centerX" secondItem="JD7-8W-OHR" secondAttribute="centerX" constant="-180" id="4f7-yW-8sq" userLabel="smallest - centerX + value"/>
                                     <constraint firstItem="b32-D8-7NX" firstAttribute="top" secondItem="9ad-bM-j74" secondAttribute="bottom" constant="80" id="EX1-9A-eG2" userLabel="smallest - space above person"/>
@@ -513,7 +514,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.87450980389999999" green="0.8862745098" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="856-1k-zGt" firstAttribute="top" secondItem="4Jc-J2-YAy" secondAttribute="top" constant="-100" id="0Eh-aI-WvI" userLabel="2nd biggest - Y to smallest"/>
@@ -529,7 +530,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.87450980389999999" green="0.8862745098" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="uaS-0X-Z0Y" firstAttribute="centerY" secondItem="dL0-fb-33f" secondAttribute="centerY" constant="50" id="04F-YW-wTb" userLabel="boy - centerY"/>
@@ -607,5 +608,5 @@
         <image name="pupstogether.png" width="375" height="299"/>
         <image name="red.png" width="163" height="163"/>
     </resources>
-    <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+    <color key="tintColor" red="1" green="0.94117647059999998" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
 </document>
