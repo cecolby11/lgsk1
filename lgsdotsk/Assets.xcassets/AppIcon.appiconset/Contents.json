@@ -3,7 +3,7 @@
     {
       "size" : "20x20",
       "idiom" : "ipad",
-      "filename" : "Icon-20@1px.png",
+      "filename" : "Icon-20@1x.png",
       "scale" : "1x"
     },
     {
@@ -15,7 +15,7 @@
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "Icon-29@1px.png",
+      "filename" : "Icon-29@1x.png",
       "scale" : "1x"
     },
     {
@@ -51,7 +51,7 @@
     {
       "size" : "83.5x83.5",
       "idiom" : "ipad",
-      "filename" : "Icon-83.5@2x.png",
+      "filename" : "Icon-1024-appStore.png",
       "scale" : "2x"
     }
   ],
