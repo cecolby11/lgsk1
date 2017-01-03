@@ -14,6 +14,11 @@ class EndExperimentViewController: UIViewController {
     @IBOutlet var tapRec: UITapGestureRecognizer!
     var i = 4
     
+    var alertController : UIAlertController!
+    let accentColor = UIColor(red: 255/255, green: 240/255, blue: 86/255, alpha: 1)
+    let darkColor = UIColor(red: 25/255, green: 25/255, blue: 25/255, alpha: 1)
+    let lightColor = UIColor(red: 223/255, green: 226/255, blue: 219/255, alpha: 1)
+    
     
     //MARK: Actions
     
@@ -37,6 +42,26 @@ class EndExperimentViewController: UIViewController {
         }
     }
     
+    func showAlert(){
+        //initialize controller
+        alertController = UIAlertController(title: "Are you sure?", message: "Select 'Continue' to start a new experiment", preferredStyle: .alert)
+        alertController.view.tintColor = self.accentColor
+        
+        
+        //initialize actions
+        let continueAction = UIAlertAction(title: "Continue", style: .default, handler: {action in
+            self.performSegue(withIdentifier: "unwindToSetupVC", sender: self) //when save button pressed
+        })
+        
+        //add actions
+        alertController.addAction(continueAction)
+        
+        //present alert controller
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+
+    
     
     //MARK: View Lifecycle
 
@@ -52,7 +77,7 @@ class EndExperimentViewController: UIViewController {
     //MARK: Navigation
     
     @IBAction func newSubjectTapped(_ sender: UIBarButtonItem) {
-        self.performSegue(withIdentifier: "unwindToSetupVC", sender: self)
+        showAlert()
     }
     
 }

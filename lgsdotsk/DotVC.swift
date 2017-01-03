@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GameplayKit //for fast and uniform shuffle
 import RealmSwift
 
 class DotViewController: UIViewController, UIPopoverPresentationControllerDelegate {
@@ -31,24 +32,12 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
     //MARK: Experiment Setup
     
     func selectStimuli() {
-        //shortened test version
+        //3 trial version for testing
         if baseTrial.subjectNumber == "s999" {
-            stim.order = stim.plT
-            baseTrial.order = 99
+            stim.shuffled = [stim.arr[0], stim.arr[1], stim.arr[2]]
         } else {
-        
-            let indexLast = baseTrial.subjectNumber.index(before:baseTrial.subjectNumber.endIndex)
-            let lastCh = baseTrial.subjectNumber[indexLast]//last character of subject number
-            let evens : [Character] = ["0", "2", "4", "6", "8"]
-        
-            //Order det. by ODD/EVEN subj#
-            if evens.contains(lastCh){
-                stim.order = stim.pl1
-                baseTrial.order = 1
-            } else { //odds and default
-                stim.order = stim.pl2
-                baseTrial.order = 2
-            }
+        //randomize array of stimuli
+            stim.shuffled = stim.arr.randomized() as! [NSObject]
         }
     }
     
@@ -71,11 +60,11 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
     }
     
     func nextImage() {
-        if i==stim.order.count-1 {
+        if i==stim.shuffled.count-1 {
             endExperiment()
         } else {
             i+=1
-            dotDisplay.image = UIImage(contentsOfFile: stim.order[i] as! String)
+            dotDisplay.image = UIImage(contentsOfFile: stim.shuffled[i] as! String)
             character1.isEnabled = true
             character2.isEnabled = true
             print("i=\(i)")
@@ -149,7 +138,7 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
     
     func writeTrialToRealm() {
         
-        let path = stim.order[i]
+        let path = stim.shuffled[i]
         let url = NSURL.fileURL(withPath: path as! String)
         let fileName = url.deletingPathExtension().lastPathComponent
 
@@ -163,7 +152,6 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
             //common
             newTrial.subjectNumber = baseTrial.subjectNumber
             newTrial.condition = baseTrial.condition
-            newTrial.order = baseTrial.order
             //trial-specific
             newTrial.trialNumber = i+1
             newTrial.response = response
@@ -243,7 +231,7 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
         redirectLogToDocuments() //NSlog in aux file from this point forward
         
         selectStimuli()
-        dotDisplay.image = UIImage(contentsOfFile: stim.order[i] as! String)
+        dotDisplay.image = UIImage(contentsOfFile: stim.shuffled[i] as! String)
 
         progressView.alpha = 0
         leftPawButton.isHidden = true
@@ -263,9 +251,13 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
         
     }
 
-    
-    
-    
 
+}
+
+extension Array {
+    func randomized() -> [Any] {
+        let list = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: self)
+        return list
+    }
 }
 

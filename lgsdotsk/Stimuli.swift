@@ -13,9 +13,9 @@ class Stimuli {
     
     //TODO: Get both conditions and orders
     
-    var order : [NSObject] = []
+    var shuffled : [NSObject] = []
     
-    let pl1 : [NSObject] = [
+    let arr : [NSObject] = [
         Bundle.main.path(forResource: "Slide02", ofType: "png")! as NSObject,
         Bundle.main.path(forResource: "Slide03", ofType: "png")! as NSObject,
         Bundle.main.path(forResource: "Slide04", ofType: "png")! as NSObject,
@@ -27,25 +27,6 @@ class Stimuli {
         Bundle.main.path(forResource: "Slide04", ofType: "png")! as NSObject,
         Bundle.main.path(forResource: "Slide05", ofType: "png")! as NSObject
     ]
-    
-    let pl2 : [NSObject] = [
-        Bundle.main.path(forResource: "Slide08", ofType: "png")! as NSObject,
-        Bundle.main.path(forResource: "Slide07", ofType: "png")! as NSObject,
-        Bundle.main.path(forResource: "Slide05", ofType: "png")! as NSObject,
-        Bundle.main.path(forResource: "Slide04", ofType: "png")! as NSObject,
-        Bundle.main.path(forResource: "Slide03", ofType: "png")! as NSObject,
-        Bundle.main.path(forResource: "Slide02", ofType: "png")! as NSObject,
-        Bundle.main.path(forResource: "Slide08", ofType: "png")! as NSObject,
-        Bundle.main.path(forResource: "Slide07", ofType: "png")! as NSObject,
-        Bundle.main.path(forResource: "Slide06", ofType: "png")! as NSObject,
-        Bundle.main.path(forResource: "Slide04", ofType: "png")! as NSObject
-    
-    ]
 
-    let plT : [NSObject] = [
-        Bundle.main.path(forResource: "Slide02", ofType: "png")! as NSObject,
-        Bundle.main.path(forResource: "Slide03", ofType: "png")! as NSObject,
-        Bundle.main.path(forResource: "Slide04", ofType: "png")! as NSObject
-    ]
 }
 
