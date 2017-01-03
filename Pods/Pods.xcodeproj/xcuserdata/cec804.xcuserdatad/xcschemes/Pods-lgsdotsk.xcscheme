@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6C3A960F31A139154D827EF938750421"
+               BlueprintIdentifier = "B3212EC9684BB00EFC9A29AF702F1EFD"
                BuildableName = "Pods_lgsdotsk.framework"
                BlueprintName = "Pods-lgsdotsk"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6C3A960F31A139154D827EF938750421"
+            BlueprintIdentifier = "B3212EC9684BB00EFC9A29AF702F1EFD"
             BuildableName = "Pods_lgsdotsk.framework"
             BlueprintName = "Pods-lgsdotsk"
             ReferencedContainer = "container:Pods.xcodeproj">
@@ -63,7 +63,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6C3A960F31A139154D827EF938750421"
+            BlueprintIdentifier = "B3212EC9684BB00EFC9A29AF702F1EFD"
             BuildableName = "Pods_lgsdotsk.framework"
             BlueprintName = "Pods-lgsdotsk"
             ReferencedContainer = "container:Pods.xcodeproj">
