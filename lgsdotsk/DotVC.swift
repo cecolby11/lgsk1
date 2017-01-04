@@ -31,13 +31,23 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
     
     //MARK: Experiment Setup
     
-    func selectStimuli() {
-        //3 trial version for testing
+    func selectStimuli() { //by condition
+        //3 trial short version for testing/development
         if baseTrial.subjectNumber == "s999" {
-            stim.shuffled = [stim.arr[0], stim.arr[1], stim.arr[2]]
+            if baseTrial.condition == "sg" {
+                stim.shuffled = [stim.sgArr[0], stim.sgArr[1], stim.sgArr[2]]
+            }
+            if baseTrial.condition == "pl" {
+               stim.shuffled = [stim.plArr[0], stim.plArr[1], stim.plArr[2]]
+            }
         } else {
-        //randomize array of stimuli
-            stim.shuffled = stim.arr.randomized() as! [NSObject]
+        //randomize order of full array of stimuli
+            if baseTrial.condition == "sg" {
+              stim.shuffled = stim.sgArr.randomized() as! [NSObject]
+            }
+            if baseTrial.condition == "pl" {
+               stim.shuffled = stim.plArr.randomized() as! [NSObject]
+            }
         }
     }
     
