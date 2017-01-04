@@ -184,7 +184,7 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
             currentTrial.imageType = "ATWFlg"
         case "Slide12", "Slide13", "Slide14","Slide15":
             currentTrial.imageType = "ATWFsm"
-        case "Slide 27", "Slide28", "Slide29", "Slide30":
+        case "Slide27", "Slide28", "Slide29", "Slide30":
             currentTrial.imageType = "ATWFsm2"
         case "Slide07", "Slide08", "Slide09","Slide10":
             currentTrial.imageType = "ATWT"
@@ -225,18 +225,19 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
                     currentTrial.X1biggestpx = "R"
                 default: break
             }
-                //response consistent with hypotheses?
-            print("TODO: plural response-consistent is wrong")
-            switch response {
-                case currentTrial.strongpx:
-                    currentTrial.strongResp = 1
-                case currentTrial.weakpx:
-                    currentTrial.weakResp = 1
-                case currentTrial.averagepx:
-                    currentTrial.averageResp = 1
-                case currentTrial.X1biggestpx:
-                    currentTrial.X1biggestResp = 1
-                default: break
+            
+            //response consistent with hypotheses?
+            if response == currentTrial.strongpx {
+                currentTrial.strongResp = 1
+            }
+            if response == currentTrial.weakpx {
+                currentTrial.weakResp = 1
+            }
+            if response == currentTrial.averagepx {
+                currentTrial.averageResp = 1
+            }
+            if response == currentTrial.X1biggestpx {
+                currentTrial.X1biggestResp = 1
             }
         }
         
