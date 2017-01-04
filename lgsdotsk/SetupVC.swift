@@ -153,6 +153,7 @@ class SetupViewController: UIViewController, UIAlertViewDelegate{
         
         print(Realm.Configuration.defaultConfiguration.fileURL!) //prints database filepath to the console (simulator)
         NSLog("\n\n\nSubject Number: \(trial.subjectNumber)") //to aux file
+        NSLog("Condition: \(trial.condition)") //to aux file
         
     }
     

@@ -174,50 +174,63 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
             currentTrial.imageType = "ATWFlg"
         case "Slide12", "Slide13", "Slide14","Slide15":
             currentTrial.imageType = "ATWFsm"
+        case "Slide 27", "Slide28", "Slide29", "Slide30":
+            currentTrial.imageType = "ATWFsm2"
         case "Slide07", "Slide08", "Slide09","Slide10":
             currentTrial.imageType = "ATWT"
         default: break
         }
         //hypotheses px
-        switch currentTrial.imageType {
-            case "AllT":
-                currentTrial.strongpx = "R"
-                currentTrial.weakpx = "R"
-                currentTrial.averagepx = "R"
-                currentTrial.X1biggestpx = "R"
-            case "AllF":
-                currentTrial.strongpx = "B"
-                currentTrial.weakpx = "B"
-                currentTrial.averagepx = "B"
-                currentTrial.X1biggestpx = "B"
-            case "ATWFlg":
-                currentTrial.strongpx = "B"
-                currentTrial.weakpx = "B"
-                currentTrial.averagepx = "R"
-                currentTrial.X1biggestpx = "B"
-            case "ATWFsm":
-                currentTrial.strongpx = "B"
-                currentTrial.weakpx = "B"
-                currentTrial.averagepx = "R"
-                currentTrial.X1biggestpx = "R"
-            case "ATWT":
-                currentTrial.strongpx = "B"
-                currentTrial.weakpx = "R"
-                currentTrial.averagepx = "R"
-                currentTrial.X1biggestpx = "R"
-            default: break
+        if baseTrial.condition == "pl" {
+            switch currentTrial.imageType {
+                case "AllT":
+                    currentTrial.strongpx = "R"
+                    currentTrial.weakpx = "R"
+                    currentTrial.averagepx = "R"
+                    currentTrial.X1biggestpx = "R"
+                case "AllF":
+                    currentTrial.strongpx = "B"
+                    currentTrial.weakpx = "B"
+                    currentTrial.averagepx = "B"
+                    currentTrial.X1biggestpx = "B"
+                case "ATWFlg":
+                    currentTrial.strongpx = "B"
+                    currentTrial.weakpx = "B"
+                    currentTrial.averagepx = "R"
+                    currentTrial.X1biggestpx = "B"
+                case "ATWFsm":
+                    currentTrial.strongpx = "B"
+                    currentTrial.weakpx = "B"
+                    currentTrial.averagepx = "R"
+                    currentTrial.X1biggestpx = "R"
+                case "ATWFsm2":
+                    currentTrial.strongpx = "B"
+                    currentTrial.weakpx = "B"
+                    currentTrial.averagepx = "R"
+                    currentTrial.X1biggestpx = "R"
+                case "ATWT":
+                    currentTrial.strongpx = "B"
+                    currentTrial.weakpx = "R"
+                    currentTrial.averagepx = "R"
+                    currentTrial.X1biggestpx = "R"
+                default: break
+            }
+                //response consistent with hypotheses?
+            switch response {
+                case currentTrial.strongpx:
+                    currentTrial.strongResp = 1
+                case currentTrial.weakpx:
+                    currentTrial.weakResp = 1
+                case currentTrial.averagepx:
+                    currentTrial.averageResp = 1
+                case currentTrial.X1biggestpx:
+                    currentTrial.X1biggestResp = 1
+                default: break
+            }
         }
-            //response consistent with hypotheses?
-        switch response {
-            case currentTrial.strongpx:
-                currentTrial.strongResp = 1
-            case currentTrial.weakpx:
-                currentTrial.weakResp = 1
-            case currentTrial.averagepx:
-                currentTrial.averageResp = 1
-            case currentTrial.X1biggestpx:
-                currentTrial.X1biggestResp = 1
-            default: break
+        
+        if baseTrial.condition == "sg" {
+            print("TODO: singular preprocessing")
         }
         
         
