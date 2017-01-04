@@ -174,7 +174,7 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
     }
     
     func preprocessData(currentTrial: Trial) {
-        //imageType
+        //get imageType
         switch currentTrial.imageName {
         case "Slide02", "Slide03", "Slide04","Slide05":
             currentTrial.imageType = "AllT"
@@ -190,8 +190,9 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
             currentTrial.imageType = "ATWT"
         default: break
         }
-        //hypotheses px
+
         if baseTrial.condition == "pl" {
+            //hypotheses predictions
             switch currentTrial.imageType {
                 case "AllT":
                     currentTrial.strongpx = "R"
@@ -242,10 +243,20 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
         }
         
         if baseTrial.condition == "sg" {
-            print("TODO: singular preprocessing")
+            //correct answer
+            switch currentTrial.imageName {
+            case "Slide02", "Slide03", "Slide04", "Slide05", "Slide07", "Slide08", "Slide09", "Slide10", "Slide12", "Slide13", "Slide18", "Slide19", "Slide20", "Slide27", "Slide28":
+                currentTrial.sgcorrectpx = "R"
+            case "Slide14","Slide15","Slide17","Slide22","Slide23","Slide24","Slide25","Slide29","Slide30":
+                currentTrial.sgcorrectpx = "B"
+            default: break
+            }
+            
+            //subject correct?
+            if response == currentTrial.sgcorrectpx {
+                currentTrial.sgcorrectResp = 1
+            }
         }
-        
-        
     }
     
     

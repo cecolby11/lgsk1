@@ -30,4 +30,7 @@ class Trial: Object {
     dynamic var weakResp = 0
     dynamic var averageResp = 0
     dynamic var X1biggestResp = 0
+    
+    dynamic var sgcorrectpx = ""
+    dynamic var sgcorrectResp = 0
 }
