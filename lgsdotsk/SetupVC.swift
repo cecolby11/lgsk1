@@ -61,7 +61,7 @@ class SetupViewController: UIViewController, UIAlertViewDelegate{
         //in indicates the start of the closure body
         saveAction = UIAlertAction(title: "Save", style: .default, handler: {action in
             self.trial.subjectNumber = "\((self.alertController.textFields![0] as UITextField).text!)" //unwrap array UITextFields (array of type AnyObject), cast to UITextField, and get the text variable from the entry
-            self.trial.condition = "\((self.alertController.textFields![1] as UITextField).text!)"
+            self.trial.condition = "\((self.alertController.textFields![1] as UITextField).text!.lowercased())"
             
             if self.validateFields() { //require that all fields are filled before segue is called
                 if self.validateSubjectNumber() {
@@ -92,7 +92,7 @@ class SetupViewController: UIViewController, UIAlertViewDelegate{
             return false
         }
         let conditions = ["sg", "pl"]
-        if !(conditions.contains(trial.condition.lowercased())) {
+        if !(conditions.contains(trial.condition)) {
             errController = UIAlertController(title: "Validation Error", message: "'sg' or 'pl' conditions only", preferredStyle: .alert)
             errController.view.tintColor = self.darkColor
             

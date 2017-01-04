@@ -226,6 +226,7 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
                 default: break
             }
                 //response consistent with hypotheses?
+            print("TODO: plural response-consistent is wrong")
             switch response {
                 case currentTrial.strongpx:
                     currentTrial.strongResp = 1
