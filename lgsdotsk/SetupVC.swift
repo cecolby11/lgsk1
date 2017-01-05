@@ -17,9 +17,10 @@ class SetupViewController: UIViewController, UIAlertViewDelegate{
     var alertController: UIAlertController!
     var errController: UIAlertController!
     
-    let accentColor = UIColor(red: 255/255, green: 240/255, blue: 86/255, alpha: 1)
     let darkColor = UIColor(red: 25/255, green: 25/255, blue: 25/255, alpha: 1)
     let lightColor = UIColor(red: 223/255, green: 226/255, blue: 219/255, alpha: 1)
+    let brightGreen: UIColor = UIColor(red: 195/255, green:247/255, blue: 165/255, alpha:1)
+    let brightPurple: UIColor = UIColor(red: 194/255, green: 124/255, blue: 254/255, alpha: 1)
     
     @IBOutlet weak var boy: UIImageView!
     @IBOutlet weak var girl: UIImageView!
@@ -42,14 +43,14 @@ class SetupViewController: UIViewController, UIAlertViewDelegate{
         //add text fields
         alertController.addTextField{ (textField:UITextField!) in
             textField.placeholder = "Subject Number"
-            textField.textColor = self.darkColor //input text
+            textField.textColor = self.brightPurple //input text
             textField.font = UIFont.systemFont(ofSize: 22, weight: UIFontWeightLight)
         }
         
         
         alertController.addTextField { (textField:UITextField!) in
             textField.placeholder = "Condition (sg or pl)"
-            textField.textColor = self.darkColor //input text
+            textField.textColor = self.brightPurple //input text
             textField.font = UIFont.systemFont(ofSize: 22, weight: UIFontWeightLight)
         }
         

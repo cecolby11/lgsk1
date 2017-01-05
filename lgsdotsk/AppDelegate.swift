@@ -16,15 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let accentColor = UIColor(red: 255/255, green: 240/255, blue: 86/255, alpha: 1) //fff056
+        let brightGreen: UIColor = UIColor(red: 195/255, green:247/255, blue: 165/255, alpha:1)
+        let brightPurple: UIColor = UIColor(red: 194/255, green: 124/255, blue: 254/255, alpha: 1)
         let darkColor = UIColor(red: 25/255, green: 25/255, blue: 25/255, alpha: 1) //#191919
         let lightColor = UIColor(red: 223/255, green: 226/255, blue: 219/255, alpha: 1) //#dfe2db
         
         // Bugfix: Tint not fully Applied to Alert Controller without Reapplying (e.g. on device rotation)
-        window?.tintColor = darkColor
+        window?.tintColor = brightGreen
         window?.backgroundColor = lightColor
-        UITextField.appearance().tintColor = darkColor
-        UIToolbar.appearance().tintColor = accentColor
+        UITextField.appearance().tintColor = brightPurple
+        UIToolbar.appearance().tintColor = brightGreen
         return true
     }
 
