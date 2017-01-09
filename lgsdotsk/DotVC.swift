@@ -68,7 +68,7 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
         let pawView = UIImageView()
         pawView.image = UIImage(named: "paw.png")
         pawView.frame = CGRect(x:position.x + offsetX, y: position.y, width: CGFloat((14.0/Double(numberPaws))*50), height: CGFloat((14.0/Double(numberPaws))*50))
-        pawView.alpha = 0.1
+        pawView.alpha = 0.01
         pawView.tag = tag
         progressView.addSubview(pawView)
         tag+=1
