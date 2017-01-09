@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RKh-8n-xNc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RKh-8n-xNc">
     <device id="ipad12_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -149,62 +149,8 @@
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VwG-og-LeI">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paw.png" translatesAutoresizingMaskIntoConstraints="NO" id="vzT-we-goK">
-                                        <rect key="frame" x="480" y="1042" width="64" height="64"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" alpha="0.10000000000000001" tag="8" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paw.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xkm-CN-FAW">
-                                        <rect key="frame" x="465" y="384" width="64" height="64"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" alpha="0.10000000000000001" tag="7" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paw.png" translatesAutoresizingMaskIntoConstraints="NO" id="1yt-Zx-dfU">
-                                        <rect key="frame" x="495" y="478" width="64" height="64"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" alpha="0.10000000000000001" tag="6" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paw.png" translatesAutoresizingMaskIntoConstraints="NO" id="fPT-Kh-rT1">
-                                        <rect key="frame" x="465" y="572" width="64" height="64"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" alpha="0.10000000000000001" tag="5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paw.png" translatesAutoresizingMaskIntoConstraints="NO" id="63J-06-P60">
-                                        <rect key="frame" x="495" y="666" width="64" height="64"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" alpha="0.10000000000000001" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paw.png" translatesAutoresizingMaskIntoConstraints="NO" id="pk4-wL-oFm">
-                                        <rect key="frame" x="495" y="854" width="64" height="64"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" alpha="0.10000000000000001" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paw.png" translatesAutoresizingMaskIntoConstraints="NO" id="kjG-hb-8Fs">
-                                        <rect key="frame" x="465" y="948" width="64" height="64"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" alpha="0.10000000000000001" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paw.png" translatesAutoresizingMaskIntoConstraints="NO" id="7n0-ls-6nH">
-                                        <rect key="frame" x="480" y="760" width="64" height="64"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" alpha="0.10000000149011612" tag="9" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paw.png" translatesAutoresizingMaskIntoConstraints="NO" id="B9Y-fG-OPg">
-                                        <rect key="frame" x="475" y="290" width="64" height="64"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" alpha="0.10000000149011612" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paw.png" translatesAutoresizingMaskIntoConstraints="NO" id="xj9-Ap-Qky">
-                                        <rect key="frame" x="485" y="196" width="64" height="64"/>
-                                    </imageView>
-                                </subviews>
                                 <color key="backgroundColor" red="0.87450980389999999" green="0.8862745098" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstItem="Xkm-CN-FAW" firstAttribute="top" secondItem="B9Y-fG-OPg" secondAttribute="bottom" constant="30" id="3g8-2S-OVU" userLabel="paw9 - Y"/>
-                                    <constraint firstItem="Xkm-CN-FAW" firstAttribute="centerX" secondItem="VwG-og-LeI" secondAttribute="centerX" constant="-15" id="43K-vU-32L" userLabel="paw8 - X"/>
-                                    <constraint firstItem="1yt-Zx-dfU" firstAttribute="centerX" secondItem="VwG-og-LeI" secondAttribute="centerX" constant="15" id="5g7-SX-glB" userLabel="paw7 - X"/>
-                                    <constraint firstItem="vzT-we-goK" firstAttribute="centerX" secondItem="VwG-og-LeI" secondAttribute="centerX" id="5iq-nX-HOX" userLabel="paw1 - X"/>
-                                    <constraint firstItem="fPT-Kh-rT1" firstAttribute="centerX" secondItem="VwG-og-LeI" secondAttribute="centerX" constant="-15" id="Akb-a0-zVM" userLabel="paw6 - X"/>
-                                    <constraint firstItem="fPT-Kh-rT1" firstAttribute="top" secondItem="1yt-Zx-dfU" secondAttribute="bottom" constant="30" id="CPb-YZ-gxB" userLabel="paw7 - Y"/>
-                                    <constraint firstItem="B9Y-fG-OPg" firstAttribute="top" secondItem="xj9-Ap-Qky" secondAttribute="bottom" constant="30" id="Lj9-7W-vAF" userLabel="paw10 - Y"/>
-                                    <constraint firstItem="63J-06-P60" firstAttribute="centerY" secondItem="VwG-og-LeI" secondAttribute="centerY" constant="15" id="Opo-Sy-sfS" userLabel="middlepaw - centerY"/>
-                                    <constraint firstItem="7n0-ls-6nH" firstAttribute="top" secondItem="63J-06-P60" secondAttribute="bottom" constant="30" id="SJw-fj-abx" userLabel="paw4 - Y"/>
-                                    <constraint firstItem="1yt-Zx-dfU" firstAttribute="top" secondItem="Xkm-CN-FAW" secondAttribute="bottom" constant="30" id="Vxr-68-0Vr" userLabel="paw8 - Y"/>
-                                    <constraint firstItem="xj9-Ap-Qky" firstAttribute="centerX" secondItem="VwG-og-LeI" secondAttribute="centerX" constant="5" id="WKU-b2-eV0" userLabel="paw10 - X"/>
-                                    <constraint firstItem="7n0-ls-6nH" firstAttribute="centerX" secondItem="VwG-og-LeI" secondAttribute="centerX" id="YqL-tm-oqp" userLabel="paw4 - X"/>
-                                    <constraint firstItem="pk4-wL-oFm" firstAttribute="centerX" secondItem="VwG-og-LeI" secondAttribute="centerX" constant="15" id="cp0-8h-oK4" userLabel="paw3 - X"/>
-                                    <constraint firstItem="vzT-we-goK" firstAttribute="top" secondItem="kjG-hb-8Fs" secondAttribute="bottom" constant="30" id="hUr-25-r0U" userLabel="paw1 - Y"/>
-                                    <constraint firstItem="pk4-wL-oFm" firstAttribute="top" secondItem="7n0-ls-6nH" secondAttribute="bottom" constant="30" id="kfu-Ht-FaP" userLabel="paw3 - Y"/>
-                                    <constraint firstItem="kjG-hb-8Fs" firstAttribute="centerX" secondItem="VwG-og-LeI" secondAttribute="centerX" constant="-15" id="ljC-IR-7EN" userLabel="paw2 - X"/>
-                                    <constraint firstItem="kjG-hb-8Fs" firstAttribute="top" secondItem="pk4-wL-oFm" secondAttribute="bottom" constant="30" id="vnZ-vT-oSY" userLabel="paw2 - Y"/>
-                                    <constraint firstItem="63J-06-P60" firstAttribute="top" secondItem="fPT-Kh-rT1" secondAttribute="bottom" constant="30" id="wIC-W6-exM" userLabel="paw6 - Y"/>
-                                    <constraint firstItem="63J-06-P60" firstAttribute="centerX" secondItem="VwG-og-LeI" secondAttribute="centerX" constant="15" id="ynJ-qM-H6x" userLabel="middlepaw - X"/>
-                                    <constraint firstItem="B9Y-fG-OPg" firstAttribute="centerX" secondItem="VwG-og-LeI" secondAttribute="centerX" constant="-5" id="zlD-dv-Nlv" userLabel="paw9 - X"/>
-                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="OWY-Hq-3Z6" appends="YES" id="bWb-Lw-IQg"/>
                                 </connections>

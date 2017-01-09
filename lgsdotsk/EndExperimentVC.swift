@@ -15,7 +15,8 @@ class EndExperimentViewController: UIViewController {
     var i = 4
     
     var alertController : UIAlertController!
-    let accentColor = UIColor(red: 255/255, green: 240/255, blue: 86/255, alpha: 1)
+    let brightGreen: UIColor = UIColor(red: 195/255, green:247/255, blue: 165/255, alpha:1)
+    let brightPurple: UIColor = UIColor(red: 194/255, green: 124/255, blue: 254/255, alpha: 1)
     let darkColor = UIColor(red: 25/255, green: 25/255, blue: 25/255, alpha: 1)
     let lightColor = UIColor(red: 223/255, green: 226/255, blue: 219/255, alpha: 1)
     
@@ -45,7 +46,7 @@ class EndExperimentViewController: UIViewController {
     func showAlert(){
         //initialize controller
         alertController = UIAlertController(title: "Are you sure?", message: "Select 'Continue' to start a new experiment", preferredStyle: .alert)
-        alertController.view.tintColor = self.accentColor
+        alertController.view.tintColor = self.darkColor
         
         
         //initialize actions

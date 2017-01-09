@@ -27,7 +27,12 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
     @IBOutlet weak var leftPawButton: UIButton!
     @IBOutlet weak var rightPawButton: UIButton!
     
-
+    //progress variables
+    var tag = 1
+    let numberPaws = 24
+    var position : CGPoint!
+    var offsetY : CGFloat = 50
+    var randomX : Int = 0
     
     //MARK: Experiment Setup
     
@@ -51,7 +56,39 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
         }
     }
     
-    //Experiment Actions
+    
+    //MARK: Paw Progress Setup
+    
+    func createPaw(offsetX: CGFloat, offsetY: CGFloat) {
+        position.y = position.y + offsetY //update position Y, keep original position X and pick offset
+        let pawView = UIImageView()
+        pawView.image = UIImage(named: "paw.png")
+        pawView.frame = CGRect(x:position.x + offsetX, y: position.y, width: CGFloat((14.0/Double(numberPaws))*50), height: CGFloat((14.0/Double(numberPaws))*50))
+        pawView.alpha = 0.1
+        pawView.tag = tag
+        progressView.addSubview(pawView)
+        tag+=1
+    }
+
+    func drawPaws() {
+        offsetY = (self.view.frame.height - 80)/CGFloat(numberPaws)
+        position = CGPoint(x:view.center.x, y:view.frame.maxY - 40)
+        for i in 1...numberPaws {
+            if tag % 2 == 0 {
+                createPaw(offsetX: 8, offsetY: -offsetY)
+            }
+            else if tag % 3 == 0 {
+                createPaw(offsetX: -7, offsetY: -offsetY)
+            }
+            else {
+                createPaw(offsetX: -17, offsetY: -offsetY)
+            }
+        }
+    }
+    
+    
+    
+    //MARK: Experiment Actions
     
     func wobbleButton(sender:UIButton) {
         //shrink
@@ -270,12 +307,9 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
         dotDisplay.image = UIImage(contentsOfFile: stim.shuffled[i] as! String)
 
         progressView.alpha = 0
+        drawPaws()
         leftPawButton.isHidden = true
         rightPawButton.isHidden = true
-        
-//        trialStepper.maximumValue = 10
-//        trialStepper.minimumValue = 1
-//        trialStepper.wraps = true
     }
 
     
