@@ -347,6 +347,9 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
         redirectLogToDocuments() //NSlog in aux file from this point forward
         
         selectStimuli()
+        character1.isExclusiveTouch = true
+        character2.isExclusiveTouch = true
+        
         dotDisplay.image = UIImage(contentsOfFile: stim.shuffled[i] as! String)
 
         //progressView.alpha = 0
