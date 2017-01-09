@@ -10,8 +10,11 @@ import UIKit
 import GameplayKit //for fast and uniform shuffle
 import RealmSwift
 
+@IBDesignable
+
 class DotViewController: UIViewController, UIPopoverPresentationControllerDelegate {
 
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var dotDisplay: UIImageView!
     var i: Int = 0
     let stim = Stimuli()
@@ -29,10 +32,11 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
     
     //progress variables
     var tag = 1
-    let numberPaws = 24
+    var numberPaws : Int!
     var position : CGPoint!
     var offsetY : CGFloat = 50
     var randomX : Int = 0
+    var isDotDisplayShowing = true
     
     //MARK: Experiment Setup
     
@@ -71,8 +75,8 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
     }
 
     func drawPaws() {
-        offsetY = (self.view.frame.height - 80)/CGFloat(numberPaws)
-        position = CGPoint(x:view.center.x, y:view.frame.maxY - 40)
+        offsetY = (self.progressView.frame.height - 80)/CGFloat(numberPaws)
+        position = CGPoint(x:progressView.center.x, y:progressView.frame.maxY - 40)
         for i in 1...numberPaws {
             if tag % 2 == 0 {
                 createPaw(offsetX: 8, offsetY: -offsetY)
@@ -84,6 +88,45 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
                 createPaw(offsetX: -17, offsetY: -offsetY)
             }
         }
+    }
+    
+    func dotDisplayFlip(){
+        if (isDotDisplayShowing) {
+            
+            //hide Dots show Progress
+            UIView.transition(from: dotDisplay,
+                              to: progressView,
+                                      duration: 1.2,
+                                      options: [.transitionFlipFromLeft, .showHideTransitionViews],
+                                      completion:nil)
+            hidePawButtons()
+            hideCharacters()
+        } else {
+            
+            //show Dots show Progress
+            UIView.transition(from: progressView,
+                                      to: dotDisplay,
+                                      duration: 1.2,
+                                      options: [.transitionFlipFromRight, .showHideTransitionViews],
+                                      completion: {finished in
+                                        self.showCharacters()})
+        }
+        isDotDisplayShowing = !isDotDisplayShowing
+    }
+    
+        func hidePawButtons() {
+        leftPawButton.isHidden = true
+        rightPawButton.isHidden = true
+    }
+    
+    func hideCharacters() {
+        character1.isHidden = true
+        character2.isHidden = true
+    }
+    
+    func showCharacters() {
+        character1.isHidden = false
+        character2.isHidden = false
     }
     
     
@@ -132,10 +175,12 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
                 case character1:
                     response="R"
                     revealPawButton(button: leftPawButton)
+                    character2.isEnabled = false
                 
                 case character2:
                     response="B"
                     revealPawButton(button: rightPawButton)
+                    character1.isEnabled = false
                 default:
                     response="NA"
             }
@@ -150,23 +195,21 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
         pulseButton(button: button)
     }
     
-    func hidePawButtons() {
-        leftPawButton.isHidden = true
-        rightPawButton.isHidden = true
-    }
-    
+
     @IBAction func showProgress() {
         writeTrialToRealm()
         for index in 1...i+1 {
             view.viewWithTag(index)?.alpha = 1
         }
-        UIView.animate(withDuration: 0.5, animations: {self.progressView.alpha = 1})
+        dotDisplayFlip()
+        //UIView.animate(withDuration: 0.5, animations: {self.progressView.alpha = 1})
     }
     
     @IBAction func tapToHideProgress(_ sender: UITapGestureRecognizer) {
-        nextImage()
-        hidePawButtons()
-        UIView.animate(withDuration: 0.5, animations: {self.progressView.alpha = 0})
+        if isDotDisplayShowing == false {
+            nextImage()
+            dotDisplayFlip()
+        }
     }
     
     func pulseButton(button: UIButton) {
@@ -306,10 +349,15 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
         selectStimuli()
         dotDisplay.image = UIImage(contentsOfFile: stim.shuffled[i] as! String)
 
-        progressView.alpha = 0
+        //progressView.alpha = 0
+        numberPaws = stim.shuffled.count
         drawPaws()
         leftPawButton.isHidden = true
         rightPawButton.isHidden = true
+        
+        dotDisplay.roundedCorners()
+        progressView.roundedCorners()
+        containerView.shadow()
     }
 
     
@@ -328,6 +376,23 @@ extension Array {
     func randomized() -> [Any] {
         let list = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: self)
         return list
+    }
+}
+
+
+extension UIView {
+    func roundedCorners() {
+        self.layer.cornerRadius = 16.0
+        self.clipsToBounds = true
+    }
+    
+    func shadow(){
+        self.layer.masksToBounds = false
+        self.layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOpacity = 0.6
+        self.layer.shadowOffset = CGSize.zero
+        self.layer.shadowRadius = 5
     }
 }
 

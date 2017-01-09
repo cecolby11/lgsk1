@@ -53,9 +53,12 @@ class EndExperimentViewController: UIViewController {
         let continueAction = UIAlertAction(title: "Continue", style: .default, handler: {action in
             self.performSegue(withIdentifier: "unwindToSetupVC", sender: self) //when save button pressed
         })
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) -> Void in
+        })
         
         //add actions
         alertController.addAction(continueAction)
+        alertController.addAction(cancelAction)
         
         //present alert controller
         self.present(alertController, animated: true, completion: nil)

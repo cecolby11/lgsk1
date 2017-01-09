@@ -22,10 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let lightColor = UIColor(red: 223/255, green: 226/255, blue: 219/255, alpha: 1) //#dfe2db
         
         // Bugfix: Tint not fully Applied to Alert Controller without Reapplying (e.g. on device rotation)
-        window?.tintColor = brightGreen
+        window?.tintColor = brightPurple
         window?.backgroundColor = lightColor
         UITextField.appearance().tintColor = brightPurple
-        UIToolbar.appearance().tintColor = brightGreen
+        UIToolbar.appearance().tintColor = brightPurple
         return true
     }
 
