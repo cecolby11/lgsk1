@@ -395,9 +395,9 @@ extension UIView {
         self.layer.masksToBounds = false
         self.layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
         self.layer.shadowColor = UIColor.black.cgColor
-        self.layer.shadowOpacity = 0.6
+        self.layer.shadowOpacity = 0.7
         self.layer.shadowOffset = CGSize.zero
-        self.layer.shadowRadius = 5
+        self.layer.shadowRadius = 6
     }
 }
 
