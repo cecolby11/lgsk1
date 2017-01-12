@@ -360,10 +360,12 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
         
         dotDisplay.roundedCorners()
         progressView.roundedCorners()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         containerView.shadow()
     }
 
-    
     //MARK: Logging
     func redirectLogToDocuments() {
         let allPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)

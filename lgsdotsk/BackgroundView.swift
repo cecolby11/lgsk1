@@ -21,7 +21,7 @@ class BackgroundView: UIView {
         
         let colors = [UIColor.white.cgColor, brightPurple.cgColor]
         let colorSpace = CGColorSpaceCreateDeviceRGB()
-        let colorLocations: [CGFloat] = [0.0,0.6,1.0]
+        let colorLocations: [CGFloat] = [0.0,1.0]
         
         let gradient = CGGradient(colorsSpace: colorSpace, colors: colors as CFArray, locations: colorLocations)
         
