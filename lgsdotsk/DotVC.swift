@@ -74,9 +74,17 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
         tag+=1
     }
 
-    func drawPaws() {
-        offsetY = (self.progressView.frame.height - 80)/CGFloat(numberPaws)
-        position = CGPoint(x:progressView.center.x, y:progressView.frame.maxY - 40)
+    func redrawPaws() {
+    //first clean up any previous paws (ie if redrawing upon orientation change)
+        //remove any existing paws 
+        for view in progressView.subviews {
+            view.removeFromSuperview()
+        }
+        //reset tag
+        tag = 1
+    //generate subviews
+        offsetY = (self.progressView.frame.height - 80)/CGFloat(numberPaws) //generate offset from view
+        position = CGPoint(x:progressView.center.x, y:progressView.frame.maxY - 40) //generate position from view
         for i in 1...numberPaws {
             if tag % 2 == 0 {
                 createPaw(offsetX: 8, offsetY: -offsetY)
@@ -87,6 +95,10 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
             else {
                 createPaw(offsetX: -17, offsetY: -offsetY)
             }
+        }
+    //reveal any progress made so far
+        for index in 1...i+1 {
+            view.viewWithTag(index)?.alpha = 1
         }
     }
     
@@ -202,7 +214,6 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
             view.viewWithTag(index)?.alpha = 1
         }
         dotDisplayFlip()
-        //UIView.animate(withDuration: 0.5, animations: {self.progressView.alpha = 1})
     }
     
     @IBAction func tapToHideProgress(_ sender: UITapGestureRecognizer) {
@@ -352,9 +363,7 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
         
         dotDisplay.image = UIImage(contentsOfFile: stim.shuffled[i] as! String)
 
-        //progressView.alpha = 0
         numberPaws = stim.shuffled.count
-        drawPaws()
         leftPawButton.isHidden = true
         rightPawButton.isHidden = true
         
@@ -364,11 +373,13 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
     
     override func willAnimateRotation(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
         containerView.shadow() //redraw shadow on orientation change
+        redrawPaws()
     }
     
     override func viewWillLayoutSubviews() {
-        //in case of rotation after initial loading but before initial display
+        //called here in case of rotation after initial loading but before initial display
         containerView.shadow()
+        redrawPaws()
     }
 
     //MARK: Logging
