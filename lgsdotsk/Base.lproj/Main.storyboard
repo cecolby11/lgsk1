@@ -40,15 +40,15 @@
                                 </constraints>
                             </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="girlBig.png" translatesAutoresizingMaskIntoConstraints="NO" id="bQU-La-Bxs">
-                                <rect key="frame" x="499.5" y="471" width="275" height="424"/>
+                                <rect key="frame" x="499.5" y="464" width="275" height="438"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="275" id="V4k-Vn-jze"/>
-                                    <constraint firstAttribute="width" secondItem="bQU-La-Bxs" secondAttribute="height" multiplier="24:37" id="j1t-ZR-qcr"/>
+                                    <constraint firstAttribute="width" secondItem="bQU-La-Bxs" secondAttribute="height" multiplier="209:333" id="j1t-ZR-qcr"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pupalone.png" translatesAutoresizingMaskIntoConstraints="NO" id="LIF-7Y-h4m">
-                                <rect key="frame" x="653.5" y="670" width="268" height="283"/>
+                                <rect key="frame" x="653.5" y="677" width="268" height="283"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="283" id="Md3-Qb-Ajj"/>
@@ -339,7 +339,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boyBig.png" translatesAutoresizingMaskIntoConstraints="NO" id="uaS-0X-Z0Y">
-                                <rect key="frame" x="174.5" y="514" width="275" height="438"/>
+                                <rect key="frame" x="175" y="514" width="275" height="438"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="275" id="92r-lr-wVQ"/>
                                     <constraint firstAttribute="width" secondItem="uaS-0X-Z0Y" secondAttribute="height" multiplier="209:333" id="wPt-tg-5gc"/>
@@ -349,27 +349,27 @@
                                 <rect key="frame" x="423" y="803" width="268" height="283"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="girlBig.png" translatesAutoresizingMaskIntoConstraints="NO" id="ysP-l4-YCT">
-                                <rect key="frame" x="574.5" y="521" width="275" height="424"/>
+                                <rect key="frame" x="575" y="514" width="275" height="438"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="ysP-l4-YCT" secondAttribute="height" multiplier="24:37" id="J1F-dM-wpQ"/>
+                                    <constraint firstAttribute="width" secondItem="ysP-l4-YCT" secondAttribute="height" multiplier="209:333" id="J1F-dM-wpQ"/>
                                     <constraint firstAttribute="width" constant="275" id="mf6-vL-awL"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grey.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xgp-2l-wAa" userLabel="leftgrey.png">
-                                <rect key="frame" x="230.5" y="301.5" width="163" height="163"/>
+                                <rect key="frame" x="231" y="302" width="163" height="163"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grey.png" translatesAutoresizingMaskIntoConstraints="NO" id="k0p-mI-Cle" userLabel="rightgrey.png">
-                                <rect key="frame" x="630.5" y="301.5" width="163" height="163"/>
+                                <rect key="frame" x="631" y="302" width="163" height="163"/>
                             </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red.png" translatesAutoresizingMaskIntoConstraints="NO" id="qGJ-J3-KnB" userLabel="Red Dot">
-                                <rect key="frame" x="430.5" y="901.5" width="163" height="163"/>
+                                <rect key="frame" x="431" y="902" width="163" height="163"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="QzP-md-rpn" appends="YES" id="E0Q-fD-9gQ"/>
                                 </connections>
                             </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue.png" translatesAutoresizingMaskIntoConstraints="NO" id="vT1-GJ-DB0" userLabel="Blue Dot">
-                                <rect key="frame" x="430.5" y="901.5" width="163" height="163"/>
+                                <rect key="frame" x="431" y="902" width="163" height="163"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="Fje-W4-tNd" appends="YES" id="Ims-DH-U4Q"/>
@@ -438,38 +438,38 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue.png" translatesAutoresizingMaskIntoConstraints="NO" id="a9f-LA-IbS" userLabel="biggest">
-                                        <rect key="frame" x="530" y="223" width="163" height="163"/>
+                                        <rect key="frame" x="530" y="216" width="163" height="163"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="163" id="9Nc-lj-HCi"/>
                                             <constraint firstAttribute="height" constant="163" id="Qwi-Gr-ZrU"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue.png" translatesAutoresizingMaskIntoConstraints="NO" id="tcN-vn-V53" userLabel="2ndsmallest">
-                                        <rect key="frame" x="576" y="456" width="70" height="70"/>
+                                        <rect key="frame" x="576" y="449" width="70" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="BaR-A8-NZv"/>
                                             <constraint firstAttribute="height" constant="70" id="X2g-8p-Hk2"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue.png" translatesAutoresizingMaskIntoConstraints="NO" id="4Jc-J2-YAy" userLabel="smallest">
-                                        <rect key="frame" x="716" y="408" width="33" height="33"/>
+                                        <rect key="frame" x="716" y="401" width="33" height="33"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="33" id="P5A-eW-bUS"/>
                                             <constraint firstAttribute="width" constant="33" id="geT-J2-I94"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue.png" translatesAutoresizingMaskIntoConstraints="NO" id="856-1k-zGt" userLabel="2ndbiggest">
-                                        <rect key="frame" x="779" y="308" width="101" height="101"/>
+                                        <rect key="frame" x="779" y="301" width="101" height="101"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="101" id="Joy-Ha-d4F"/>
                                             <constraint firstAttribute="width" constant="101" id="RcI-CU-ypV"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="girlBig.png" translatesAutoresizingMaskIntoConstraints="NO" id="GNl-Ut-5qw">
-                                        <rect key="frame" x="575" y="521" width="275" height="424"/>
+                                        <rect key="frame" x="575" y="514" width="275" height="438"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="275" id="IJy-Ee-YqV" userLabel="width = 275"/>
-                                            <constraint firstAttribute="width" secondItem="GNl-Ut-5qw" secondAttribute="height" multiplier="24:37" id="mZ0-ZD-4tQ"/>
+                                            <constraint firstAttribute="width" secondItem="GNl-Ut-5qw" secondAttribute="height" multiplier="209:333" id="mZ0-ZD-4tQ"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
@@ -558,8 +558,8 @@
     </scenes>
     <resources>
         <image name="blue.png" width="163" height="163"/>
-        <image name="boyBig.png" width="209" height="333"/>
-        <image name="girlBig.png" width="210" height="343"/>
+        <image name="boyBig.png" width="968" height="1522"/>
+        <image name="girlBig.png" width="983" height="1522"/>
         <image name="grey.png" width="163" height="163"/>
         <image name="paw.png" width="64" height="64"/>
         <image name="pup2alone.png" width="378" height="300"/>
