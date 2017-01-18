@@ -362,7 +362,12 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
         progressView.roundedCorners()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func willAnimateRotation(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
+        containerView.shadow() //redraw shadow on orientation change
+    }
+    
+    override func viewWillLayoutSubviews() {
+        //in case of rotation after initial loading but before initial display
         containerView.shadow()
     }
 
