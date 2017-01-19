@@ -12,14 +12,15 @@ import UIKit
 
 class BackgroundView: UIView {
     
-    @IBInspectable var brightPurple: UIColor = UIColor(red: 194/255, green: 124/255, blue: 254/255, alpha: 1)
+    //let brightPurple: UIColor = UIColor(red: 194/255, green: 124/255, blue: 254/255, alpha: 1)
+    let brightGreen: UIColor = UIColor(red: 184/255, green:254/255, blue: 124/255, alpha:1)
     
     override func draw(_ rect: CGRect) {
         
         
         let currentContext = UIGraphicsGetCurrentContext()
         
-        let colors = [UIColor.white.cgColor, brightPurple.cgColor]
+        let colors = [UIColor.white.cgColor, brightGreen.cgColor]
         let colorSpace = CGColorSpaceCreateDeviceRGB()
         let colorLocations: [CGFloat] = [0.0,1.0]
         
