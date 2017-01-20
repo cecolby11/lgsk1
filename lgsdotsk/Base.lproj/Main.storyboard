@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RKh-8n-xNc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RKh-8n-xNc">
     <device id="ipad12_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,12 +14,12 @@
         <!--Tap '+' to create new subject-->
         <scene sceneID="IiX-Gn-SbQ">
             <objects>
-                <viewController id="RKh-8n-xNc" customClass="SetupViewController" customModule="lgsk" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RKh-8n-xNc" customClass="SetupViewController" customModule="Lgsk" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Efz-QM-tov"/>
                         <viewControllerLayoutGuide type="bottom" id="uuW-HP-6d5"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="PaC-ki-PfG" customClass="BackgroundView" customModule="lgsk" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="PaC-ki-PfG" customClass="BackgroundView" customModule="Lgsk" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -123,19 +123,19 @@
         <!--Dot View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="DotViewController" customModule="lgsk" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DotViewController" customModule="Lgsk" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="BackgroundView" customModule="lgsk" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="BackgroundView" customModule="Lgsk" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="49Q-Ap-OwT" userLabel="Container View">
                                 <rect key="frame" x="58" y="342.5" width="908" height="681"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VwG-og-LeI" customClass="GradientView" customModule="lgsk" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VwG-og-LeI" customClass="GradientView" customModule="Lgsk" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="908" height="681"/>
                                         <color key="backgroundColor" red="0.84705882349999995" green="0.23137254900000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <gestureRecognizers/>
@@ -238,12 +238,12 @@
         <!--End Experiment View Controller-->
         <scene sceneID="IsT-ua-i2K">
             <objects>
-                <viewController id="UPV-IL-r08" customClass="EndExperimentViewController" customModule="lgsk" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="UPV-IL-r08" customClass="EndExperimentViewController" customModule="Lgsk" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4qX-QB-MAf"/>
                         <viewControllerLayoutGuide type="bottom" id="hio-XL-hkg"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="AFu-Kg-gMD" customClass="BackgroundView" customModule="lgsk" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="AFu-Kg-gMD" customClass="BackgroundView" customModule="Lgsk" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -371,7 +371,7 @@
         <!--Intro View Controller-->
         <scene sceneID="rcx-HL-b6U">
             <objects>
-                <viewController id="iFR-2A-omJ" customClass="IntroViewController" customModule="lgsk" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iFR-2A-omJ" customClass="IntroViewController" customModule="Lgsk" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kyx-70-TbM"/>
                         <viewControllerLayoutGuide type="bottom" id="2a8-U3-GuY"/>
@@ -471,6 +471,7 @@
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.87450980389999999" green="0.8862745098" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="9ad-bM-j74" firstAttribute="centerX" secondItem="JD7-8W-OHR" secondAttribute="centerX" constant="-180" id="4f7-yW-8sq" userLabel="smallest - centerX + value"/>
                                     <constraint firstItem="b32-D8-7NX" firstAttribute="top" secondItem="9ad-bM-j74" secondAttribute="bottom" constant="80" id="EX1-9A-eG2" userLabel="smallest - space above person"/>
@@ -523,7 +524,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.87450980389999999" green="0.8862745098" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="856-1k-zGt" firstAttribute="top" secondItem="4Jc-J2-YAy" secondAttribute="top" constant="-100" id="0Eh-aI-WvI" userLabel="2nd biggest - Y to smallest"/>
