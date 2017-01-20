@@ -18,7 +18,7 @@ class SetupViewController: UIViewController, UIAlertViewDelegate{
     var errController: UIAlertController!
     
     let darkColor = UIColor(red: 25/255, green: 25/255, blue: 25/255, alpha: 1)
-    let brightPurple: UIColor = UIColor(red: 194/255, green: 124/255, blue: 254/255, alpha: 1)
+    let brightPurple: UIColor = UIColor(red: 128/255, green: 0/255, blue: 255/255, alpha: 1)
     
     @IBOutlet weak var boy: UIImageView!
     @IBOutlet weak var girl: UIImageView!
@@ -137,8 +137,7 @@ class SetupViewController: UIViewController, UIAlertViewDelegate{
         return true
         }
     }
-    
-        @IBAction func newSubjectTapped(_ sender: Any) {
+    @IBAction func newSubjectTapped(_ sender: Any) {
         showAlert()
     }
     
@@ -161,7 +160,9 @@ class SetupViewController: UIViewController, UIAlertViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         redirectLogToDocuments()
+        
     }
+    
     
     
     //MARK: Navigation

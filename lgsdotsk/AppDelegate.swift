@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         let brightGreen: UIColor = UIColor(red: 184/255, green:254/255, blue: 124/255, alpha:1)
-        //let brightPurple: UIColor = UIColor(red: 194/255, green: 124/255, blue: 254/255, alpha: 1)
+        let brightPurple: UIColor = UIColor(red: 128/255, green: 0/255, blue: 255/255, alpha: 1)
         let darkColor = UIColor(red: 25/255, green: 25/255, blue: 25/255, alpha: 1) //#191919
         let lightColor = UIColor(red: 223/255, green: 226/255, blue: 219/255, alpha: 1) //#dfe2db
         
@@ -25,7 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.tintColor = darkColor //affects alert controller buttons
         window?.backgroundColor = lightColor
         UITextField.appearance().tintColor = brightGreen //affects cursor color
-        UIToolbar.appearance().tintColor = brightGreen 
+        UIToolbar.appearance().tintColor = brightPurple
+        UINavigationBar.appearance().tintColor = brightPurple
         return true
     }
 

@@ -15,7 +15,6 @@ class IntroViewController: UIViewController {
     @IBOutlet weak var containedViewRed: UIView!
     @IBOutlet weak var containedViewBlue: UIView!
     var tapIndex = 0
-    @IBOutlet weak var instructionText: UILabel!
     
     @IBOutlet weak var pupAlone: UIImageView!
     @IBOutlet weak var redTestDot: UIImageView!
@@ -23,6 +22,7 @@ class IntroViewController: UIViewController {
     @IBOutlet weak var leftGreyReciever: UIImageView!
     @IBOutlet weak var rightGreyReceiver: UIImageView!
     
+    @IBOutlet weak var navigationBarTitle: UINavigationItem!
     @IBOutlet var redPan: UIPanGestureRecognizer!
     @IBOutlet var bluePan: UIPanGestureRecognizer!
     var snap: UISnapBehavior!
@@ -51,7 +51,6 @@ class IntroViewController: UIViewController {
             UIView.animate(withDuration: 0.7, animations: {
                 self.containedViewBlue.alpha = 0
                 self.containedViewRed.alpha = 0
-                self.instructionText.isHidden = true
                 self.pupAlone.isHidden = true
             })
             showTestDots()
@@ -72,6 +71,7 @@ class IntroViewController: UIViewController {
         blueTestDot.isHidden = false
         leftGreyReciever.isHidden = false
         rightGreyReceiver.isHidden = false
+        navigationBarTitle.title = "Match us with the color of our dots!"
     }
 
    
@@ -103,6 +103,10 @@ class IntroViewController: UIViewController {
         } else {
             leftGreyReciever.isHidden = false
         }
+        
+        if (rightGreyReceiver.frame.intersects(blueTestDot.frame) && leftGreyReciever.frame.intersects(redTestDot.frame)) {
+            navigationBarTitle.title = "Two-finger double tap anywhere to continue!"
+        }
 
     }
     
@@ -127,8 +131,7 @@ class IntroViewController: UIViewController {
         animator = UIDynamicAnimator(referenceView: view)
 
     }
-    
-    
+
     
     //MARK: Navigation
     

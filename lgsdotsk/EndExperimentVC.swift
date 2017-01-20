@@ -77,8 +77,9 @@ class EndExperimentViewController: UIViewController {
     
     //MARK: Navigation
     
-    @IBAction func newSubjectTapped(_ sender: UIBarButtonItem) {
+    @IBAction func newSubjectTapped(_ sender: Any) {
         showAlert()
     }
+
     
 }
