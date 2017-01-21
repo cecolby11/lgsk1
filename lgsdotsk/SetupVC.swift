@@ -24,7 +24,7 @@ class SetupViewController: UIViewController, UIAlertViewDelegate{
     
     //MARK: Drawing
     func drawCircle(radius: Double, offset:Double) {
-        let circlePath = UIBezierPath(arcCenter: CGPoint(x: self.view.frame.width/2 + CGFloat(offset),y: self.view.frame.height/2-80), radius: CGFloat(radius), startAngle: CGFloat(0), endAngle:CGFloat(M_PI * 2), clockwise: true)
+        let circlePath = UIBezierPath(arcCenter: CGPoint(x: self.view.bounds.width/2 + CGFloat(offset),y: self.view.frame.height/2-80), radius: CGFloat(radius), startAngle: CGFloat(0), endAngle:CGFloat(M_PI * 2), clockwise: true)
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = circlePath.cgPath
         //change the fill color
@@ -184,14 +184,22 @@ class SetupViewController: UIViewController, UIAlertViewDelegate{
     }
     
     override func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
-    //remove and redraw circles on rotation
+    //remove circles before rotation
         for layer in self.view.layer.sublayers! {
             if(layerArray.contains(layer)){
                 layer.removeFromSuperlayer()
                 layerArray.remove(layer)
             }
         }
-        
+    }
+    
+    override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
+        //redraw circles
+        drawCircle(radius: 65,offset: -195)
+        drawCircle(radius: 55, offset: 55)
+        drawCircle(radius: 35,offset: 155)
+        drawCircle(radius: 20,offset:220)
+        drawCircle(radius: 10, offset: 260)
     }
     
     
