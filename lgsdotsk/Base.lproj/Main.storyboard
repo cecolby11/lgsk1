@@ -238,7 +238,7 @@
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
                                     <navigationItem id="nbX-3s-Cbu">
-                                        <barButtonItem key="leftBarButtonItem" title="New Subject" id="wqN-k6-JWa">
+                                        <barButtonItem key="leftBarButtonItem" title="Home" id="wqN-k6-JWa">
                                             <connections>
                                                 <action selector="newSubjectTapped:" destination="UPV-IL-r08" id="KK7-5i-u2f"/>
                                             </connections>

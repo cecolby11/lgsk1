@@ -174,13 +174,6 @@ class SetupViewController: UIViewController, UIAlertViewDelegate{
         
         let angle = (-2 * 3.14/180.0)
         containerView.transform = CGAffineTransform(rotationAngle: CGFloat(angle))
-        
-        //spacing: 5 between
-        drawCircle(radius: 65,offset: -195)
-        drawCircle(radius: 55, offset: 55)
-        drawCircle(radius: 35,offset: 155)
-        drawCircle(radius: 20,offset:220)
-        drawCircle(radius: 10, offset: 260)
     }
     
     override func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
@@ -202,6 +195,14 @@ class SetupViewController: UIViewController, UIAlertViewDelegate{
         drawCircle(radius: 10, offset: 260)
     }
     
+    override func viewWillLayoutSubviews() {
+        //spacing: 5 between
+        drawCircle(radius: 65,offset: -195)
+        drawCircle(radius: 55, offset: 55)
+        drawCircle(radius: 35,offset: 155)
+        drawCircle(radius: 20,offset:220)
+        drawCircle(radius: 10, offset: 260)
+    }
     
     //MARK: Navigation
     
