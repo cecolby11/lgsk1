@@ -88,18 +88,12 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
         for _ in 1...numberPaws {
             if tag % 2 == 0 {
                 createPaw(offsetX: 8, offsetY: -offsetY)
-                print(tag)
-                print("offset1")
             }
             else if tag % 3 == 0 {
                 createPaw(offsetX: -7, offsetY: -offsetY)
-                print(tag)
-                print("offset2")
             }
             else {
                 createPaw(offsetX: -17, offsetY: -offsetY)
-                print(tag)
-                print("offset3")
             }
         }
     //reveal any progress made so far

@@ -78,11 +78,6 @@ class EndExperimentViewController: UIViewController {
         containerView.transform = CGAffineTransform(rotationAngle: CGFloat(angle))
 
     }
-    
-    override func viewWillLayoutSubviews() {
-        
-    }
-    
 
     
     //MARK: Navigation
