@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "142EEC8F1DB9021700E4AB0D"
-               BuildableName = "lgsk.app"
+               BuildableName = "Lgsk.app"
                BlueprintName = "lgsdotsk"
                ReferencedContainer = "container:lgsdotsk.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "142EEC8F1DB9021700E4AB0D"
-            BuildableName = "lgsk.app"
+            BuildableName = "Lgsk.app"
             BlueprintName = "lgsdotsk"
             ReferencedContainer = "container:lgsdotsk.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "142EEC8F1DB9021700E4AB0D"
-            BuildableName = "lgsk.app"
+            BuildableName = "Lgsk.app"
             BlueprintName = "lgsdotsk"
             ReferencedContainer = "container:lgsdotsk.xcodeproj">
          </BuildableReference>
@@ -82,7 +82,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "142EEC8F1DB9021700E4AB0D"
-            BuildableName = "lgsk.app"
+            BuildableName = "Lgsk.app"
             BlueprintName = "lgsdotsk"
             ReferencedContainer = "container:lgsdotsk.xcodeproj">
          </BuildableReference>

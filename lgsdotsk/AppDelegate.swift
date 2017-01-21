@@ -18,11 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         let brightGreen: UIColor = UIColor(red: 184/255, green:254/255, blue: 124/255, alpha:1)
         let brightPurple: UIColor = UIColor(red: 128/255, green: 0/255, blue: 255/255, alpha: 1)
-        let darkColor = UIColor(red: 25/255, green: 25/255, blue: 25/255, alpha: 1) //#191919
+        //let darkColor = UIColor(red: 25/255, green: 25/255, blue: 25/255, alpha: 1) //#191919
         let lightColor = UIColor(red: 223/255, green: 226/255, blue: 219/255, alpha: 1) //#dfe2db
         
         // Bugfix: Tint not fully Applied to Alert Controller without Reapplying (e.g. on device rotation)
-        window?.tintColor = darkColor //affects alert controller buttons
+        window?.tintColor = brightPurple //affects alert controller buttons
         window?.backgroundColor = lightColor
         UITextField.appearance().tintColor = brightGreen //affects cursor color
         UIToolbar.appearance().tintColor = brightPurple

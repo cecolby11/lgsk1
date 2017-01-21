@@ -33,3 +33,4 @@ class BackgroundView: UIView {
         currentContext?.drawLinearGradient(gradient!, start: topLeft, end: bottomLeft, options: [])
     }
 }
+

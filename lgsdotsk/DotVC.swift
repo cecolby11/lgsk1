@@ -85,15 +85,21 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
     //generate subviews
         offsetY = (self.progressView.frame.height - 80)/CGFloat(numberPaws) //generate offset from view
         position = CGPoint(x:progressView.center.x, y:progressView.frame.maxY - 40) //generate position from view
-        for i in 1...numberPaws {
+        for _ in 1...numberPaws {
             if tag % 2 == 0 {
                 createPaw(offsetX: 8, offsetY: -offsetY)
+                print(tag)
+                print("offset1")
             }
             else if tag % 3 == 0 {
                 createPaw(offsetX: -7, offsetY: -offsetY)
+                print(tag)
+                print("offset2")
             }
             else {
                 createPaw(offsetX: -17, offsetY: -offsetY)
+                print(tag)
+                print("offset3")
             }
         }
     //reveal any progress made so far
@@ -367,8 +373,8 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
         leftPawButton.isHidden = true
         rightPawButton.isHidden = true
         
-        dotDisplay.roundedCorners()
-        progressView.roundedCorners()
+//        dotDisplay.roundedCorners()
+//        progressView.roundedCorners()
     }
     
     override func willAnimateRotation(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {

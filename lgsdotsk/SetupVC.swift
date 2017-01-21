@@ -17,7 +17,6 @@ class SetupViewController: UIViewController, UIAlertViewDelegate{
     var alertController: UIAlertController!
     var errController: UIAlertController!
     
-    let darkColor = UIColor(red: 25/255, green: 25/255, blue: 25/255, alpha: 1)
     let brightPurple: UIColor = UIColor(red: 128/255, green: 0/255, blue: 255/255, alpha: 1)
     
     @IBOutlet weak var boy: UIImageView!
@@ -35,7 +34,7 @@ class SetupViewController: UIViewController, UIAlertViewDelegate{
     func showAlert(){
         //initialize controller
         alertController = UIAlertController(title: "New LGSk Subject", message: "Enter Subject Information", preferredStyle: .alert)
-        alertController.view.tintColor = self.darkColor
+        alertController.view.tintColor = self.brightPurple
 
         
         //add text fields
@@ -80,7 +79,7 @@ class SetupViewController: UIViewController, UIAlertViewDelegate{
     func validateFields() -> Bool {
         if trial.subjectNumber.isEmpty || trial.condition.isEmpty {
             errController = UIAlertController(title: "Validation Error", message: "All fields must be filled", preferredStyle: .alert)
-            errController.view.tintColor = self.darkColor
+            errController.view.tintColor = self.brightPurple
             
             let errAction = UIAlertAction(title: "Update Fields", style: UIAlertActionStyle.destructive) { alert in
                 self.present(self.alertController, animated: true, completion: nil)
@@ -93,7 +92,7 @@ class SetupViewController: UIViewController, UIAlertViewDelegate{
         let conditions = ["sg", "pl"]
         if !(conditions.contains(trial.condition)) {
             errController = UIAlertController(title: "Validation Error", message: "'sg' or 'pl' conditions only", preferredStyle: .alert)
-            errController.view.tintColor = self.darkColor
+            errController.view.tintColor = self.brightPurple
             
             let errAction = UIAlertAction(title: "Update Fields", style: UIAlertActionStyle.destructive) { alert in
                 self.present(self.alertController, animated: true, completion: nil)
@@ -117,7 +116,7 @@ class SetupViewController: UIViewController, UIAlertViewDelegate{
             
             NSLog("validation error: \(trial.subjectNumber) already exists")
             errController = UIAlertController(title: "Validation Error", message: "\(trial.subjectNumber) already exists", preferredStyle: .alert)
-            errController.view.tintColor = self.darkColor
+            errController.view.tintColor = self.brightPurple
             
             let errAction = UIAlertAction(title: "Enter Unique Subject Number", style:UIAlertActionStyle.default) { alert in
                 NSLog("entering new subject number")

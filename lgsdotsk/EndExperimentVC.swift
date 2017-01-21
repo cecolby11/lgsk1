@@ -15,7 +15,9 @@ class EndExperimentViewController: UIViewController {
     var i = 4
     
     var alertController : UIAlertController!
-    let darkColor = UIColor(red: 25/255, green: 25/255, blue: 25/255, alpha: 1)
+    let brightPurple: UIColor = UIColor(red: 128/255, green: 0/255, blue: 255/255, alpha: 1)
+
+    @IBOutlet weak var containerView: UIView!
     
     
     //MARK: Actions
@@ -43,7 +45,7 @@ class EndExperimentViewController: UIViewController {
     func showAlert(){
         //initialize controller
         alertController = UIAlertController(title: "Are you sure?", message: "Select 'Continue' to start a new experiment", preferredStyle: .alert)
-        alertController.view.tintColor = self.darkColor
+        alertController.view.tintColor = self.brightPurple
         
         
         //initialize actions
@@ -72,8 +74,16 @@ class EndExperimentViewController: UIViewController {
         UIView.animate(withDuration: 0.5, delay: 6.0, options: [], animations: {
             self.happyPupsView.loadGif(name: "pupstogether2")
         }, completion: nil)
+        let angle = (-2 * 3.14/180.0)
+        containerView.transform = CGAffineTransform(rotationAngle: CGFloat(angle))
+
     }
     
+    override func viewWillLayoutSubviews() {
+        
+    }
+    
+
     
     //MARK: Navigation
     
