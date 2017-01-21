@@ -473,8 +473,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.87450980389999999" green="0.8862745098" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="9ad-bM-j74" firstAttribute="centerX" secondItem="JD7-8W-OHR" secondAttribute="centerX" constant="-180" id="4f7-yW-8sq" userLabel="smallest - centerX + value"/>
                                     <constraint firstItem="b32-D8-7NX" firstAttribute="top" secondItem="9ad-bM-j74" secondAttribute="bottom" constant="80" id="EX1-9A-eG2" userLabel="smallest - space above person"/>
