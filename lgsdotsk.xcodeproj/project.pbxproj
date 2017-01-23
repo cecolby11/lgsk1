@@ -30,7 +30,6 @@
 		9998AB8A1DCBD2F5008BCD0D /* paw.png in Resources */ = {isa = PBXBuildFile; fileRef = 9998AB891DCBD2F5008BCD0D /* paw.png */; };
 		99FFE7C11E01E4A8001375A7 /* pupstogether2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 99FFE7BF1E01E4A8001375A7 /* pupstogether2.gif */; };
 		99FFE7C31E01EC42001375A7 /* pup2alone.png in Resources */ = {isa = PBXBuildFile; fileRef = 99FFE7C21E01EC42001375A7 /* pup2alone.png */; };
-		99FFFF861E36906500001377 /* pupalone.gif in Resources */ = {isa = PBXBuildFile; fileRef = 99FFFF851E36906500001377 /* pupalone.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,7 +60,6 @@
 		9998AB891DCBD2F5008BCD0D /* paw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paw.png; sourceTree = "<group>"; };
 		99FFE7BF1E01E4A8001375A7 /* pupstogether2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = pupstogether2.gif; sourceTree = "<group>"; };
 		99FFE7C21E01EC42001375A7 /* pup2alone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pup2alone.png; sourceTree = "<group>"; };
-		99FFFF851E36906500001377 /* pupalone.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = pupalone.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +149,6 @@
 				14496B111E00931C0002A386 /* pupstogether.png */,
 				99FFE7BF1E01E4A8001375A7 /* pupstogether2.gif */,
 				99FFE7C21E01EC42001375A7 /* pup2alone.png */,
-				99FFFF851E36906500001377 /* pupalone.gif */,
 				14496B131E009AF40002A386 /* pupalone.png */,
 				9998AB891DCBD2F5008BCD0D /* paw.png */,
 			);
@@ -233,7 +230,6 @@
 				142EEC9E1DB9021700E4AB0D /* LaunchScreen.storyboard in Resources */,
 				9998AB8A1DCBD2F5008BCD0D /* paw.png in Resources */,
 				994868291E1D5E9A00CDBDA8 /* singularStim in Resources */,
-				99FFFF861E36906500001377 /* pupalone.gif in Resources */,
 				9927B4771DC9162100E8622B /* red.png in Resources */,
 				99FFE7C11E01E4A8001375A7 /* pupstogether2.gif in Resources */,
 				990D06381DC8FB840091B878 /* girlBig.png in Resources */,

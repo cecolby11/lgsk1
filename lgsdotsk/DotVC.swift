@@ -124,6 +124,13 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
                                         self.showCharacters()})
         }
         isDotDisplayShowing = !isDotDisplayShowing
+        
+        //pulse paws on final display
+        if i==stim.shuffled.count-1 {
+            for pawView in progressView.subviews {
+                pulseView(view: pawView)
+            }
+        }
     }
     
         func hidePawButtons() {
@@ -232,6 +239,17 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
         pulseAnimation.autoreverses = true
         pulseAnimation.repeatCount = Float.infinity
         button.layer.add(pulseAnimation, forKey: "layerAnimation")
+    }
+    
+    func pulseView(view: UIView) {
+        let pulseAnimation = CABasicAnimation(keyPath: "transform.scale")
+        pulseAnimation.duration = 1
+        pulseAnimation.fromValue = 1.0
+        pulseAnimation.toValue = 1.3
+        pulseAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        pulseAnimation.autoreverses = true
+        pulseAnimation.repeatCount = Float.infinity
+        view.layer.add(pulseAnimation, forKey: "layerAnimation")
     }
 
     
