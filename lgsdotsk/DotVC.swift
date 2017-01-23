@@ -86,14 +86,16 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
         offsetY = (self.progressView.frame.height - 80)/CGFloat(numberPaws) //generate offset from view
         position = CGPoint(x:progressView.center.x, y:progressView.frame.maxY - 40) //generate position from view
         for _ in 1...numberPaws {
+            //scale offset according to width of paw image
+            let width_multiplier = 14.0/Double(numberPaws) * 2
             if tag % 2 == 0 {
-                createPaw(offsetX: 8, offsetY: -offsetY)
+                createPaw(offsetX: CGFloat(8*width_multiplier), offsetY: -offsetY)
             }
             else if tag % 3 == 0 {
-                createPaw(offsetX: -7, offsetY: -offsetY)
+                createPaw(offsetX: CGFloat(-7*width_multiplier), offsetY: -offsetY)
             }
             else {
-                createPaw(offsetX: -17, offsetY: -offsetY)
+                createPaw(offsetX: CGFloat(-17*width_multiplier), offsetY: -offsetY)
             }
         }
     //reveal any progress made so far
