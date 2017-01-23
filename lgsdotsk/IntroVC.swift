@@ -11,11 +11,16 @@ import SwiftGifOrigin
 
 class IntroViewController: UIViewController {
 
+    let brightGreen: UIColor = UIColor(red: 184/255, green:254/255, blue: 124/255, alpha:0.75)
+    var layerArray = NSMutableArray()
+    
     @IBOutlet var tapRecognizer: UITapGestureRecognizer!
     @IBOutlet weak var containedViewRed: UIView!
     @IBOutlet weak var containedViewBlue: UIView!
     var tapIndex = 0
     
+    @IBOutlet weak var boy: UIImageView!
+    @IBOutlet weak var girl: UIImageView!
     @IBOutlet weak var pupAlone: UIImageView!
     @IBOutlet weak var redTestDot: UIImageView!
     @IBOutlet weak var blueTestDot: UIImageView!
@@ -53,7 +58,15 @@ class IntroViewController: UIViewController {
                 self.containedViewRed.alpha = 0
                 self.pupAlone.isHidden = true
             })
+            //remove ellipse
+            for layer in self.view.layer.sublayers! {
+                if(layerArray.contains(layer)){
+                    layer.removeFromSuperlayer()
+                    layerArray.remove(layer)
+                }
+            }
             showTestDots()
+
         case _ where (tapIndex>=4 && rightGreyReceiver.center==blueTestDot.center && leftGreyReciever.center==redTestDot.center):
             self.performSegue(withIdentifier: "beginExperiment", sender: self)
             
@@ -110,6 +123,18 @@ class IntroViewController: UIViewController {
 
     }
     
+    //MARK: Drawing
+    
+    func drawEllipse() {
+        let ellipsePath = UIBezierPath(ovalIn: CGRect(x:boy.frame.minX, y:boy.frame.maxY - 90, width:girl.frame.maxX-boy.frame.minX, height:200))
+        let ellipseLayer = CAShapeLayer()
+        ellipseLayer.path = ellipsePath.cgPath
+        ellipseLayer.fillColor = brightGreen.cgColor
+        view.layer.insertSublayer(ellipseLayer, at: 0)
+        
+        layerArray.add(ellipseLayer)
+    }
+    
 
     //MARK: View Lifecycle
     
@@ -129,7 +154,21 @@ class IntroViewController: UIViewController {
         tapRecognizer.numberOfTouchesRequired = 2
         
         animator = UIDynamicAnimator(referenceView: view)
+        drawEllipse()
 
+    }
+    
+    override func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
+        for layer in self.view.layer.sublayers! {
+            if(layerArray.contains(layer)){
+                layer.removeFromSuperlayer()
+                layerArray.remove(layer)
+            }
+        }
+    }
+    
+    override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
+        drawEllipse()
     }
 
     

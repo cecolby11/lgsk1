@@ -27,7 +27,6 @@ class SetupViewController: UIViewController, UIAlertViewDelegate{
         let circlePath = UIBezierPath(arcCenter: CGPoint(x: self.view.bounds.width/2 + CGFloat(offset),y: self.view.frame.height/2-80), radius: CGFloat(radius), startAngle: CGFloat(0), endAngle:CGFloat(M_PI * 2), clockwise: true)
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = circlePath.cgPath
-        //change the fill color
         shapeLayer.fillColor = brightPurple.cgColor
         view.layer.addSublayer(shapeLayer)
         
