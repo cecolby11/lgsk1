@@ -61,7 +61,7 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
     }
     
     
-    //MARK: Paw Progress Setup
+    //MARK: Progress Setup
     
     func createPaw(offsetX: CGFloat, offsetY: CGFloat) {
         position.y = position.y + offsetY //update position Y, keep original position X and pick offset
@@ -133,7 +133,10 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
         }
     }
     
-        func hidePawButtons() {
+    
+    //MARK: Buttons 
+    
+    func hidePawButtons() {
         leftPawButton.isHidden = true
         rightPawButton.isHidden = true
     }
@@ -147,10 +150,6 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
         character1.isHidden = false
         character2.isHidden = false
     }
-    
-    
-    
-    //MARK: Experiment Actions
     
     func wobbleButton(sender:UIButton) {
         //shrink
@@ -168,6 +167,8 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
         sender.isEnabled = false
     }
     
+    //MARK: Experiment Actions
+    
     func nextImage() {
         if i==stim.shuffled.count-1 {
             endExperiment()
@@ -179,7 +180,6 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
             print("i=\(i)")
         }
     }
-        
     
     func endExperiment() {
         NSLog("Experiment terminated successfully")
@@ -206,7 +206,7 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
     }
     
     
-    //MARK: Game Actions
+    //MARK: Progress Display
     
     func revealPawButton(button: UIButton) {
         button.isEnabled = true
@@ -429,9 +429,9 @@ extension UIView {
         self.layer.masksToBounds = false
         self.layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
         self.layer.shadowColor = UIColor.black.cgColor
-        self.layer.shadowOpacity = 0.7
+        self.layer.shadowOpacity = 0.6
         self.layer.shadowOffset = CGSize.zero
-        self.layer.shadowRadius = 6
+        self.layer.shadowRadius = 5
     }
 }
 
