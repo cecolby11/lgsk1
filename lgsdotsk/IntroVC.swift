@@ -11,7 +11,7 @@ import SwiftGifOrigin
 
 class IntroViewController: UIViewController {
 
-    let brightGreen: UIColor = UIColor(red: 184/255, green:254/255, blue: 124/255, alpha:0.75)
+    let brightGreen: UIColor = UIColor(red: 184/255, green:254/255, blue: 124/255, alpha:1)
     var layerArray = NSMutableArray()
     
     @IBOutlet var tapRecognizer: UITapGestureRecognizer!
@@ -126,7 +126,7 @@ class IntroViewController: UIViewController {
     //MARK: Drawing
     
     func drawEllipse() {
-        let ellipsePath = UIBezierPath(ovalIn: CGRect(x:boy.frame.minX, y:boy.frame.maxY - 90, width:girl.frame.maxX-boy.frame.minX, height:200))
+        let ellipsePath = UIBezierPath(ovalIn: CGRect(x:boy.frame.minX, y:boy.frame.maxY - 110, width:girl.frame.maxX-boy.frame.minX, height:200))
         let ellipseLayer = CAShapeLayer()
         ellipseLayer.path = ellipsePath.cgPath
         ellipseLayer.fillColor = brightGreen.cgColor
