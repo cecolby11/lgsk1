@@ -14,29 +14,37 @@ import RealmSwift
 
 class DotViewController: UIViewController, UIPopoverPresentationControllerDelegate {
 
-    @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var dotDisplay: UIImageView!
+    //database/experimental vars
     var i: Int = 0
     let stim = Stimuli()
     var baseTrial = Trial()
     var response = ""
     
+    //storyboard outlets
     @IBOutlet weak var character1: UIButton!
     @IBOutlet weak var character2: UIButton!
-    
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var dotDisplay: UIImageView!
     @IBOutlet weak var progressView: UIView!
     @IBOutlet var tapRec: UITapGestureRecognizer!
-    
     @IBOutlet weak var leftPawButton: UIButton!
     @IBOutlet weak var rightPawButton: UIButton!
     
-    //progress variables
+    //progress vars for display
     var tag = 1
     var numberPaws : Int!
     var position : CGPoint!
     var offsetY : CGFloat = 50
     var randomX : Int = 0
     var isDotDisplayShowing = true
+    
+    //reaction time vars
+    var startTime: TimeInterval = 0
+    var endTime: TimeInterval = 0
+    var reactionTime: Double = 0
+    
+    
+    
     
     //MARK: Experiment Setup
     
@@ -61,7 +69,7 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
     }
     
     
-    //MARK: Progress Setup
+    //MARK: Progress-Display Setup
     
     func createPaw(offsetX: CGFloat, offsetY: CGFloat) {
         position.y = position.y + offsetY //update position Y, keep original position X and pick offset
@@ -98,7 +106,7 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
                 createPaw(offsetX: CGFloat(-17*width_multiplier), offsetY: -offsetY)
             }
         }
-    //reveal any progress made so far
+        //reveal any progress made so far
         for index in 1...i+1 {
             view.viewWithTag(index)?.alpha = 1
         }
@@ -116,14 +124,15 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
             hidePawButtons()
             hideCharacters()
         } else {
-            
             //show Dots show Progress
             UIView.transition(from: progressView,
                                       to: dotDisplay,
                                       duration: 1.2,
                                       options: [.transitionFlipFromRight, .showHideTransitionViews],
                                       completion: {finished in
-                                        self.showCharacters()})
+                                        self.showCharacters()
+                                        self.startTimeAction() //start reaction timer
+            })
         }
         isDotDisplayShowing = !isDotDisplayShowing
         
@@ -136,7 +145,7 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
     }
     
     
-    //MARK: Buttons 
+    //MARK: Response Buttons
     
     func hidePawButtons() {
         leftPawButton.isHidden = true
@@ -169,7 +178,8 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
         sender.isEnabled = false
     }
     
-    //MARK: Experiment Actions
+    
+    //MARK: Experimental Actions
     
     func nextImage() {
         if i==stim.shuffled.count-1 {
@@ -179,7 +189,6 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
             dotDisplay.image = UIImage(contentsOfFile: stim.shuffled[i] as! String)
             character1.isEnabled = true
             character2.isEnabled = true
-            print("i=\(i)")
         }
     }
     
@@ -188,7 +197,8 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
         self.performSegue(withIdentifier: "endExperiment", sender: self)
     }
     
-    @IBAction func chooseCharacter(_ sender:UIButton) {
+    @IBAction func subjectResponse(_ sender:UIButton) {
+        stopTimeAction()
         wobbleButton(sender: sender)
             //next image called when progressView is dismissed
             //show button which calls progress view
@@ -208,7 +218,7 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
     }
     
     
-    //MARK: Progress Display
+    //MARK: Progress Display Functions
     
     func revealPawButton(button: UIButton) {
         button.isEnabled = true
@@ -254,8 +264,24 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
         view.layer.add(pulseAnimation, forKey: "layerAnimation")
     }
 
+    //MARK: Reaction Time Functions
     
-    //MARK: Realm
+    func startTimeAction() { //called in dotDisplayFlip()
+        startTime = NSDate().timeIntervalSinceReferenceDate
+    }
+    
+    func stopTimeAction() { //called in subjectResponse()
+        endTime = NSDate().timeIntervalSinceReferenceDate
+        reactionTime = (endTime-startTime).timeMilliseconds.roundTo(places: 3)
+        print("RT: \(reactionTime)")
+        
+        //ensure any experiment oddities won't log fake reaction times.
+        startTime = 0
+        endTime = 0
+    }
+    
+    
+    //MARK: Realm Database
     
     func writeTrialToRealm() {
         
@@ -375,20 +401,19 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        redirectLogToDocuments() //NSlog in aux file from this point forward
+        
+        redirectLogToDocuments() //send NSlog to aux file
         
         selectStimuli()
         character1.isExclusiveTouch = true
         character2.isExclusiveTouch = true
         
         dotDisplay.image = UIImage(contentsOfFile: stim.shuffled[i] as! String)
+        startTimeAction() //for initial trial (dotDisplayFlip not called on load())
 
         numberPaws = stim.shuffled.count
         leftPawButton.isHidden = true
         rightPawButton.isHidden = true
-        
-//        dotDisplay.roundedCorners()
-//        progressView.roundedCorners()
     }
     
     override func willAnimateRotation(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
@@ -407,11 +432,11 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
         let allPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         let documentsDirectory = allPaths.first!
         _ = documentsDirectory.appending("/experimentLog.txt")
-        
     }
 
-
 }
+
+
 
 extension Array {
     func randomized() -> [Any] {
@@ -438,19 +463,25 @@ extension UIView {
 }
 
 extension TimeInterval {
-    
-    var timeMilliseconds: String{
-        let seconds: Double = self
-        let milliseconds = seconds * 1000
-        
-        let formattedString = String(format: "%.3f", milliseconds)
+
+    var timeMilliseconds: Double {
+        //NSTimeInterval (self) is in seconds
+        let milliseconds = self * 1000
         
         if milliseconds > 0 {
-            return formattedString
+            return milliseconds
         } else {
-            return ("no time")
+            return 0
         }
     }
 }
 
+
+extension Double {
+    func roundTo(places:Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return (self * divisor).rounded() / divisor
+    }
+    
+}
 
