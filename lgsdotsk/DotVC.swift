@@ -437,3 +437,20 @@ extension UIView {
     }
 }
 
+extension TimeInterval {
+    
+    var timeMilliseconds: String{
+        let seconds: Double = self
+        let milliseconds = seconds * 1000
+        
+        let formattedString = String(format: "%.3f", milliseconds)
+        
+        if milliseconds > 0 {
+            return formattedString
+        } else {
+            return ("no time")
+        }
+    }
+}
+
+
