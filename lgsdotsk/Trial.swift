@@ -20,6 +20,7 @@ class Trial: Object {
     dynamic var imageName = ""
     
     dynamic var response = ""
+    dynamic var rt: Double = 0 //reaction time in milliseconds
     
     dynamic var strongpx = ""
     dynamic var weakpx = ""

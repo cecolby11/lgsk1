@@ -302,6 +302,7 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
             //trial-specific
             newTrial.trialNumber = i+1
             newTrial.response = response
+            newTrial.rt = reactionTime
             newTrial.imageName = fileName
             
             preprocessData(currentTrial: newTrial)
