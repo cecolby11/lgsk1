@@ -161,7 +161,6 @@ class IntroViewController: UIViewController {
         //called on every rotation too
         super.viewDidLayoutSubviews()
         drawEllipse()
-        print("boy min didlayout: \(boy.frame.minX)")
     }
     
     override func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
