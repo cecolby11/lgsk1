@@ -154,11 +154,18 @@ class IntroViewController: UIViewController {
         tapRecognizer.numberOfTouchesRequired = 2
         
         animator = UIDynamicAnimator(referenceView: view)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        //modify UI after autolayout triggered but before view presented to screen
+        //called on every rotation too
+        super.viewDidLayoutSubviews()
         drawEllipse()
-
+        print("boy min didlayout: \(boy.frame.minX)")
     }
     
     override func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
+        //remove before redraw in correct position
         for layer in self.view.layer.sublayers! {
             if(layerArray.contains(layer)){
                 layer.removeFromSuperlayer()
@@ -166,11 +173,6 @@ class IntroViewController: UIViewController {
             }
         }
     }
-    
-    override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
-        drawEllipse()
-    }
-
     
     //MARK: Navigation
     
