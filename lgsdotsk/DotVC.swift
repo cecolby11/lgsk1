@@ -273,7 +273,6 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
     func stopTimeAction() { //called in subjectResponse()
         endTime = NSDate().timeIntervalSinceReferenceDate
         reactionTime = (endTime-startTime).timeMilliseconds.roundTo(places: 3)
-        print("RT: \(reactionTime)")
         
         //ensure any experiment oddities won't log fake reaction times.
         startTime = 0
