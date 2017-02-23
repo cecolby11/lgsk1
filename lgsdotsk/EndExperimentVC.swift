@@ -70,9 +70,9 @@ class EndExperimentViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        happyPupsView.image = UIImage(named: "pupstogether.png")
+        happyPupsView.image = UIImage(named: "puppyAlone.png")
         UIView.animate(withDuration: 0.5, delay: 6.0, options: [], animations: {
-            self.happyPupsView.loadGif(name: "pupstogether2")
+            self.happyPupsView.loadGif(name: "puppyLove")
         }, completion: nil)
         let angle = (-2 * 3.14/180.0)
         containerView.transform = CGAffineTransform(rotationAngle: CGFloat(angle))
