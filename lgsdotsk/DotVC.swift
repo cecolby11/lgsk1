@@ -139,7 +139,7 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
         //pulse paws on final display
         if i==stim.shuffled.count-1 {
             for pawView in progressView.subviews {
-                pulseView(view: pawView)
+                pawView.shake(bounceMagnitude: 4.0, wiggleRotation: 0.06)
             }
         }
     }
@@ -253,17 +253,6 @@ class DotViewController: UIViewController, UIPopoverPresentationControllerDelega
         button.layer.add(pulseAnimation, forKey: "layerAnimation")
     }
     
-    func pulseView(view: UIView) {
-        let pulseAnimation = CABasicAnimation(keyPath: "transform.scale")
-        pulseAnimation.duration = 1
-        pulseAnimation.fromValue = 1.0
-        pulseAnimation.toValue = 1.3
-        pulseAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        pulseAnimation.autoreverses = true
-        pulseAnimation.repeatCount = Float.infinity
-        view.layer.add(pulseAnimation, forKey: "layerAnimation")
-    }
-
     //MARK: Reaction Time Functions
     
     func startTimeAction() { //called in dotDisplayFlip()
